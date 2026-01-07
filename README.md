@@ -135,7 +135,7 @@ python scripts/check_overflow.py
 | Reading | Time | Purpose |
 |---------|------|---------|
 | [Designing Experimentation Guardrails](https://medium.com/airbnb-engineering/designing-experimentation-guardrails-ed6a976ec669) — Airbnb Engineering | ~15 min | Counter-metrics framework |
-| [Data Analyst Guide to Stakeholder Management](https://towardsdatascience.com/the-data-analysts-guide-to-stakeholder-management-6d71f6ae5a92) — Towards Data Science | ~12 min | Stakeholder mapping |
+| [Data Analyst Guide to Stakeholder Management](https://towardsdatascience.com/data-analyst-guide-to-stakeholder-management-728413c19449/) — Towards Data Science | ~12 min | Stakeholder mapping |
 
 ---
 
