@@ -683,24 +683,495 @@ Low fluency → Feels suspicious, questionable</p>
 <footer>Block 5: Stakeholders &amp; Influence</footer>
 </section>
 <script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{container;containerSize;containerObserver;svg;svgComputedStyle;svgPreserveAspectRatio="xMinYMid meet";wrapper;wrapperSize;wrapperObserver;constructor(){super();const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver(((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()}))}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=this.shadowRoot.querySelector(`div[${e}]`)??void 0;const t=this.svg;this.svg=this.wrapper?.querySelector(`svg[${i}]`)??void 0,this.svg!==t&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=this.svg?.querySelector(`span[${n}]`)??void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame((()=>{t.style.display=""})))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){let t=Math.ceil(this.containerSize?.width??0);const e=Math.ceil(this.containerSize?.height??0);void 0!==this.dataset.downscaleOnly&&(t=Math.max(t,this.wrapperSize?.width??0));const i=this.svg?.querySelector(":scope > foreignObject");if(i?.setAttribute("width",`${t}`),i?.setAttribute("height",`${e}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${t} ${e}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=t<=0||e<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const r=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this._shadow()}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_shadow(){if(!this.shadowRoot)try{this.attachShadow({mode:"open"})}catch(t){if(!(t instanceof Error&&"NotSupportedError"===t.name))throw t}return this.shadowRoot}_update(){const t=this._shadow();if(t){const e=i?`<style>:host { ${i} }</style>`:"";let n="<slot></slot>";const{autoScaling:s}=this.dataset;if(void 0!==s){n=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===s?"data-downscale-only":""}>${n}</marp-auto-scaling>`}t.innerHTML=e+n}}};let o;const a=Symbol();let l;const c="marpitSVGPolyfill:setZoomFactor,",d=Symbol(),h=Symbol();const g=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[u]:[],i={then:e=>(t?(async()=>{if(void 0===l){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise((t=>{i.addEventListener("load",(()=>t()))}));i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),l=e.getImageData(5,5,1,1).data[3]<128}return l})().then((t=>{null==e||e(t?[u]:[])})):null==e||e([]),i)};return Object.assign(e,i)};let p,m;function u(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[h]||(Object.defineProperty(window,h,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",(({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(c)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(m=i)}}catch(t){console.error(t)}})));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,s,r,o;t.style.transform||(t.style.transform="translateZ(0)");const a=i||m||t.currentScale||1;p!==a&&(p=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(o=null===(r=n.y)||void 0===r?void 0:r.baseVal.value)&&void 0!==o?o:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}})),!1!==n&&Array.from(e.querySelectorAll("iframe"),(({contentWindow:t})=>{null==t||t.postMessage(`${c}${n}`,"null"===window.origin?"*":window.origin)}))}function v({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[d])return t[d];let e=!0;const i=()=>{e=!1,delete t[d]};Object.defineProperty(t,d,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await g()}finally{s=!0}})();const r=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(r)};return r(),i}(e);return t?(i(),()=>{}):i}p=1,m=void 0;const w=Symbol(),b=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[a];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,a=t[n].proto();(o??(o=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is"),o))&&a!==HTMLElement?i||customElements.define(s,r(a,{style:t[n].style}),{extends:n}):(i||customElements.define(s,r(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach((t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)})))}window[a]=!0})(e),e[w])return e[w];const i=v({target:e}),n=()=>{i(),delete e[w]},l=Object.assign(n,{cleanup:n,update:()=>b(e)});return Object.defineProperty(e,w,{configurable:!0,value:l}),l},y=document.currentScript;b(y?y.getRootNode():document)}();
-</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="10" tabindex="0"><p>INSTRUCTOR NOTE:
-Give 2 min to think, then cold-call 2-3 students.
-Example for Quickcart Funnel Analysis:
-- High Power, High Interest: VP Product, CFO
-- High Power, Low Interest: CEO
-- Low Power, High Interest: Checkout PM, Mobile team
-- Low Power, Low Interest: Warehouse ops</p></div><div class="bespoke-marp-note" data-index="32" tabindex="0"><p>INSTRUCTOR NOTE:
+</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="1" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This is the &quot;soft skills&quot; block, which some students will initially dismiss. The key is establishing early that these aren't optional nice-to-haves — they're how analysis creates value. Many excellent analysts plateau in their careers because they refuse to engage with organizational dynamics.
+
+**Key point:** This block is about making your technical work actually matter.
+
+**Say something like:**
+&quot;Here's what we're covering in this block. Stakeholder management — who are the people involved in your analysis, and how do you work with them? Processing fluency — why simple communication beats complex. Message theory — how to structure your presentations. Four influence strategies — different approaches for different stakeholders. And then we'll integrate it all with an exercise.
+
+I know some of you are thinking 'this isn't technical.' You're right. It's not. But it's how technical work creates value. Stick with me.&quot;
+
+**Transition:** &quot;Let me start by framing why Day 2 is different from Day 1...&quot;</p></div><div class="bespoke-marp-note" data-index="2" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This block often meets resistance from students who see themselves as &quot;technical&quot; and view organizational dynamics as &quot;politics they shouldn't have to deal with.&quot; The key reframe is that stakeholder work IS the work — it's not optional overhead, it's how analysis creates value. Many excellent analysts plateau in their careers because they refuse to engage with this.
+
+**Key point:** Technical correctness is necessary but not sufficient. The best analysis fails without stakeholder buy-in.
+
+**Say something like:**
+&quot;I want to set the frame for Day 2. Yesterday was about The Work — how to scope projects, define metrics, conduct analyses. Important stuff.
+
+Today is about The People. And I know some of you are thinking: 'I'm a data scientist. I just want to do good analysis. Why do I need to learn about politics?'
+
+Here's why: because the best analysis in the world fails if the wrong people see it, or the right people don't buy in, or a single blocker kills it politically.
+
+I've seen this dozens of times. Beautiful analysis. Correct methodology. Actionable findings. And it went nowhere. Because the analyst didn't understand who needed to be convinced, or they surprised the wrong person in a meeting, or they presented to an executive who'd already made up their mind.
+
+Technical correctness is necessary — obviously — but it's not sufficient. The skills we cover today are how analysis creates value. They're not optional overhead. They're the job.&quot;
+
+**If asked:** &quot;Isn't this just 'office politics'?&quot;
+A: It's organizational awareness. Politics has a negative connotation — like manipulation. This is about understanding how decisions get made and communicating effectively. That's a professional skill, not a dark art.
+
+**Transition:** &quot;Let's start with stakeholder management...&quot;</p></div><div class="bespoke-marp-note" data-index="4" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This slide establishes that stakeholder awareness isn't optional — it's a core professional skill. The table shows concrete outcomes: the difference between surprise and anticipation, between ignored and acted-upon analysis.
+
+**Key point:** Organizational dynamics aren't an obstacle to analysis. They're the context in which analysis creates value.
+
+**Say something like:**
+&quot;Look at this table. The column on the left is what happens when you ignore stakeholders. You get surprised by resistance — someone shoots down your recommendation, and you didn't see it coming. Your analysis gets ignored — it was technically correct, but nobody acted on it. You ask 'why didn't anyone tell me?' — because you didn't ask.
+
+The column on the right is what happens when you're aware. You anticipate resistance and address it before the meeting. Your analysis gets acted upon because you involved the right people. You see problems coming.
+
+Here's the uncomfortable truth: every analysis exists in a political context. There are winners and losers from your findings. There are people whose budgets, headcounts, and reputations are affected. Ignoring that context is a choice — and it's usually a bad one.
+
+I'm not asking you to become political operators. I'm asking you to be aware of the organizational context you're operating in.&quot;
+
+**Transition:** &quot;Let me give you a framework for mapping stakeholders...&quot;</p></div><div class="bespoke-marp-note" data-index="6" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** The Power-Interest Grid (also called the Mendelow Matrix) is a classic stakeholder analysis tool. Power = ability to affect outcomes. Interest = degree of engagement with this specific project. The key insight is that different quadrants require different engagement strategies.
+
+**Key point:** Not all stakeholders are equal. Different quadrants require different approaches.
+
+**Say something like:**
+&quot;This is the Power-Interest Grid. It's simple but powerful.
+
+Power is on the vertical axis — can this person affect whether your project succeeds or fails? Interest is on the horizontal — do they care about this specific project?
+
+The combination determines your strategy. High power, high interest — these are your key stakeholders. They can affect outcomes and they care. Manage them closely.
+
+High power, low interest — they can affect outcomes but don't care yet. Keep them satisfied. Don't waste their time, but don't let them be surprised.
+
+Low power, high interest — they care deeply but can't make decisions. Keep them informed. They're often great sources of information and can become champions.
+
+Low power, low interest — monitor but don't over-engage. You have limited time.&quot;
+
+**Transition:** &quot;Let me define each quadrant more precisely...&quot;</p></div><div class="bespoke-marp-note" data-index="7" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** Each quadrant has a specific engagement strategy. The most common mistake is treating all stakeholders equally — either over-engaging low-power people or under-engaging high-power people.
+
+**Key point:** &quot;Manage closely&quot; ≠ &quot;bother constantly.&quot; It means proactive, substantive engagement.
+
+**Say something like:**
+&quot;Let me make each quadrant concrete.
+
+High Power, High Interest: these are your sponsors and decision makers. Manage closely. That means regular updates, no surprises, genuine involvement in key decisions. If the VP of Product is your sponsor, they should never be surprised by what you present.
+
+High Power, Low Interest: executives who could veto your project but probably won't pay attention unless something goes wrong. Keep satisfied. Don't waste their time with details, but make sure they're not blindsided. A 30-second update in a meeting is often enough.
+
+Low Power, High Interest: subject matter experts, individual contributors who care deeply. Keep informed. They're often your best sources of context and can become powerful champions even without formal authority.
+
+Low Power, Low Interest: tangential teams. Monitor. Check in occasionally, but don't over-invest. Your time is limited.
+
+The mistake is treating everyone the same. Sending the same update to everyone. Scheduling the same meetings with everyone. That wastes time on low-priority stakeholders and under-serves high-priority ones.&quot;
+
+**Transition:** &quot;Beyond the grid, we need to identify two special categories...&quot;</p></div><div class="bespoke-marp-note" data-index="8" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** Champions and blockers are special categories that cross-cut the power-interest grid. A champion might be low-power but incredibly valuable because they advocate for you in rooms you're not in. A blocker might be low-power but can still derail progress through passive resistance.
+
+**Key point:** Champions advocate for you in rooms you're not in. Blockers can kill projects you've worked on for months.
+
+**Say something like:**
+&quot;Beyond the grid, you need to identify two special categories: champions and blockers.
+
+Champions actively want you to succeed. They might be in any quadrant. What makes them champions is that they'll advocate for you in meetings you're not invited to. They'll provide air cover when things get political. They'll say 'I've seen their analysis, it's solid' when someone questions you.
+
+Champions are gold. Find them. Arm them with information. Make them look good.
+
+Blockers might resist your project. The crucial question is: WHY do they resist? Budget threat? Ego protection? Additional workload? Past bad experiences with similar projects?
+
+Understanding motivation is everything. A blocker who's worried about their budget needs a different conversation than one who's protecting their ego. We'll talk about mitigation strategies next.&quot;
+
+**Transition:** &quot;Let's look at common blocker motivations and how to address them...&quot;</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This slide gives a quick reference for common blocker motivations and mitigation strategies. Each motivation requires a different approach — there's no one-size-fits-all.
+
+**Key point:** Mitigation starts with understanding motivation. Wrong diagnosis = wrong treatment.
+
+**Say something like:**
+&quot;Let me walk through these quickly.
+
+Threatens budget: If your analysis recommends cutting their budget, frame it as reallocation. 'We're shifting resources to higher-ROI channels' sounds different from 'we're cutting your budget.'
+
+Threatens credibility: If your findings imply their past work failed, give them a private preview. Let them process it without an audience. Frame collaboratively: 'What can we learn from this?' not 'you were wrong.'
+
+Creates work: If acting on your analysis means more work for them, show the ROI. Offer a phased approach. 'We can start small and scale if results justify' is less threatening than 'change everything now.'
+
+Past failures: If they've been burned by similar projects before, involve them in your methodology. Be conservative in your estimates. Acknowledge the history: 'I know this hasn't worked before. Here's what's different.'
+
+Ego/ownership: If they feel territorial, solicit their input genuinely. Share credit for the success. Make them part of the solution, not just a victim of the recommendation.&quot;
+
+**If asked:** &quot;What if I can't figure out their motivation?&quot;
+A: Ask them. &quot;I want to understand your concerns&quot; often works. Or ask someone who knows them well.
+
+**Transition:** &quot;Let's practice mapping stakeholders...&quot;</p></div><div class="bespoke-marp-note" data-index="10" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This brief exercise connects stakeholder mapping to the analyses students learned yesterday. It makes the abstract concept concrete.
+
+**Key point:** Every analysis has stakeholders. Mapping them should become automatic.
+
+**Facilitation:**
+Give 2 min to think silently, then cold-call 2-3 students. Push them to be specific about names/roles, not just &quot;product team.&quot;
+
+**Example for Quickcart Funnel Analysis:**
+- High Power, High Interest: VP Product (owns conversion), CFO (cares about revenue)
+- High Power, Low Interest: CEO (trusts VP to handle, but could override)
+- Low Power, High Interest: Checkout PM (owns the feature), Mobile team lead (technical implementation)
+- Low Power, Low Interest: Warehouse ops (not affected), Customer Support (tangentially aware)
+
+**Say something like:**
+&quot;Take 2 minutes. Pick one of the analyses from yesterday — Funnel, Attribution, Retention, any of them. Map the stakeholders to quadrants. Be specific: names or roles, not 'the team.'
+
+[After 2 min]
+
+Let me hear from a few of you. You — which analysis and who's in High Power, High Interest?&quot;
+
+**Transition:** &quot;Let me give you the key takeaways from stakeholder management...&quot;</p></div><div class="bespoke-marp-note" data-index="11" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This slide summarizes the stakeholder management section. These five points are the minimum viable stakeholder awareness for any analyst.
+
+**Key point:** These five practices should become automatic for every project.
+
+**Say something like:**
+&quot;Let me summarize stakeholder management in five points.
+
+One: Map stakeholders to the Power-Interest grid. Different quadrants, different strategies.
+
+Two: Identify champions and blockers. Champions help you in rooms you're not in. For blockers, understand WHY they resist — that's the key to mitigation.
+
+Three: Pre-brief uncomfortable findings. Never surprise anyone in a meeting. If your analysis makes someone look bad, they should hear about it privately first.
+
+Four: Tailor communication by quadrant. Executives don't want the same level of detail as subject matter experts. Adjust.
+
+Five: Politics is part of the job. I know some of you resist that idea. But ignoring organizational dynamics is a choice — and it usually leads to your work being ignored.&quot;
+
+**Transition:** &quot;Now let's talk about how you communicate — starting with processing fluency...&quot;</p></div><div class="bespoke-marp-note" data-index="13" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** Processing fluency is a psychological phenomenon: information that's easy to process feels more credible, regardless of its actual truth value. This has been studied extensively — even simple things like using a legible font or presenting in simple language increase perceived credibility. This is counterintuitive for technical people who associate complexity with rigor.
+
+**Key point:** Complexity doesn't signal rigor. It signals &quot;this is hard to evaluate.&quot; Simplicity creates trust.
+
+**Say something like:**
+&quot;This is one of the most counterintuitive findings from psychology research: the more work your listener has to do to understand something, the less they trust it.
+
+This is called processing fluency. Information that's easy to process feels true. Information that's hard to process feels suspicious.
+
+Now, why is this counterintuitive? Because many of us were trained to think that complex equals rigorous. If the analysis looks complicated, it must be thorough. If the explanation has caveats, it must be nuanced.
+
+But that's not how audiences perceive it. When an executive sees a slide with 15 columns of numbers and three paragraphs of methodology caveats, they don't think 'wow, this is rigorous.' They think 'I don't understand this, so I can't trust it.'
+
+Your job is to do the hard work of simplification. The complexity lives in your methodology. The audience sees the clear conclusions.&quot;
+
+**If asked:** &quot;Won't executives think simple analysis is shallow?&quot;
+A: Only if it's actually shallow. You can be rigorous AND simple. The methodology is complex; the communication is clear. Have the details ready if asked, but lead with clarity.
+
+**Transition:** &quot;Let me show you what low vs. high fluency looks like...&quot;</p></div><div class="bespoke-marp-note" data-index="15" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** These findings come from cognitive psychology research on fluency. The counterintuitive result is that even expert audiences are more persuaded by simpler explanations. Jargon signals in-group membership but reduces actual persuasion.
+
+**Key point:** Complexity signals &quot;I can't evaluate this&quot; not &quot;this must be rigorous.&quot;
+
+**Say something like:**
+&quot;These are research findings, not my opinions.
+
+Simple explanations are rated as more credible — even by experts. Why? Because fluency creates a feeling of truth. If I can understand it easily, my brain says 'this makes sense.'
+
+Jargon reduces persuasion — even with expert audiences. Jargon signals 'I'm part of the in-group' but it doesn't actually convince people. In fact, excessive jargon makes people suspicious that you're hiding behind words.
+
+Visual clarity increases agreement. A clean chart with one clear message is more persuasive than a complex chart with many messages.
+
+The formula to remember: Complex ≠ Rigorous. Complex = Hard to trust. Do the hard work of simplification.&quot;
+
+**Transition:** &quot;Let me show you what this looks like in practice...&quot;</p></div><div class="bespoke-marp-note" data-index="16" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This table provides concrete before/after examples. The left column is how many analysts actually communicate. The right column is what works.
+
+**Key point:** The 30-second rule is real. If an executive can't understand it quickly, they'll delegate to someone who will simplify it anyway — and that person may misunderstand.
+
+**Say something like:**
+&quot;Let me make this concrete.
+
+Low fluency: 'The coefficient on the interaction term between channel and cohort was significant at p&lt;0.05 controlling for...' Who is this sentence for? Other statisticians. Not decision makers.
+
+High fluency: 'Paid social users from Q3 retained 20% worse than Q2.' Same finding. One sentence. Actionable.
+
+Low fluency: Dense tables with 15 columns. Everything you computed.
+
+High fluency: Highlighted key numbers with context. The one or two numbers that matter, with enough context to understand them.
+
+Low fluency: 40-slide appendix proving how thorough you were.
+
+High fluency: 10 slides with the story, and 'details available' for those who want to dig deeper.
+
+Here's the rule: if an executive can't understand it in 30 seconds, simplify. If they have to work hard to understand you, they'll either stop listening or delegate to someone who will simplify it — and that person might misunderstand.&quot;
+
+**Transition:** &quot;Here's a test you can apply to any presentation...&quot;</p></div><div class="bespoke-marp-note" data-index="17" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** The Fluency Test is a self-check before any presentation. Each question forces simplification. If you can't pass this test, you're not ready — and presenting anyway will be less effective.
+
+**Key point:** If you can't explain it simply, you either don't understand it or haven't done the work of simplifying.
+
+**Say something like:**
+&quot;Before any presentation, run this test on yourself.
+
+One: Can I explain this in one sentence? If you need three paragraphs to explain what you found, you haven't distilled it enough.
+
+Two: Would my non-technical friend understand? Not 'would they understand the methodology' — would they understand the point? 'We should shift money from one channel to another because the second one is more profitable.' That's friend-explainable.
+
+Three: What's the ONE number that matters? Not the five numbers you computed. The one that makes the decision. Everything else is supporting detail.
+
+Four: Is everything else supporting detail? If you have information that isn't supporting the main point, why is it in your presentation?
+
+If you can't pass this test, you're not ready to present. Go back and simplify.&quot;
+
+**Transition:** &quot;Let me give you a framework for structuring any presentation...&quot;</p></div><div class="bespoke-marp-note" data-index="18" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This is the Message Theory framework — a forcing function for clarity. Most presentations fail because the presenter hasn't answered these three questions clearly. The sentence structure forces specificity.
+
+**Key point:** &quot;The team&quot; is not an audience. &quot;We should consider options&quot; is not a recommendation. Be specific.
+
+**Say something like:**
+&quot;This is my favorite pre-presentation framework. Before any communication, fill in this sentence:
+
+'I'm presenting to [specific person] about [topic in 10 words] and my recommendation is [specific action].'
+
+Let me break that down.
+
+Who? A specific person. Not 'the leadership team.' Not 'stakeholders.' Sarah, the CFO. Because Sarah has specific concerns, priorities, and decision-making styles. 'The team' doesn't.
+
+What? Topic in 10 words or less. If you need more than 10 words to describe your topic, you haven't focused enough. 'Where should we spend next quarter?' That's clear.
+
+So what? A specific action. Not 'we should consider our options.' Not 'here are some findings.' A specific recommendation: 'Shift $200K from paid social to referral.'
+
+If you can't fill in this sentence, you're not ready to present. Go back and clarify until you can.&quot;
+
+**If asked:** &quot;What if I genuinely don't have a recommendation?&quot;
+A: Then your recommendation is 'I need [specific thing] to make a recommendation.' That's still specific. 'I need 2 more weeks of data to be confident' is a recommendation.
+
+**Transition:** &quot;Now let's talk about how to influence different stakeholders...&quot;</p></div><div class="bespoke-marp-note" data-index="21" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** The Influence Compass organizes four distinct persuasion strategies. They're not mutually exclusive — most successful presentations combine 2-3. But each works differently and appeals to different stakeholder types.
+
+**Key point:** Different stakeholders respond to different strategies. One size does not fit all.
+
+**Say something like:**
+&quot;This is the Influence Compass. Four strategies, four directions.
+
+Authority — North. Leveraging organizational hierarchy.
+Credibility — South. Leveraging expertise and peer validation.
+Social Proof — West. Leveraging data about what others do.
+Consistency — East. Leveraging alignment with stated priorities.
+
+Each strategy works differently. Each appeals to different stakeholder types. The key insight is: you don't use the same strategy with everyone. Your stakeholder map tells you WHO you're influencing. The compass tells you HOW.
+
+Most successful presentations use 2-3 strategies combined. Let me walk you through each one.&quot;
+
+**Transition:** &quot;Let's start with Authority...&quot;</p></div><div class="bespoke-marp-note" data-index="22" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** Authority is the most straightforward influence strategy — &quot;someone powerful backs this.&quot; It works when stakeholders respect hierarchy and when you genuinely have top-down support. The danger is faking it or overusing it.
+
+**Key point:** Authority requires genuine backing. Faking it destroys credibility permanently.
+
+**Say something like:**
+&quot;Authority is the simplest strategy. Someone powerful supports your recommendation. You invoke that support.
+
+'The VP of Product has reviewed this and supports moving forward.' That sentence does a lot of work. It says: I'm not a lone analyst with an idea. Someone with organizational power has validated this.
+
+When to use it: when your stakeholder respects hierarchy, when you genuinely have top-down support, when the decision needs organizational weight to move forward.
+
+The danger: don't fake it. If you say 'the VP supports this' and the VP hasn't actually reviewed it, you'll be caught. And that destroys your credibility permanently. Authority only works when it's genuine.&quot;
+
+**Transition:** &quot;But you probably don't have authority just because you're an analyst. Let me show you how to build it...&quot;</p></div><div class="bespoke-marp-note" data-index="23" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** Most analysts don't have inherent authority — they're not senior executives. But they can borrow authority through sponsorship and endorsement. The key is making it explicit and genuine.
+
+**Key point:** &quot;Can I say you've reviewed this?&quot; is a magic question. It gets explicit permission to invoke authority.
+
+**Say something like:**
+&quot;You probably don't have inherent authority. You're an analyst, not a VP. So how do you use this strategy?
+
+Get a sponsor. Find a leader who supports your work. Build that relationship over time.
+
+Secure explicit endorsement. This is the key move. When your sponsor reviews your work, ask: 'Can I say you've reviewed and support this approach?' That gives you explicit permission to invoke their authority. Without that permission, you're name-dropping without consent.
+
+Cite the ask. If a leader asked for this analysis, say so: 'This was requested by [name].' That's authority by origin, not endorsement.
+
+The warning is important: don't fake it. Don't say 'the CEO supports this' if you've never talked to the CEO. Getting caught faking authority is career-limiting.&quot;
+
+**Transition:** &quot;The opposite of Authority is Credibility — let's look at that...&quot;</p></div><div class="bespoke-marp-note" data-index="24" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** Credibility is expert validation — &quot;smart people have checked this.&quot; It works especially well with technical or skeptical stakeholders who won't just trust authority. It's the natural strategy for junior analysts who don't yet have personal credibility.
+
+**Key point:** Credibility says &quot;experts have validated this&quot; — it's bottom-up influence vs. Authority's top-down.
+
+**Say something like:**
+&quot;Credibility is the opposite direction from Authority. Instead of 'powerful people support this,' it's 'smart people have validated this.'
+
+'The senior data scientist reviewed the methodology.' 'Engineering confirmed feasibility.' These sentences say: I'm not asking you to trust me. I'm asking you to trust the experts who've reviewed my work.
+
+When to use it: when your stakeholder is technical or detail-oriented, when your personal credibility isn't established yet, when the methodology is complex or novel and needs validation.
+
+This is the natural strategy for junior analysts. You might not have authority or reputation, but you can get your work reviewed by people who do.&quot;
+
+**Transition:** &quot;Let me show you how to build credibility...&quot;</p></div><div class="bespoke-marp-note" data-index="25" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** Credibility is built through peer validation, precedent, transparency, and intellectual honesty. The counterintuitive element is that acknowledging limitations INCREASES credibility rather than decreasing it.
+
+**Key point:** Admitting uncertainty makes you more credible, not less. People trust those who know what they don't know.
+
+**Say something like:**
+&quot;How do you build credibility?
+
+Peer review. Have respected people review your work. 'The senior data scientist reviewed this' is powerful because it transfers their credibility to you.
+
+Cite precedent. 'This is the same approach Airbnb used for their pricing optimization.' Precedent says: I'm not inventing something new. Smart companies have done this.
+
+Show your work. Make methodology transparent. Credible people invite scrutiny. If you hide your methodology, people wonder what you're hiding.
+
+Acknowledge limitations. This is counterintuitive. You might think admitting uncertainty makes you look weak. Actually, it makes you more credible. People trust those who know what they don't know. 'This analysis has a limitation in that...' signals intellectual honesty.
+
+The warning: don't over-claim expertise. If you claim to be an expert in something you're not, and you get caught, your credibility is destroyed permanently.&quot;
+
+**Transition:** &quot;Third strategy: Social Proof...&quot;</p></div><div class="bespoke-marp-note" data-index="26" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** Social Proof says &quot;others do this&quot; or &quot;data supports this.&quot; It works especially well with risk-averse stakeholders who don't want to be first. Benchmarks, survey data, and competitive intelligence all provide social proof.
+
+**Key point:** Social proof reduces perceived risk. &quot;Others do this&quot; = &quot;it's not crazy.&quot;
+
+**Say something like:**
+&quot;Social Proof says: others do this. Or: data supports this.
+
+'73% of users said they'd upgrade.' That's user data as social proof. 'Industry benchmarks show 3:1 is healthy.' That's benchmark data. 'Three other companies already made this change.' That's competitive intelligence.
+
+When to use it: when your stakeholder is risk-averse. Risk-averse people don't want to be first. They want to know others have done this successfully. Social proof reduces perceived risk.
+
+Also useful when the decision feels uncertain. 'I don't know if this will work' becomes 'others have done this and it worked for them.'
+
+And obviously useful when you have the data. Survey results, benchmarks, competitor analysis — all provide social proof.&quot;
+
+**Transition:** &quot;How do you gather social proof?...&quot;</p></div><div class="bespoke-marp-note" data-index="28" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** Consistency leverages the psychological principle that people want to be consistent with what they've already said. If the CEO said profitability matters, recommending something that improves profitability is aligned with what they've committed to.
+
+**Key point:** Consistency says &quot;you already said this matters.&quot; It's hard to argue against your own stated priorities.
+
+**Say something like:**
+&quot;Consistency is powerful because it leverages something already said.
+
+'This aligns with our Q2 priority of improving retention.' If the organization has committed to retention, you're not asking for something new. You're asking them to follow through on what they already said.
+
+'The CEO said at all-hands that profitability is the focus.' If the CEO said that, recommending something that improves profitability is hard to argue against. They'd be contradicting themselves.
+
+When to use it: when stakeholders have stated priorities, when the organization has clear strategy, when you can draw a genuine connection.
+
+The key word is genuine. If you force a connection that isn't there, it feels manipulative. The alignment has to be real.&quot;
+
+**Transition:** &quot;Let me show you how to build consistency...&quot;</p></div><div class="bespoke-marp-note" data-index="32" tabindex="0"><p>INSTRUCTOR NOTE:
 Cold call 2-3 students.
 Strong answer: Social Proof (ROI benchmarks, other companies' results) + Consistency (aligns with profitability goals)
-CFOs often respond to data and financial alignment more than authority.</p></div><div class="bespoke-marp-note" data-index="44" tabindex="0"><p>INSTRUCTOR NOTE:
+CFOs often respond to data and financial alignment more than authority.</p></div><div class="bespoke-marp-note" data-index="38" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** The pre-brief is the single most practical tactical skill in this block. Most analytical disasters happen because someone was surprised in a meeting. Pre-briefing uncomfortable findings transforms potential blockers into at-worst neutrals. The framing &quot;I want to get your input&quot; is crucial — it positions the meeting as collaborative, not combative.
+
+**Key point:** Never surprise stakeholders with uncomfortable findings. The pre-brief is the most underused tactical skill in analytics.
+
+**Say something like:**
+&quot;This is the single most actionable thing I'll teach you today. The pre-brief.
+
+Before any major presentation where someone might be uncomfortable with your findings, do this:
+
+First, identify who might be uncomfortable. Whose budget are you cutting? Whose project are you critiquing? Whose judgment are you questioning?
+
+Second, schedule a 15-minute 1:1. Frame it as: 'I want to get your input before the meeting.' Not 'I need to warn you about something.' Input. Collaborative.
+
+Third, share your key findings. No surprises. Let them react privately, not in front of their colleagues.
+
+Fourth, solicit feedback genuinely. 'What am I missing?' They might actually have valid points you didn't consider. And even if they don't, you've given them a chance to be heard.
+
+Fifth, incorporate reasonable feedback. If they had a good point, acknowledge it. This shows you listened.
+
+In the meeting, they're prepared. They might still disagree — that's fine — but they won't be blindsided. The worst reaction is 'why am I hearing this for the first time in this meeting?'
+
+This transforms blockers into, at worst, neutrals. Sometimes even into supporters.&quot;
+
+**If asked:** &quot;What if they're hostile in the pre-brief?&quot;
+A: Better to know now than in the meeting. If they're hostile privately, you have time to adjust your approach, involve their concerns in your narrative, or escalate to your sponsor if needed.
+
+**Transition:** &quot;Let me show you what this looks like in practice...&quot;</p></div><div class="bespoke-marp-note" data-index="41" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This exercise integrates everything from Block 5: stakeholder awareness (the blocker), influence strategies, and message clarity. The scenario is deliberately uncomfortable — recommending something that makes a colleague look bad.
+
+**Key point:** This is realistic. Many analytics findings imply someone's past work was wrong. How you handle it matters.
+
+**Say something like:**
+&quot;Here's your scenario. You've done a retention analysis. You found that D7 retention dropped because the new onboarding flow is too aggressive — the mandatory friend-adding step is causing drop-off.
+
+Your recommendation: simplify onboarding. Remove that mandatory step.
+
+The problem: the Growth PM who designed that onboarding flow is in the room. And their recent promotion case cited that launch as a success. Your finding implies their promoted work... failed.
+
+This is realistic. Analytics findings often imply someone was wrong. How you handle that determines whether your work gets acted on — or whether it dies politically.&quot;
+
+**Transition:** &quot;Take 3 minutes to think through your approach...&quot;</p></div><div class="bespoke-marp-note" data-index="44" tabindex="0"><p>INSTRUCTOR NOTE:
 Looking for:
 - Topic: &quot;Why retention dropped and how to fix it&quot;
 - Recommendation: &quot;Remove mandatory friend-adding, A/B test simplified flow&quot;
 - Strategies: Credibility (data), Social Proof (correlation with retention drop), Consistency (retention is company priority)
 - Blocker: Pre-brief, frame as &quot;learning&quot; not &quot;failure&quot;, acknowledge their other contributions
 
-Push back on weak approaches. Ask &quot;What if the Growth PM pushes back with...?&quot;</p></div><div class="bespoke-marp-note" data-index="47" tabindex="0"><p>INSTRUCTOR NOTE:
-Take 2-3 questions.
-Common Q: &quot;What if I don't have authority or credibility?&quot;
-A: Build it through the other strategies first. Social proof and consistency don't require seniority.</p></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@4.2.3/lib/bespoke.js.LICENSE.txt */
+Push back on weak approaches. Ask &quot;What if the Growth PM pushes back with...?&quot;</p></div><div class="bespoke-marp-note" data-index="46" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This summary captures the five core concepts from Block 5. Students should leave with these five things in mind.
+
+**Key point:** These five concepts work together — stakeholder map informs strategy choice, which is communicated with fluency and message clarity.
+
+**Say something like:**
+&quot;Let me summarize what we covered.
+
+Processing Fluency: Simple beats complex. Do the hard work of simplification. If they can't understand it quickly, they won't trust it.
+
+Message Theory: Audience + Topic + Recommendation. All specific. Sarah the CFO, not 'leadership.' 10 words on the topic. A specific action.
+
+Four Strategies: Authority, Credibility, Social Proof, Consistency. Different strategies for different stakeholders. Most presentations use 2-3.
+
+Stakeholder Connection: The Power-Interest Grid tells you WHO to focus on. The influence strategies tell you HOW to persuade them. They work together.
+
+Blockers: Pre-brief privately. Never surprise anyone with uncomfortable findings. This single practice will save you more grief than anything else we discussed.&quot;
+
+**Transition:** &quot;Questions before we break?&quot;</p></div><div class="bespoke-marp-note" data-index="47" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** Final Q&amp;A before the break. Keep it brief — afternoon energy depends on protecting the break.
+
+**Key point:** End on time. The break matters.
+
+**Facilitation:**
+Take 2-3 questions maximum. Common questions:
+
+&quot;What if I don't have authority or credibility?&quot;
+A: Build it through the other strategies. Social proof and consistency don't require seniority. You can have strong influence without personal authority.
+
+&quot;Isn't this manipulative?&quot;
+A: Only if you're dishonest. Clear communication + stakeholder awareness is professional skill, not manipulation. Manipulation involves deception; influence involves clarity.
+
+&quot;How do I know which strategy to use?&quot;
+A: Start with your stakeholder map. Technical people respond to credibility. Risk-averse people respond to social proof. Hierarchy-respecting people respond to authority. Strategy-focused people respond to consistency.
+
+**Say something like:**
+&quot;Quick questions before we break? [Take 2-3] Great — see you at 15:40 for Block 6. We'll talk about your capstone and close out the course.&quot;
+
+**Transition:** Move to break slide.</p></div><div class="bespoke-marp-note" data-index="48" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This is the final break before Block 6. Energy management is critical — afternoon blocks can drag if students are tired.
+
+**Key point:** Protect the break. 30 minutes matters.
+
+**Say something like:**
+&quot;Take a break. Coffee, snack, stretch, whatever you need. Block 6 starts at 15:40 — that's the capstone preparation and course closing. See you then.&quot;
+
+**Logistics:**
+- Break is ~30 minutes
+- Block 6 is the final block of the course
+- This is a good time to check in with students who seemed confused earlier</p></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@4.2.3/lib/bespoke.js.LICENSE.txt */
 !function(){"use strict";function e(e){return e&&e.__esModule&&Object.prototype.hasOwnProperty.call(e,"default")?e.default:e}var t,n,r=(n||(n=1,t={from:function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),o=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,function(e){return"SCRIPT"!==e.nodeName}),a={},i=function(e,t){return(t=t||{}).index=o.indexOf(e),t.slide=e,t},s=function(e,t){a[e]=(a[e]||[]).filter(function(e){return e!==t})},c=function(e,t){return(a[e]||[]).reduce(function(e,n){return e&&!1!==n(t)},!0)},l=function(e,t){o[e]&&(n&&c("deactivate",i(n,t)),n=o[e],c("activate",i(n,t)))},d=function(e,t){var r=o.indexOf(n)+e;c(e>0?"next":"prev",i(n,t))&&l(r,t)},u={off:s,on:function(e,t){return(a[e]||(a[e]=[])).push(t),s.bind(null,e,t)},fire:c,slide:function(e,t){if(!arguments.length)return o.indexOf(n);c("slide",i(o[e],t))&&l(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:o,destroy:function(e){c("destroy",i(n,e)),a={}}};return(t||[]).forEach(function(e){e(u)}),n||l(0),u}}),t),o=e(r);const a=document.body,i=(...e)=>history.replaceState(...e),s="",c="presenter",l="next",d=["",c,l],u="bespoke-marp-",f=`data-${u}`,m=(e,{protocol:t,host:n,pathname:r,hash:o}=location)=>{const a=e.toString();return`${t}//${n}${r}${a?"?":""}${a}${o}`},g=()=>a.dataset.bespokeView,p=e=>new URLSearchParams(location.search).get(e),v=(e,t={})=>{const n={location,setter:i,...t},r=new URLSearchParams(n.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?r.set(t,n):r.delete(t)}try{n.setter({...window.history.state??{}},"",m(r,n.location))}catch(e){console.error(e)}},h=(()=>{const e="bespoke-marp";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch{return!1}})(),y=e=>{try{return localStorage.getItem(e)}catch{return null}},b=(e,t)=>{try{return localStorage.setItem(e,t),!0}catch{return!1}},w=e=>{try{return localStorage.removeItem(e),!0}catch{return!1}},x=(e,t)=>{const n="aria-hidden";t?e.setAttribute(n,"true"):e.removeAttribute(n)},k=e=>{e.parent.classList.add(`${u}parent`),e.slides.forEach(e=>e.classList.add(`${u}slide`)),e.on("activate",t=>{const n=`${u}active`,r=t.slide,o=r.classList,a=!o.contains(n);if(e.slides.forEach(e=>{e.classList.remove(n),x(e,!0)}),o.add(n),x(r,!1),a){const e=`${n}-ready`;o.add(e),document.body.clientHeight,o.remove(e)}})},$=e=>{let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],o=(r,o)=>{t=r,n=o,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const a=t<r||t===r&&n<=o;e.setAttribute(`${f}fragment`,(a?"":"in")+"active");const i=`${f}current-fragment`;t===r&&n===o?e.setAttribute(i,"current"):e.removeAttribute(i)})}),e.fragmentIndex=o;const a={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:o};e.fire("fragment",a)};e.on("next",({fragment:a=!0})=>{if(a){if(r(1))return o(t,n+1),!1;const a=t+1;e.fragments[a]&&o(a,0)}else{const r=e.fragments[t].length;if(n+1<r)return o(t,r-1),!1;const a=e.fragments[t+1];a&&o(t+1,a.length-1)}}),e.on("prev",({fragment:a=!0})=>{if(r(-1)&&a)return o(t,n-1),!1;const i=t-1;e.fragments[i]&&o(i,e.fragments[i].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const o=e.fragments[t];if(o){const{length:e}=o;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}o(t,r)}),o(0,0)},E=document,L=()=>!(!E.fullscreenEnabled&&!E.webkitFullscreenEnabled),S=()=>!(!E.fullscreenElement&&!E.webkitFullscreenElement),P=e=>{e.fullscreen=()=>{L()&&(async()=>{S()?(E.exitFullscreen||E.webkitExitFullscreen)?.call(E):((e=E.body)=>{(e.requestFullscreen||e.webkitRequestFullscreen)?.call(e)})()})()},document.addEventListener("keydown",t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!L()||(e.fullscreen(),t.preventDefault())})},_=`${u}inactive`,T=(e=2e3)=>({parent:t,fire:n})=>{const r=t.classList,o=e=>n(`marp-${e?"":"in"}active`);let a;const i=()=>{a&&clearTimeout(a),a=setTimeout(()=>{r.add(_),o()},e),r.contains(_)&&(r.remove(_),o(!0))};for(const e of["mousedown","mousemove","touchend"])document.addEventListener(e,i);setTimeout(i,0)},I=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"],M=e=>{e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(I.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})},O=e=>{window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("marp-auto-scaling, [data-auto-scaling], [data-marp-fitting]");t.setAttribute(`${f}load`,e?"":"hideable")}})},A=({interval:e=250}={})=>t=>{document.addEventListener("keydown",e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()});let n,r,o=0;t.parent.addEventListener("wheel",a=>{let i=!1;const s=(e,t)=>{e&&(i=i||((e,t)=>((e,t)=>{const n="X"===t?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]})(e,t)&&((e,t)=>{const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r})(getComputedStyle(e),t))(e,t)),e?.parentElement&&s(e.parentElement,t)};if(0!==a.deltaX&&s(a.target,"X"),0!==a.deltaY&&s(a.target,"Y"),i)return;a.preventDefault();const c=Math.sqrt(a.deltaX**2+a.deltaY**2);if(void 0!==a.wheelDelta){if(void 0===a.webkitForce&&Math.abs(a.wheelDelta)<40)return;if(a.deltaMode===a.DOM_DELTA_PIXEL&&c<4)return}else if(a.deltaMode===a.DOM_DELTA_PIXEL&&c<12)return;r&&clearTimeout(r),r=setTimeout(()=>{n=0},e);const l=Date.now()-o<e,d=c<=n;if(n=c,l||d)return;let u;(a.deltaX>0||a.deltaY>0)&&(u="next"),(a.deltaX<0||a.deltaY<0)&&(u="prev"),u&&(t[u](),o=Date.now())})},C=(e=`.${u}osc`)=>{const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[${f}osc=${JSON.stringify(e)}]`).forEach(n)};return L()||n("fullscreen",e=>e.style.display="none"),h||n("presenter",e=>{e.disabled=!0,e.title="Presenter view is disabled due to restricted localStorage."}),e=>{t.addEventListener("click",t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;n&&t.target.blur();const r={fragment:!t.shiftKey};"next"===n?e.next(r):"prev"===n?e.prev(r):"fullscreen"===n?e?.fullscreen():"presenter"===n&&e.openPresenterView()}}),e.parent.appendChild(t),e.on("activate",({index:t})=>{n("page",n=>n.textContent=`Page ${t+1} of ${e.slides.length}`)}),e.on("fragment",({index:t,fragments:r,fragmentIndex:o})=>{n("prev",e=>e.disabled=0===t&&0===o),n("next",n=>n.disabled=t===e.slides.length-1&&o===r.length-1)}),e.on("marp-active",()=>x(t,!1)),e.on("marp-inactive",()=>x(t,!0)),L()&&(e=>{for(const t of["","webkit"])E.addEventListener(t+"fullscreenchange",e)})(()=>n("fullscreen",e=>e.classList.toggle("exit",L()&&S())))}},D=e=>{window.addEventListener("message",t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let o=Number.parseInt(t,10),a=Number.parseInt(n,10)+1;a>=e.fragments[o].length&&(o+=1,a=0),e.slide(o,{fragment:a})}})};var N,B,q,K,F,j,V,U={exports:{}},X=(N||(N=1,U.exports=(B=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"],q=function(e){return String(e).replace(/[&<>"']/g,function(e){return"&"+K[e]+";"})},K={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},F="dangerouslySetInnerHTML",j={className:"class",htmlFor:"for"},V={},function(e,t){var n=[],r="";t=t||{};for(var o=arguments.length;o-- >2;)n.push(arguments[o]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(var a in t)!1!==t[a]&&null!=t[a]&&a!==F&&(r+=" "+(j[a]?j[a]:q(a))+'="'+q(t[a])+'"');r+=">"}if(-1===B.indexOf(e)){if(t[F])r+=t[F].__html;else for(;n.length;){var i=n.pop();if(i)if(i.pop)for(var s=i.length;s--;)n.push(i[s]);else r+=!0===V[i]?i:q(i)}r+=e?"</"+e+">":""}return V[r]=!0,r})),U.exports),H=e(X);const R=({children:e})=>H(null,null,...e),W=`${u}presenter-`,J={container:`${W}container`,dragbar:`${W}dragbar-container`,next:`${W}next`,nextContainer:`${W}next-container`,noteContainer:`${W}note-container`,noteWrapper:`${W}note-wrapper`,noteButtons:`${W}note-buttons`,infoContainer:`${W}info-container`,infoPage:`${W}info-page`,infoPageText:`${W}info-page-text`,infoPagePrev:`${W}info-page-prev`,infoPageNext:`${W}info-page-next`,noteButtonsBigger:`${W}note-bigger`,noteButtonsSmaller:`${W}note-smaller`,infoTime:`${W}info-time`,infoTimer:`${W}info-timer`},Y=e=>{const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=J.container,t.appendChild(e),t.insertAdjacentHTML("beforeend",H(R,null,H("div",{class:J.nextContainer},H("iframe",{class:J.next,src:"?view=next"})),H("div",{class:J.dragbar}),H("div",{class:J.noteContainer},H("div",{class:J.noteWrapper}),H("div",{class:J.noteButtons},H("button",{class:J.noteButtonsSmaller,tabindex:"-1",title:"Smaller notes font size"},"Smaller notes font size"),H("button",{class:J.noteButtonsBigger,tabindex:"-1",title:"Bigger notes font size"},"Bigger notes font size"))),H("div",{class:J.infoContainer},H("div",{class:J.infoPage},H("button",{class:J.infoPagePrev,tabindex:"-1",title:"Previous"},"Previous"),H("span",{class:J.infoPageText}),H("button",{class:J.infoPageNext,tabindex:"-1",title:"Next"},"Next")),H("time",{class:J.infoTime,title:"Current time"}),H("time",{class:J.infoTimer,title:"Timer"})))),t})(e.parent)),(e=>{let t=!1;r(J.dragbar).addEventListener("mousedown",()=>{t=!0,r(J.dragbar).classList.add("active")}),window.addEventListener("mouseup",()=>{t=!1,r(J.dragbar).classList.remove("active")}),window.addEventListener("mousemove",e=>{if(!t)return;const n=e.clientX/document.documentElement.clientWidth*100;r(J.container).style.setProperty("--bespoke-marp-presenter-split-ratio",`${Math.max(0,Math.min(100,n))}%`)}),r(J.nextContainer).addEventListener("click",()=>e.next());const n=r(J.next),o=(a=n,(e,t)=>a.contentWindow?.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin));var a;n.addEventListener("load",()=>{r(J.nextContainer).classList.add("active"),o(e.slide(),e.fragmentIndex),e.on("fragment",({index:e,fragmentIndex:t})=>o(e,t))});const i=document.querySelectorAll(".bespoke-marp-note");i.forEach(e=>{e.addEventListener("keydown",e=>e.stopPropagation()),r(J.noteWrapper).appendChild(e)}),e.on("activate",()=>i.forEach(t=>t.classList.toggle("active",t.dataset.index==e.slide())));let s=0;const c=e=>{s=Math.max(-5,s+e),r(J.noteContainer).style.setProperty("--bespoke-marp-note-font-scale",(1.2**s).toFixed(4))},l=()=>c(1),d=()=>c(-1),u=r(J.noteButtonsBigger),f=r(J.noteButtonsSmaller);u.addEventListener("click",()=>{u.blur(),l()}),f.addEventListener("click",()=>{f.blur(),d()}),document.addEventListener("keydown",e=>{"+"===e.key&&l(),"-"===e.key&&d()},!0),e.on("activate",({index:t})=>{r(J.infoPageText).textContent=`${t+1} / ${e.slides.length}`});const m=r(J.infoPagePrev),g=r(J.infoPageNext);m.addEventListener("click",t=>{m.blur(),e.prev({fragment:!t.shiftKey})}),g.addEventListener("click",t=>{g.blur(),e.next({fragment:!t.shiftKey})}),e.on("fragment",({index:t,fragments:n,fragmentIndex:r})=>{m.disabled=0===t&&0===r,g.disabled=t===e.slides.length-1&&r===n.length-1});let p=new Date;const v=()=>{const e=new Date,t=e=>`${Math.floor(e)}`.padStart(2,"0"),n=e.getTime()-p.getTime(),o=t(n/1e3%60),a=t(n/1e3/60%60),i=t(n/36e5%24);r(J.infoTime).textContent=e.toLocaleTimeString(),r(J.infoTimer).textContent=`${i}:${a}:${o}`};v(),setInterval(v,250),r(J.infoTimer).addEventListener("click",()=>{p=new Date})})(e)},z=e=>{if(!(e=>e.syncKey&&"string"==typeof e.syncKey)(e))throw new Error("The current instance of Bespoke.js is invalid for Marp bespoke presenter plugin.");Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:G},presenterUrl:{enumerable:!0,get:Q}}),h&&document.addEventListener("keydown",t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())})};function G(){const{max:e,floor:t}=Math,n=e(t(.85*window.innerWidth),640),r=e(t(.85*window.innerHeight),360);return window.open(this.presenterUrl,W+this.syncKey,`width=${n},height=${r},menubar=no,toolbar=no`)}function Q(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),m(e)}const Z=e=>{const t=g();return t===l&&e.appendChild(document.createElement("span")),{[s]:z,[c]:Y,[l]:D}[t]},ee=e=>{e.on("activate",t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach(n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"})})},te=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t},ne=(e={})=>{const t={history:!0,...e};return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},o=(t={fragment:!0})=>{let n=t.fragment?te(p("f")||""):null;((t,n)=>{const{min:r,max:o}=Math,{fragments:a,slides:i}=e,s=o(0,r(t,i.length-1)),c=o(0,r(n||0,a[s].length-1));s===e.slide()&&c===e.fragmentIndex||e.slide(s,{fragment:c})})((()=>{if(location.hash){const[t]=location.hash.slice(1).split(":~:");if(/^\d+$/.test(t))return(te(t)??1)-1;const r=document.getElementById(t)||document.querySelector(`a[name="${CSS.escape(t)}"]`);if(r){const{length:t}=e.slides;for(let o=0;o<t;o+=1)if(e.slides[o].contains(r)){const t=e.fragments?.[o],a=r.closest("[data-marpit-fragment]");if(t&&a){const e=t.indexOf(a);e>=0&&(n=e)}return o}}}return 0})(),n)};e.on("fragment",({index:e,fragmentIndex:r})=>{n||v({f:0===r||r.toString()},{location:{...location,hash:`#${e+1}`},setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})}),setTimeout(()=>{o(),window.addEventListener("hashchange",()=>r(()=>{o({fragment:!1}),v({f:void 0})})),window.addEventListener("popstate",()=>{n||r(()=>o())}),n=!1},0)}},re=(e={})=>{const t=e.key||window.history.state?.marpBespokeSyncKey||Math.random().toString(36).slice(2),n=`bespoke-marp-sync-${t}`;var r;r={marpBespokeSyncKey:t},v({},{setter:(e,...t)=>i({...e,...r},...t)});const o=()=>{const e=y(n);return e?JSON.parse(e):Object.create(null)},a=e=>{const t=o(),r={...t,...e(t)};return b(n,JSON.stringify(r)),r},s=()=>{window.removeEventListener("pageshow",s),a(e=>({reference:(e.reference||0)+1}))};return e=>{s(),Object.defineProperty(e,"syncKey",{value:t,enumerable:!0});let r=!0;setTimeout(()=>{e.on("fragment",e=>{r&&a(()=>({index:e.index,fragmentIndex:e.fragmentIndex}))})},0),window.addEventListener("storage",t=>{if(t.key===n&&t.oldValue&&t.newValue){const n=JSON.parse(t.oldValue),o=JSON.parse(t.newValue);if(n.index!==o.index||n.fragmentIndex!==o.fragmentIndex)try{r=!1,e.slide(o.index,{fragment:o.fragmentIndex,forSync:!0})}finally{r=!0}}});const i=()=>{const{reference:e}=o();void 0===e||e<=1?w(n):a(()=>({reference:e-1}))};window.addEventListener("pagehide",e=>{e.persisted&&window.addEventListener("pageshow",s),i()}),e.on("destroy",i)}},{PI:oe,abs:ae,sqrt:ie,atan2:se}=Math,ce={passive:!0},le=({slope:e=-.7,swipeThreshold:t=30}={})=>n=>{let r;const o=n.parent,a=e=>{const t=o.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};o.addEventListener("touchstart",({touches:e})=>{r=1===e.length?a(e[0]):void 0},ce),o.addEventListener("touchmove",e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=a(e.touches[0]),n=t.x-r.x,o=t.y-r.y;r.delta=ie(ae(n)**2+ae(o)**2),r.radian=se(n,o)}else r=void 0}),o.addEventListener("touchend",o=>{if(r){if(r.delta&&r.delta>=t&&r.radian){const t=(r.radian-e+oe)%(2*oe)-oe;n[t<0?"next":"prev"](),o.stopPropagation()}r=void 0}},ce)},de=new Map;de.clear(),de.set("none",{backward:{both:void 0,incoming:void 0,outgoing:void 0},forward:{both:void 0,incoming:void 0,outgoing:void 0}});const ue={both:"",outgoing:"outgoing-",incoming:"incoming-"},fe={forward:"",backward:"-backward"},me=e=>`--marp-bespoke-transition-animation-${e}`,ge=e=>`--marp-transition-${e}`,pe=me("name"),ve=me("duration"),he=e=>new Promise(t=>{const n={},r=document.createElement("div"),o=e=>{r.remove(),t(e)};r.addEventListener("animationstart",()=>o(n)),Object.assign(r.style,{animationName:e,animationDuration:"1s",animationFillMode:"both",animationPlayState:"paused",position:"absolute",pointerEvents:"none"}),document.body.appendChild(r);const a=getComputedStyle(r).getPropertyValue(ge("duration"));a&&Number.parseFloat(a)>=0&&(n.defaultDuration=a),((e,t)=>{requestAnimationFrame(()=>{e.style.animationPlayState="running",requestAnimationFrame(()=>t(void 0))})})(r,o)}),ye=async e=>de.has(e)?de.get(e):(e=>{const t={},n=[];for(const[r,o]of Object.entries(ue))for(const[a,i]of Object.entries(fe)){const s=`marp-${o}transition${i}-${e}`;n.push(he(s).then(e=>{t[a]=t[a]||{},t[a][r]=e?{...e,name:s}:void 0}))}return Promise.all(n).then(()=>t)})(e).then(t=>(de.set(e,t),t)),be=e=>Object.values(e).flatMap(Object.values).every(e=>!e),we=(e,{type:t,backward:n})=>{const r=e[n?"backward":"forward"],o=(()=>{const e=r[t],n=e=>({[pe]:e.name});if(e)return n(e);if(r.both){const e=n(r.both);return"incoming"===t&&(e[me("direction")]="reverse"),e}})();return!o&&n?we(e,{type:t,backward:!1}):o||{[pe]:"__bespoke_marp_transition_no_animation__"}},xe=e=>{if(e)try{const t=JSON.parse(e);if((e=>{if("object"!=typeof e)return!1;const t=e;return"string"==typeof t.name&&(void 0===t.duration||"string"==typeof t.duration)})(t))return t}catch{}},ke="_tSId",$e="_tA",Ee="bespoke-marp-transition-warming-up",Le=window.matchMedia("(prefers-reduced-motion: reduce)"),Se="__bespoke_marp_transition_reduced_outgoing__",Pe="__bespoke_marp_transition_reduced_incoming__",_e={forward:{both:void 0,incoming:{name:Pe},outgoing:{name:Se}},backward:{both:void 0,incoming:{name:Pe},outgoing:{name:Se}}},Te=e=>{if(!document.startViewTransition)return;const t=t=>(void 0!==t&&(e._tD=t),e._tD);let n;t(!1),((...e)=>{CSS.registerProperty({name:ge("duration"),syntax:"<time>",inherits:!0,initialValue:"-1s"});const t=[...new Set(e).values()];return Promise.all(t.map(e=>ye(e))).then()})(...Array.from(document.querySelectorAll("section[data-transition], section[data-transition-back]")).flatMap(e=>[e.dataset.transition,e.dataset.transitionBack].flatMap(e=>{const t=xe(e);return[t?.name,t?.builtinFallback?`__builtin__${t.name}`:void 0]}).filter(e=>!!e))).then(()=>{document.querySelectorAll("style").forEach(e=>{e.innerHTML=e.innerHTML.replace(/--marp-transition-duration:[^;}]*[;}]/g,e=>e.slice(0,-1)+"!important"+e.slice(-1))})});const r=(n,{back:r,cond:o})=>a=>{const i=t();if(i)return!!a[$e]||!("object"!=typeof i||(i.skipTransition(),!a.forSync));if(!o(a))return!0;const s=e.slides[e.slide()],c=()=>a.back??r,l="data-transition"+(c()?"-back":""),d=s.querySelector(`section[${l}]`);if(!d)return!0;const u=xe(d.getAttribute(l)??void 0);return!u||((async(e,{builtinFallback:t=!0}={})=>{let n=await ye(e);if(be(n)){if(!t)return;return n=await ye(`__builtin__${e}`),be(n)?void 0:n}return n})(u.name,{builtinFallback:u.builtinFallback}).then(e=>{if(!e){t(!0);try{n(a)}finally{t(!1)}return}let r=e;Le.matches&&(console.warn("Use a constant animation to transition because preferring reduced motion by viewer has detected."),r=_e);const o=document.getElementById(ke);o&&o.remove();const i=document.createElement("style");i.id=ke,document.head.appendChild(i),((e,t)=>{const n=[`:root{${ge("direction")}:${t.backward?-1:1};}`,":root:has(.bespoke-marp-inactive){cursor:none;}"],r=t=>{const n=e[t].both?.defaultDuration||e[t].outgoing?.defaultDuration||e[t].incoming?.defaultDuration;return"forward"===t?n:n||r("forward")},o=t.duration||r(t.backward?"backward":"forward");void 0!==o&&n.push(`::view-transition-group(*){${ve}:${o};}`);const a=e=>Object.entries(e).map(([e,t])=>`${e}:${t};`).join("");return n.push(`::view-transition-old(root){${a(we(e,{...t,type:"outgoing"}))}}`,`::view-transition-new(root){${a(we(e,{...t,type:"incoming"}))}}`),n})(r,{backward:c(),duration:u.duration}).forEach(e=>i.sheet?.insertRule(e));const s=document.documentElement.classList;s.add(Ee);let l=!1;const d=()=>{l||(n(a),l=!0,s.remove(Ee))},f=()=>{t(!1),i.remove(),s.remove(Ee)};try{t(!0);const e=document.startViewTransition(d);t(e),e.finished.finally(f)}catch(e){console.error(e),d(),f()}}),!1)};e.on("prev",r(t=>e.prev({...t,[$e]:!0}),{back:!0,cond:e=>e.index>0&&!((e.fragment??1)&&n.fragmentIndex>0)})),e.on("next",r(t=>e.next({...t,[$e]:!0}),{cond:t=>t.index+1<e.slides.length&&!(n.fragmentIndex+1<n.fragments.length)})),setTimeout(()=>{e.on("slide",r(t=>e.slide(t.index,{...t,[$e]:!0}),{cond:t=>{const n=e.slide();return t.index!==n&&(t.back=t.index<n,!0)}}))},0),e.on("fragment",e=>{n=e})};let Ie;const Me=()=>(void 0===Ie&&(Ie="wakeLock"in navigator&&navigator.wakeLock),Ie),Oe=async()=>{const e=Me();if(e)try{return await e.request("screen")}catch(e){console.warn(e)}return null},Ae=async()=>{if(!Me())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&Oe()};for(const e of["visibilitychange","fullscreenchange"])document.addEventListener(e,t);return e=await Oe(),e};((e=document.getElementById(":$p"))=>{(()=>{const e=p("view");a.dataset.bespokeView=e===l||e===c?e:""})();const t=(e=>{const t=p(e);return v({[e]:void 0}),t})("sync")||void 0;o.from(e,((...e)=>{const t=d.findIndex(e=>g()===e);return e.map(([e,n])=>e[t]&&n).filter(e=>e)})([[1,1,0],re({key:t})],[[1,1,1],Z(e)],[[1,1,0],M],[[1,1,1],k],[[1,0,0],T()],[[1,1,1],O],[[1,1,1],ne({history:!1})],[[1,1,0],A()],[[1,1,0],P],[[1,0,0],ee],[[1,1,0],le()],[[1,0,0],C()],[[1,0,0],Te],[[1,1,1],$],[[1,1,0],Ae]))})()}();</script></body></html>

@@ -29,6 +29,23 @@ January 12, 2026
 | Your Assignment: Scenario → Brief | 25 min |
 | Closing | 25 min |
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This is the final block of the course. Energy may be lower after a full day. The content is practical (capstone preparation) and motivational (closing). Pace appropriately — not too slow, but allow for reflection.
+
+**Key point:** Everything we've covered leads to the capstone. This block makes that connection explicit.
+
+**Say something like:**
+"This is our final block. We're covering four things: the capstone lifecycle so you know what's coming, how to find and secure projects, your assignment that's due Thursday, and then we'll close out the course.
+
+This block is practical. It's about your capstone — the biggest single deliverable in your program. Everything we've covered over the past two days is meant to help you scope that project well."
+
+**Energy check:** This is late in Day 2. If energy seems low, consider starting with a quick stand-up stretch or a brief energizer question.
+
+**Transition:** "Let me start by framing why this matters..."
+-->
+
 ---
 
 ## Why This Matters
@@ -40,6 +57,25 @@ Everything in this course points toward one thing:
 This is the largest single deliverable in your program. It's what employers see. It's what you talk about in interviews.
 
 The Analytics Project Brief is your tool to **scope it professionally**.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Students may not yet appreciate how important the capstone is for their careers. It's the main portfolio piece they'll reference in job interviews. Employers care about it. Poor scoping leads to poor capstones leads to weak interview stories.
+
+**Key point:** The capstone is career-relevant. Good scoping = good capstone = good interview stories.
+
+**Say something like:**
+"Everything in this course points toward one thing: your capstone project.
+
+This isn't just an academic exercise. The capstone is the largest single deliverable in your program. It's what employers see when they review your CV. It's what you'll talk about in interviews for years.
+
+I can tell you from experience as a hiring manager: capstone projects matter. When I interview someone, I ask about their biggest analytical project. The people who can explain it clearly — the problem, the approach, the impact, the challenges — stand out. The people who mumble through a vague description of 'some analysis I did' don't get hired.
+
+The Brief is your tool to scope the capstone professionally. Good scoping leads to good execution leads to good stories in interviews."
+
+**Transition:** "Let me walk you through the capstone timeline..."
+-->
 
 ---
 
@@ -121,6 +157,31 @@ First you'll practice concepts while searching for projects, then build Brief se
 | **Demonstrable impact** | You can show what you did mattered |
 
 **Warning signs:** Vague questions, unavailable data, absent sponsors.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This slide establishes the criteria for project selection. Students often accept the first project that comes along. These five criteria help them evaluate whether a project will be successful.
+
+**Key point:** Not all projects are created equal. Learn to say no to bad projects.
+
+**Say something like:**
+"Let me tell you what makes a good capstone project.
+
+Real business question: Not 'explore the data' but 'should we invest in X?' Real questions have answers that lead to decisions.
+
+Access to data: Sounds obvious, but I've seen capstones fail because the promised data never materialized. Before you commit, see the data.
+
+Engaged sponsor: Someone who will give you feedback, answer questions, and validate that your findings make sense. A sponsor who's 'too busy' is a red flag.
+
+Feasible scope: You have limited time. A project that could take 6 months isn't a capstone; it's a full-time job. Scope it down.
+
+Demonstrable impact: Can you show what you did mattered? If the analysis sits on a shelf, it's hard to talk about in interviews.
+
+Warning signs: vague questions, unavailable data, absent sponsors. These are predictors of failed capstones."
+
+**Transition:** "Let me say more about the sponsor relationship..."
+-->
 
 ---
 
@@ -227,6 +288,33 @@ Before committing, ask:
 | "We've tried this before" | Previous failures; why? |
 | "It needs to be done by [soon]" | Not a capstone, it's free labor |
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** These are actual phrases students have heard from potential sponsors. Each one sounds benign but predicts problems. Teaching students to recognize these early saves them from bad projects.
+
+**Key point:** Learn the language of red flags. Trust your instincts when something feels off.
+
+**Say something like:**
+"Let me teach you the language of red flags. These are actual things sponsors have said to students.
+
+'We have tons of data, just explore.' This means there's no clear question. Exploration without a question is a recipe for wasted time.
+
+'We'll get you access soon.' This often means the data never comes. Before you commit, SEE the data.
+
+'The CEO is very interested.' But the CEO is never available. Interest without availability isn't helpful.
+
+'This is a simple project.' Simple projects creep. If they say it's simple, ask why they haven't done it themselves.
+
+'We've tried this before.' Ask why it failed. You might be walking into the same problem.
+
+'It needs to be done by [soon].' If it's urgent, it's not a capstone — it's free labor. Capstones have academic timelines.
+
+When you hear these phrases, dig deeper or walk away."
+
+**Transition:** "How do you negotiate scope when sponsors want too much?..."
+-->
+
 ---
 
 ## Negotiating Scope with Sponsors
@@ -299,6 +387,30 @@ Questions to ask:
 - Constraints
 
 **What you'll submit:** A complete Analytics Project Brief for that scenario.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This is the first major assignment (30% of grade). Each student receives a unique scenario to prevent copying and force independent thinking. The deadline is Thursday evening, giving students 4 days to complete it.
+
+**Key point:** Unique scenarios mean you can't collaborate on answers. You can discuss approaches but not share your Brief.
+
+**Say something like:**
+"Let me tell you about your assignment.
+
+Due Thursday, January 16 at 23:59 CET. That's four days from now.
+
+You'll each receive a unique 2-page business scenario. Different company, different problem, different constraints. This is intentional — it prevents copying and forces you to think independently.
+
+The scenario will give you everything you need: the company situation, the business problem, key stakeholders, available data, and constraints. Your job is to write a complete Analytics Project Brief for that scenario.
+
+You'll receive your scenario via email after class today. If you don't receive it by tonight, email me."
+
+**If asked:** "Can we work together?"
+A: You can discuss the Brief framework and general approaches. You cannot share your scenario or your Brief sections. Each scenario is unique to you.
+
+**Transition:** "Why unique scenarios?..."
+-->
 
 ---
 
@@ -385,6 +497,33 @@ Your scenario will be distributed via email after class today.
 | Metrics | 15 | Risks & Pre-Mortem | 15 |
 | Stakeholders | 15 | Overall coherence | 20 |
 | Methodology | 15 | | |
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** The rubric shows where points are allocated. Metrics, Stakeholders, and Pre-Mortem are weighted heavily because these are where students typically struggle most. Overall Coherence (20 pts) is the largest single category — this is where most points are lost.
+
+**Key point:** Coherence matters most. Sections must connect, not stand alone.
+
+**Say something like:**
+"Here's how the assignment is graded. Notice the distribution.
+
+Problem & Decision: 10 points. This should be the easiest section.
+
+Metrics: 15 points. SQL-level precision matters. 'Conversion rate' with no definition will lose points.
+
+Stakeholders: 15 points. Named blockers with motivations, not 'leadership.'
+
+Methodology: 15 points. Justified analysis selection, not 'we'll look at the data.'
+
+Scope & Success: 10 points. Clear in/out scope, decision criteria.
+
+Risks & Pre-Mortem: 15 points. Specific failure scenarios, not generic.
+
+And the big one: Overall Coherence. 20 points. This is where most points are lost. Your sections need to connect. The methodology must answer the problem. The counter-metrics must anticipate the pre-mortem. If your sections feel like independent documents, you'll lose points here."
+
+**Transition:** "Let me explain what coherence means..."
+-->
 
 ---
 
@@ -524,6 +663,31 @@ These are **practice exercises** that prepare you for your capstone.
 
 5. **"Your job is never to optimize a metric."** — Improve the experience it measures.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** These five messages are the course distilled to its essence. If students remember nothing else, these five principles will serve them throughout their careers.
+
+**Key point:** Five principles that will guide your work for years.
+
+**Say something like:**
+"If you remember nothing else from this course, remember these five things.
+
+One: Fill out the Brief before you analyze. Not after. Not during. Before. 30 minutes of scoping saves 30 hours of wrong analysis.
+
+Two: What breaks if you succeed? Always identify counter-metrics. Optimization without guardrails is dangerous.
+
+Three: Never surprise a stakeholder. Pre-brief uncomfortable findings. The meeting should be confirmation, not revelation.
+
+Four: Correlation is not causation. Before you recommend forcing a behavior on users, A/B test it. Tutorial completers retain better, but mandating tutorials might not improve retention.
+
+Five: Your job is never to optimize a metric. Your job is to improve the experience that the metric measures. The metric is a proxy. Don't optimize the proxy at the expense of reality.
+
+These five principles will guide your work for years. Write them down."
+
+**Transition:** "And here's why each tool we taught you matters..."
+-->
+
 ---
 
 ## What Each Piece Prevents
@@ -553,15 +717,61 @@ In 10 years:
 
 **That's what this course is for.**
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This is the emotional close of the course. Students have absorbed a lot of content over two days. This slide is about durable value — the distinction between technical skills that depreciate and professional habits that compound. The goal is for students to feel that what they learned will matter throughout their careers, not just for the capstone.
+
+**Key point:** Technical skills change. The discipline of scoping well is forever.
+
+**Say something like:**
+"I want to close with something that I hope you'll remember years from now.
+
+The technical skills you've learned — and will continue to learn — will evolve. The Python library you master this year might be deprecated in five years. The SQL syntax you memorize will be replaced by something else. The hot analytical framework of today will be the legacy system of tomorrow.
+
+That's fine. That's how technology works. You'll adapt.
+
+But the discipline of scoping projects well? That's durable. In 10 years, you might not remember the syntax for a cohort retention query. But you WILL remember to ask 'what breaks if we succeed?' You WILL remember to identify blockers before you present uncomfortable findings. You WILL remember that 30 minutes of scoping saves 30 hours of wrong analysis.
+
+That's what this course is for. Not to teach you tools that will change. To teach you habits that will compound.
+
+The Brief framework is just a structure. The real skill is the discipline: don't start analyzing until you've done the hard work of alignment. That discipline will serve you whether you're a junior analyst or a VP. Whether you're in tech or healthcare or finance. Whether analytics looks like Python or something that doesn't exist yet.
+
+[Pause]
+
+I hope you carry that with you."
+
+**If asked:** [unlikely at this moment]
+
+**Transition:** "Any final questions?"
+-->
+
 ---
 
 ## Questions?
 
 <!--
 INSTRUCTOR NOTE:
-Take final questions.
-If none: "What's one thing you'll do differently in your next analytics project?"
-Cold call 2-3 students.
+
+**Background:** Final Q&A before the course ends. This is the last chance for students to clarify anything. If there are no questions, use the reflection prompt.
+
+**Key point:** End with reflection if no questions.
+
+**Facilitation:**
+Take final questions. If none after 15 seconds:
+
+"What's one thing you'll do differently in your next analytics project?"
+
+Cold call 2-3 students. Listen to their answers. Affirm good ones.
+
+This creates closure and reinforces learning through verbalization.
+
+**Common final questions:**
+- "Where can we learn more?" → Point to the reading list, suggest books on analytics project management
+- "Will this really help with the capstone?" → Yes, the Brief is the foundation of good scoping
+- "Can I contact you if I'm stuck?" → Yes, office hours by appointment
+
+**Transition:** "Thank you all for your engagement..."
 -->
 
 ---
@@ -578,6 +788,25 @@ Cold call 2-3 students.
 - rubiae@ceu.edu
 - Office hours by appointment
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This is the administrative close. Make sure students know what's coming and how to reach you.
+
+**Key point:** Reinforce the immediate next steps.
+
+**Say something like:**
+"Thank you all for your engagement over these two days.
+
+Here's what's coming. Your scenario will be emailed to you today — check your inbox. The assignment is due Thursday January 16 by 23:59 CET. The exam is January 27 — 90 minutes, one A4 cheat sheet allowed. And the weekly write-ups run from February 10 through March 17.
+
+If you have questions, email me at rubiae@ceu.edu. For urgent matters, earino@gmail.com. Office hours are available by appointment — just email to schedule.
+
+Good luck with your assignment. I look forward to reading your Briefs."
+
+**Transition:** Move to final slide.
+-->
+
 ---
 
 <!-- _class: lead -->
@@ -590,4 +819,29 @@ Cold call 2-3 students.
 Fill out the Brief before you analyze.
 Ask "what breaks?" before you recommend.
 Never surprise a stakeholder.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This is the final slide. It should stay on screen as students leave. The three principles are the course in three lines.
+
+**Key point:** Leave the room with these principles visible.
+
+**Say something like:**
+"Your job is to drive better decisions with data. That's what analytics is for.
+
+Three things to remember:
+Fill out the Brief before you analyze.
+Ask 'what breaks?' before you recommend.
+Never surprise a stakeholder.
+
+Thank you. Good luck with your capstones. I'll see your Briefs on Thursday."
+
+[Wait for applause if appropriate, otherwise dismiss]
+
+**Post-class:**
+- Send scenario emails within 2 hours of class ending
+- Be available for email questions over the next few days
+- Monitor for students who don't receive their scenarios
+-->
 

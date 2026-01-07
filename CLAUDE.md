@@ -51,10 +51,28 @@ The centerpiece teaching tool is the **Analytics Project Brief** (one-page templ
 │   └── images/                     # Designer-created slide images
 ├── scripts/
 │   └── check_overflow.py           # Slide overflow detection tool
+├── instructor_resources/           # GITIGNORED - not in repo (see below)
 ├── extract_pdf_text.py             # OCR utility for extracting text from PDFs
 ├── extract_pdf_with_images.py      # Alternative PDF extraction with image processing
 └── *_text.txt                      # Extracted text from PDFs
 ```
+
+### Instructor Resources (Local Only)
+
+The `instructor_resources/` directory exists locally but is **gitignored** (not committed to the repo). This contains sensitive materials students should not see:
+
+```
+instructor_resources/
+├── presenter_mode_guide.md    # How to use Marp presenter mode for instructor notes
+├── grading_rubric.md          # Detailed rubric with point values and red flags
+└── scenario_key.md            # "Golden key" for all 18 scenarios (traps, ideal answers)
+```
+
+**IMPORTANT:** Never commit this directory. It contains:
+- Scenario answers (the "traps" and ideal solutions)
+- Grading criteria students could use to game the assignment
+
+If recreating this directory on a new machine, the files must be manually copied from a secure backup.
 
 ## Common Development Tasks
 

@@ -10,6 +10,7 @@ old/
 # Sensitive course materials (not for public repo)
 exam/
 grading/
+instructor_resources/
 
 # Python
 __pycache__/

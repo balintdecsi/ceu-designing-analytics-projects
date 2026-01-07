@@ -636,59 +636,784 @@ Months to recover CAC. Needs: monthly revenue by cohort.</p>
 <footer>Block 4: Application &amp; Practice</footer>
 </section>
 <script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{container;containerSize;containerObserver;svg;svgComputedStyle;svgPreserveAspectRatio="xMinYMid meet";wrapper;wrapperSize;wrapperObserver;constructor(){super();const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver(((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()}))}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=this.shadowRoot.querySelector(`div[${e}]`)??void 0;const t=this.svg;this.svg=this.wrapper?.querySelector(`svg[${i}]`)??void 0,this.svg!==t&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=this.svg?.querySelector(`span[${n}]`)??void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame((()=>{t.style.display=""})))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){let t=Math.ceil(this.containerSize?.width??0);const e=Math.ceil(this.containerSize?.height??0);void 0!==this.dataset.downscaleOnly&&(t=Math.max(t,this.wrapperSize?.width??0));const i=this.svg?.querySelector(":scope > foreignObject");if(i?.setAttribute("width",`${t}`),i?.setAttribute("height",`${e}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${t} ${e}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=t<=0||e<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const r=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this._shadow()}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_shadow(){if(!this.shadowRoot)try{this.attachShadow({mode:"open"})}catch(t){if(!(t instanceof Error&&"NotSupportedError"===t.name))throw t}return this.shadowRoot}_update(){const t=this._shadow();if(t){const e=i?`<style>:host { ${i} }</style>`:"";let n="<slot></slot>";const{autoScaling:s}=this.dataset;if(void 0!==s){n=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===s?"data-downscale-only":""}>${n}</marp-auto-scaling>`}t.innerHTML=e+n}}};let o;const a=Symbol();let l;const c="marpitSVGPolyfill:setZoomFactor,",d=Symbol(),h=Symbol();const g=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[u]:[],i={then:e=>(t?(async()=>{if(void 0===l){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise((t=>{i.addEventListener("load",(()=>t()))}));i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),l=e.getImageData(5,5,1,1).data[3]<128}return l})().then((t=>{null==e||e(t?[u]:[])})):null==e||e([]),i)};return Object.assign(e,i)};let p,m;function u(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[h]||(Object.defineProperty(window,h,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",(({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(c)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(m=i)}}catch(t){console.error(t)}})));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),(t=>{var e,s,r,o;t.style.transform||(t.style.transform="translateZ(0)");const a=i||m||t.currentScale||1;p!==a&&(p=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(o=null===(r=n.y)||void 0===r?void 0:r.baseVal.value)&&void 0!==o?o:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}})),!1!==n&&Array.from(e.querySelectorAll("iframe"),(({contentWindow:t})=>{null==t||t.postMessage(`${c}${n}`,"null"===window.origin?"*":window.origin)}))}function v({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[d])return t[d];let e=!0;const i=()=>{e=!1,delete t[d]};Object.defineProperty(t,d,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await g()}finally{s=!0}})();const r=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(r)};return r(),i}(e);return t?(i(),()=>{}):i}p=1,m=void 0;const w=Symbol(),b=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[a];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,a=t[n].proto();(o??(o=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is"),o))&&a!==HTMLElement?i||customElements.define(s,r(a,{style:t[n].style}),{extends:n}):(i||customElements.define(s,r(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach((t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)})))}window[a]=!0})(e),e[w])return e[w];const i=v({target:e}),n=()=>{i(),delete e[w]},l=Object.assign(n,{cleanup:n,update:()=>b(e)});return Object.defineProperty(e,w,{configurable:!0,value:l}),l},y=document.currentScript;b(y?y.getRootNode():document)}();
-</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="6" tabindex="0"><p>INSTRUCTOR NOTE:
-Take 4-5 questions. Common ones:
-- &quot;How do I choose between analyses?&quot;
-- &quot;What if I don't have the data?&quot;
-- &quot;How detailed should the Brief be?&quot;
-- &quot;What's the difference between guardrail and tradeoff?&quot;
+</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="1" tabindex="0"><p>INSTRUCTOR NOTE:
 
-If no questions, prompt: &quot;What was most surprising about Day 1?&quot;</p></div><div class="bespoke-marp-note" data-index="11" tabindex="0"><p>INSTRUCTOR NOTE:
-Looking for: Investors have specific expectations (benchmarks).
-Board context means this is high-stakes.
-Timeline is probably tied to fundraising.</p></div><div class="bespoke-marp-note" data-index="13" tabindex="0"><p>INSTRUCTOR NOTE:
-Looking for: Present scenarios not verdicts.
-Private conversation before broad share.
-Frame as &quot;tradeoffs leadership must decide&quot; not &quot;paid team failed.&quot;</p></div><div class="bespoke-marp-note" data-index="15" tabindex="0"><p>INSTRUCTOR NOTE:
-Looking for: Free users have different economics.
-Including them would muddy the paid subscriber analysis.
-Could be a separate analysis.</p></div><div class="bespoke-marp-note" data-index="17" tabindex="0"><p>INSTRUCTOR NOTE:
-Looking for: Product changes, pricing changes, competitor entry,
-economic shifts, cohort composition changes</p></div><div class="bespoke-marp-note" data-index="21" tabindex="0"><p>INSTRUCTOR NOTE:
-Possible answers:
-- No sensitivity analysis specified for LTV projections
-- Doesn't address channel interaction explicitly in methodology
-- Timeline might be aggressive for board-quality work
-- Could specify action thresholds more precisely</p></div><div class="bespoke-marp-note" data-index="25" tabindex="0"><p>INSTRUCTOR NOTE:
-Reasonable answers:
-- CAC/LTV (are we acquiring profitably?)
-- Funnel (where are free users dropping off before premium?)
-- Expansion/Monetization (what triggers free→paid conversion?)
-- Attribution (which channels are working?)
+**Background:** Day 2 starts after a 4-day break. Students have had time to digest Day 1 concepts but may have forgotten details. The morning coffee break just ended, so energy should be reasonable. This block is the transition from &quot;learning concepts&quot; to &quot;applying concepts.&quot;
 
-Push back on any answer — &quot;Why not [X] instead?&quot;</p></div><div class="bespoke-marp-note" data-index="27" tabindex="0"><p>INSTRUCTOR NOTE:
-Reasonable answers:
-- Failure Analysis (categorize why deliveries fail — carrier? address? inventory?)
-- Funnel (where in the delivery process do failures occur?)
-- Retention (are affected customers churning?)
+**Key point:** Set the tone that today is hands-on. Less lecture, more practice.
 
-Key insight: This is exploratory — they don't know the root cause.
-Failure Analysis is the right starting point.</p></div><div class="bespoke-marp-note" data-index="29" tabindex="0"><p>INSTRUCTOR NOTE:
-Reasonable answers:
-- Ecosystem Analysis (complement vs. substitute?)
-- Power User (are multi-product users more valuable?)
-- Retention (do multi-product users retain better? Is it causal?)
+**Say something like:**
+&quot;Welcome back! I hope the long weekend gave you time to let Day 1 sink in. Today is different from Day 1. Less lecture, more practice.
 
-Key pushback: Selection bias! Multi-product correlation ≠ causation.</p></div><div class="bespoke-marp-note" data-index="33" tabindex="0"><p>INSTRUCTOR NOTE:
-Set a visible 10-minute timer.
-Walk around but don't answer questions — this simulates exam conditions.
-After 10 min: &quot;Pens down. How did that feel?&quot;</p></div><div class="bespoke-marp-note" data-index="34" tabindex="0"><p>INSTRUCTOR NOTE:
-Common struggles:
-- Metric precision takes longer than expected
-- Hard to justify counter-metric quickly
-- Blocker motivation requires scenario re-reading
+By the end of Day 1, you had all the vocabulary — Briefs, counter-metrics, stakeholder maps, the 9 analyses. Today we put it together. You'll work through complete scenarios, argue with each other about analysis choices, and practice under time pressure.
 
-Key message: &quot;This is why you practice. Your assignment is Thursday.&quot;</p></div><div class="bespoke-marp-note" data-index="44" tabindex="0"><p>INSTRUCTOR NOTE:
-Take 2-3 questions max.
-End on time — lunch break matters for afternoon energy.</p></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@4.2.3/lib/bespoke.js.LICENSE.txt */
+The goal is that by the end of today, you're ready for your assignment on Thursday.&quot;
+
+**Energy management:** This is the first slide of Day 2. Take a moment to scan the room. How are energy levels? If people seem sluggish, consider a 30-second &quot;stand up and stretch&quot; before diving in.
+
+**Transition:** &quot;Let me show you what we'll cover this morning...&quot;</p></div><div class="bespoke-marp-note" data-index="6" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This Q&amp;A serves two purposes: (1) surface confusion from Day 1 before we build on it, and (2) get students talking early in Day 2 to increase engagement. After a 4-day break, some concepts will have faded. Better to resurface confusion now than during the assignment.
+
+**Key point:** Questions are signals — they reveal what stuck and what didn't.
+
+**Facilitation approach:**
+- Wait at least 10 seconds after asking. Silence is uncomfortable but productive.
+- If no hands, cold-call: &quot;What question did you have on Sunday when you were thinking about this?&quot;
+- Write questions on the board as they come — shows you're listening.
+- Don't answer everything immediately. Some questions are better answered by other students.
+
+**Common questions and quick answers:**
+- &quot;How do I choose between analyses?&quot; → Depends on the question. We'll practice this in 30 minutes.
+- &quot;What if I don't have the data?&quot; → That's what the Brief surfaces. Better to know now than after you've promised results.
+- &quot;How detailed should the Brief be?&quot; → Detailed enough that someone else could take over. One page is typical.
+- &quot;Guardrail vs. tradeoff?&quot; → Guardrail = must not cross. Tradeoff = acceptable cost. We'll see more examples.
+
+**If no questions:** &quot;What was most surprising about Day 1?&quot; or &quot;What's one thing you'd do differently on a past project after Day 1?&quot;
+
+**Transition:** &quot;Let me quickly clarify a few things that often come up...&quot;</p></div><div class="bespoke-marp-note" data-index="7" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** These FAQs address the most common anxieties students have before their assignment. The &quot;30-60 minutes&quot; answer calibrates expectations. The &quot;Unknown is honest&quot; answer reduces perfectionism anxiety. The &quot;2-3 analyses&quot; answer prevents scope overload.
+
+**Key point:** The Brief is a thinking tool, not a compliance exercise.
+
+**Say something like:**
+&quot;These questions come up every time I teach this. Let me address them preemptively.
+
+First: timing. Once you're practiced, a Brief takes 30-60 minutes. Your first few will take longer. That's expected.
+
+Second: blank sections. 'I don't know' is useful information. It tells your sponsor what needs to be figured out before analysis begins. What's not acceptable is a blank section with no acknowledgment. If you don't know the answer, say so and explain what you'd need to find out.
+
+Third: you don't need all 9 analyses. Most real projects use 2-3. The point of learning all 9 is so you can choose wisely, not so you use them all.&quot;
+
+**If asked:** &quot;What if my sponsor asks for an analysis I don't think is right?&quot;
+A: That's a conversation, not a conflict. Ask what decision they're trying to make. Often the 'wrong' analysis request reflects a real underlying question that a better analysis could answer.
+
+**Transition:** &quot;Now let's see how all the Brief sections work together in a real scenario...&quot;</p></div><div class="bespoke-marp-note" data-index="9" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** Day 1 taught each Brief section individually. But in practice, sections connect — the methodology must answer the problem, counter-metrics anticipate pre-mortem scenarios, stakeholder blockers shape how you present findings. This deep dive shows that coherence.
+
+**Key point:** The Brief isn't 10 independent sections. They reference each other.
+
+**Say something like:**
+&quot;Yesterday, we went through each Brief section one by one. Problem statement, metrics, stakeholders, methodology, and so on. That's the learning mode.
+
+But in real life, you don't fill out sections in isolation. They connect. Your methodology has to actually answer the problem you stated. Your counter-metrics should anticipate the failure modes in your pre-mortem. Your stakeholder map shapes how you present findings.
+
+This deep dive shows a complete, realistic Brief. We'll walk through it section by section and pay attention to how each section references the others. This is what coherence looks like — and it's where most points are lost in your assignment.&quot;
+
+**If asked:** &quot;Is this the format we should use for the assignment?&quot;
+A: The structure, yes. The exact formatting is flexible. What matters is that all sections are covered and they connect logically.
+
+**Transition:** &quot;Let's look at the scenario...&quot;</p></div><div class="bespoke-marp-note" data-index="10" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** MindfulApp is a composite case based on real wellness apps (Calm, Headspace, etc.). The scenario captures a common startup tension: growth looks great, but unit economics may be broken. Series B companies often face this &quot;grow or fix&quot; decision. The $8M/quarter burn rate is realistic for a company at this stage.
+
+**Key point:** This scenario is realistic — you'll see versions of it in your careers.
+
+**Say something like:**
+&quot;Let me set the scene. MindfulApp is a meditation app — think Calm or Headspace. They're growing 40% year-over-year, which sounds great. But they're burning $8 million per quarter, which is not sustainable.
+
+Their investors are asking a question that many growth-stage companies face: Are we acquiring customers profitably? Or are we buying growth that will never pay back?
+
+This is the 'scale or fix' decision. If unit economics are good, pour on the gas. If they're broken, fix the leak before you scale the problem.
+
+We're going to walk through their Brief section by section. As we go, notice how each section connects to the others.&quot;
+
+**If asked:** &quot;Is this a real company?&quot;
+A: It's a composite based on real companies. The specific numbers are illustrative but the dynamics are realistic.
+
+**Transition:** &quot;Let's start with Section 1: Problem &amp; Decision...&quot;</p></div><div class="bespoke-marp-note" data-index="11" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This slide demonstrates what a complete Problem &amp; Decision section looks like. Notice the specificity: not &quot;are we acquiring profitably&quot; but &quot;by channel.&quot; The hypothesis is quantified (&gt;5x, ~1.2x), which makes it testable.
+
+**Key point:** &quot;Who's asking&quot; shapes everything — framing, benchmarks, timeline, politics.
+
+**Discussion facilitation:**
+Pause after the question. Wait 5-7 seconds. If no response, cold-call: &quot;You — why does it matter that investors are asking?&quot;
+
+**Looking for in discussion:**
+- Investors have specific expectations (industry benchmarks like 3:1 LTV:CAC)
+- Board context = high stakes, career implications
+- Timeline is probably tied to fundraising (Series C planning)
+- Framing will need to be &quot;investor-friendly&quot; (unit economics language)
+
+**Say something like:**
+&quot;Let's pause here. Why does it matter that investors are asking, rather than, say, the marketing team?
+
+[Discussion]
+
+The 'who' shapes everything. Investors think in LTV:CAC ratios because that's how they evaluate companies. They have benchmarks: a 3:1 ratio is healthy, below 1:1 is a red flag. If the marketing team asked, you might frame findings differently — 'how do we optimize spend?' vs. 'are we a good investment?'
+
+Also notice the hypothesis is quantified. Not 'organic is better than paid' but '&gt;5x vs. ~1.2x.' That's testable.&quot;
+
+**Transition:** &quot;Now let's look at how they defined their metrics...&quot;</p></div><div class="bespoke-marp-note" data-index="12" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This slide shows a well-specified primary metric with appropriately labeled counter-metrics. The distinction between tradeoff and guardrail is critical — students often confuse them.
+
+**Key point:** Tradeoffs are expected costs you accept; guardrails are lines you won't cross.
+
+**Discussion facilitation:**
+This is a concept-check question. If students struggle, it indicates Day 1 didn't land.
+
+**Answer to surface:**
+Growth rate is a tradeoff because we EXPECT cutting unprofitable channels to slow growth — that's the cost we're willing to pay for profitability. It's not a line we refuse to cross; it's a known consequence we accept.
+
+Engagement quality is a guardrail because we DON'T want users who sign up but never engage. If a cheap acquisition channel produces non-engaging users, we'd stop using it regardless of the CAC — that's a line we won't cross.
+
+**Say something like:**
+&quot;Why is growth rate labeled as a tradeoff rather than a guardrail?
+
+[Wait for answers]
+
+Growth rate is a tradeoff because cutting unprofitable channels WILL slow growth. We know this going in. If we decide unit economics matter more than growth rate right now, we accept slower growth as the cost of that decision. That's a tradeoff — an expected consequence we consciously accept.
+
+Engagement quality is different. If we're acquiring users cheaply but they never meditate, that's not a cost we accept — that's a failure. That's a guardrail. If we cross it, we stop, regardless of how good the CAC looks.&quot;
+
+**If asked:** &quot;Can something switch from tradeoff to guardrail?&quot;
+A: Yes, if circumstances change. If the board says 'growth rate cannot drop below 30%', that becomes a guardrail.
+
+**Transition:** &quot;Now let's see who they identified as stakeholders...&quot;</p></div><div class="bespoke-marp-note" data-index="13" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This is where the Brief shifts from technical to political. The stakeholder map reveals the landscape; the blocker analysis reveals the landmines. The paid team has existential stakes — half their team could be cut. This isn't a hypothetical; this happens.
+
+**Key point:** Knowing blockers BEFORE you present lets you shape the message, not suppress it.
+
+**Discussion facilitation:**
+This is a politically sensitive topic. Some students may feel uncomfortable with &quot;managing&quot; stakeholders. Emphasize: you're not manipulating or lying. You're being strategic about HOW you communicate truth.
+
+**Looking for:**
+- Present scenarios, not verdicts (&quot;If paid social is &lt;2x, options include...&quot;)
+- Private conversation before the big meeting (no ambushes)
+- Frame as &quot;tradeoffs leadership must decide&quot; not &quot;paid team failed&quot;
+- Acknowledge the work the paid team has done, even if results aren't great
+- Give the paid team advance notice so they're not blindsided
+
+**Say something like:**
+&quot;This is where things get real. The paid acquisition team — 4 people — could become 2 people if your analysis shows paid social isn't working. That's not hypothetical. That's jobs.
+
+How does knowing this change how you present?
+
+[Discussion]
+
+First, you don't ambush them. Before the board meeting, you have a private conversation with the Head of Growth. 'Here's what I'm going to present. I wanted you to see it first.' This isn't political favor-trading; it's professional courtesy.
+
+Second, you present scenarios, not verdicts. 'If paid social is below 2x, leadership has options: cut spend, change creative strategy, or accept the awareness value.' You're not saying 'fire the paid team.' You're laying out the decision space.
+
+Third, you acknowledge what's worked. 'Paid social contributed to brand awareness growth even if direct attribution looks weak.' Don't be dishonest — but don't make people feel like failures unnecessarily.&quot;
+
+**If asked:** &quot;Isn't this manipulative?&quot;
+A: No. You're not hiding findings. You're being thoughtful about how truth lands. An analyst who drops a bomb in a meeting with no warning isn't being more honest — they're being careless.
+
+**Transition:** &quot;Let's look at the methodology they chose...&quot;</p></div><div class="bespoke-marp-note" data-index="14" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This slide shows how methodology connects to the problem. They're doing CAC/LTV analysis, so they need cohort-based LTV, fully-loaded CAC, and payback period. Notice each methodology line includes &quot;Needs:&quot; — this is the data requirements check.
+
+**Key point:** &quot;Fully-loaded&quot; matters because media spend is only part of the true cost.
+
+**Discussion facilitation:**
+This is a technical concept-check. Push students to be specific about what gets missed.
+
+**What gets missed with media-only CAC:**
+- Salaries: The 4-person paid team's compensation
+- Tools: Analytics platforms, creative tools, ad management software
+- Agency fees: If they use external agencies for creative or buying
+- Overhead: Office space, management time, etc.
+- Creative production: Photo shoots, video production
+
+**Say something like:**
+&quot;Why does the Brief specify 'fully-loaded' CAC rather than just CAC?
+
+[Wait for answers]
+
+If you only count media spend — the money you give to Facebook or Google — you're ignoring the salaries of the 4 people running the campaigns. You're ignoring the $50K/year you spend on analytics tools. You're ignoring the agency you hired to make the ads.
+
+A channel might look profitable if you only count media spend but unprofitable when you load in the team cost. This matters especially for paid social, where creative production and campaign management are labor-intensive.
+
+This is why the methodology says 'fully-loaded CAC by channel' — not just 'CAC.'&quot;
+
+**If asked:** &quot;How do you allocate shared costs like office space?&quot;
+A: Common approach: proportional to headcount or time tracking. Perfect accuracy isn't possible; directional accuracy is the goal.
+
+**Transition:** &quot;Now let's see what they put in scope and out of scope...&quot;</p></div><div class="bespoke-marp-note" data-index="15" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This slide demonstrates good scoping — explicit in-scope AND out-of-scope lists. The discussion question is genuinely debatable; there's a reasonable argument for including free users.
+
+**Key point:** Scoping is about making conscious choices, not just listing what you'll do.
+
+**Discussion facilitation:**
+This is a good &quot;reasonable people disagree&quot; moment. Let students argue both sides before providing synthesis.
+
+**Arguments for excluding free tier:**
+- Free users have different economics (zero LTV until conversion)
+- Including them would muddy the paid subscriber CAC/LTV analysis
+- The business question is about paying customer profitability
+- Could be a separate analysis: &quot;What's the CAC of free-to-paid conversion?&quot;
+
+**Arguments for including free tier:**
+- Free tier is part of the acquisition funnel
+- CAC should include cost of acquiring free users who never convert (that's real spend)
+- Excluding them might make ratios look better than reality
+
+**Say something like:**
+&quot;Should free tier users be in scope or out? Let me hear arguments on both sides.
+
+[Discussion]
+
+Both positions are defensible. The Brief chose to exclude them. Here's the logic: the investors' question is about PAYING customer profitability. Including free users who never convert would muddy that specific analysis.
+
+But — and this is important — there's a legitimate counter-argument. The cost of acquiring free users who never convert IS a real cost. By excluding them, you might make LTV:CAC look better than the true picture.
+
+This is a scoping choice, not a right answer. The Brief makes the choice explicit. That's what matters.&quot;
+
+**Transition:** &quot;Now let's see what decisions they'd make based on different findings...&quot;</p></div><div class="bespoke-marp-note" data-index="16" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** Decision criteria are often the weakest part of student Briefs. This example shows what good looks like: specific thresholds (3x, 2x, 5x), concrete actions (scale, reallocate, fix, invest $500K), and importantly — the null/mixed result case.
+
+**Key point:** Pre-defining decisions prevents analysis paralysis and post-hoc rationalization.
+
+**Discussion facilitation:**
+The question is about why &quot;inconclusive&quot; matters. Many students skip this scenario.
+
+**Why include inconclusive/mixed outcomes:**
+- Most real analyses produce mixed results (not clean stories)
+- Without pre-defined action, you waste weeks debating what to do
+- Prevents cherry-picking: &quot;Well, THIS channel is great...&quot;
+- Keeps you honest: if most channels are broken, don't hide behind the one that works
+
+**Say something like:**
+&quot;Why include the 'most channels &lt;2x' scenario? Couldn't you just figure out what to do if that happens?
+
+[Wait for answers]
+
+Here's what actually happens if you don't pre-define this. You finish your analysis. Most channels are mediocre. And then you spend three weeks debating what to do, with different stakeholders advocating for their favorite interpretation.
+
+The paid team says 'but awareness!' The growth team says 'but the trend is improving!' The CFO says 'but the burn rate!' By pre-defining the decision — 'if most channels &lt;2x, we fix retention before scaling' — you short-circuit that debate.
+
+Also notice the last row: 'Referral is 5x+ but tiny.' This anticipates a specific finding that might get buried. Even if the answer is 'invest more,' you've pre-committed to noticing it.&quot;
+
+**If asked:** &quot;What if leadership overrides the pre-defined decision?&quot;
+A: That happens. The value of pre-defining isn't that it's binding — it's that overriding requires conscious choice. They have to say &quot;I know we agreed to X, but I want Y instead.&quot; That's different from drifting into Y through analysis paralysis.
+
+**Transition:** &quot;Let's quickly cover timeline, risks, and ethics...&quot;</p></div><div class="bespoke-marp-note" data-index="17" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** These sections are often rushed in student Briefs. Timeline, risks, and ethics feel like &quot;administrative&quot; sections. They're not — they're where assumptions get surfaced.
+
+**Key point:** LTV projections are assumptions about the future. Assumptions can be wrong.
+
+**Discussion facilitation:**
+Push students to think about what makes projections fragile. This connects to the pre-mortem mindset.
+
+**What could invalidate LTV projections:**
+- Product changes: New features could improve (or worsen) retention
+- Pricing changes: If they raise prices, historical LTV doesn't predict future
+- Competitor entry: A new meditation app could shift the market
+- Economic shifts: Recession = more churn on discretionary subscriptions
+- Cohort composition: Early adopters vs. late majority have different behaviors
+- Platform changes: Apple privacy updates affecting attribution and targeting
+
+**Say something like:**
+&quot;What could make these LTV projections wrong?
+
+[Discussion]
+
+This is critical thinking. LTV projections assume the future looks like the past. That's often wrong.
+
+If they launch a major new feature that improves retention, historical LTV underpredicts. If Apple changes privacy rules and targeting gets worse, historical LTV overpredicts. If a competitor launches and users churn faster, historical LTV overpredicts.
+
+The Brief acknowledges this: 'Use conservative retention curves, show sensitivity.' That means: don't just show the happy path. Show what happens if retention is 20% worse.&quot;
+
+**Transition:** &quot;Now let's look at the pre-mortem — the most important section for adversarial thinking...&quot;</p></div><div class="bespoke-marp-note" data-index="18" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This pre-mortem is excellent because it tells a specific story with a causal insight. It's not &quot;we failed because data quality&quot; — it's a concrete failure scenario that reveals a methodological blind spot (channel interdependence).
+
+**Key point:** Good pre-mortems reveal WHAT YOU HAVEN'T THOUGHT ABOUT yet.
+
+**Discussion facilitation:**
+Push students to think about detection mechanisms. This is how pre-mortems add value — they surface problems you can then look for.
+
+**How they could have caught this:**
+- Correlation analysis: Do organic/referral signups spike after paid campaigns?
+- Geographic testing: Cut paid in one market, observe organic in that market
+- Seasonal analysis: Does organic drop when paid is paused (holidays)?
+- Customer surveys: &quot;How did you hear about us?&quot; with multi-touch option
+- Time-lagged analysis: Is there a delay between paid spend and organic lift?
+
+**Say something like:**
+&quot;This pre-mortem describes a specific failure: channels that looked independent weren't. Paid social was boosting organic in ways that didn't show up in direct attribution.
+
+How could they have caught this before recommending the cut?
+
+[Discussion]
+
+The key insight is channel interdependence. If they'd looked at correlations — does organic spike after paid campaigns? — they might have noticed. Or they could have done a geographic test: cut paid in one city, see if organic drops in that city.
+
+This is the value of pre-mortems. It's not about predicting the future. It's about asking 'what are we assuming?' The assumption here was 'channels are independent.' A good pre-mortem surfaces that assumption so you can test it.&quot;
+
+**If asked:** &quot;Isn't this hindsight bias?&quot;
+A: The pre-mortem is written BEFORE the analysis. The example shows what could go wrong. In practice, you write this to force yourself to think about interdependence, then you test for it.
+
+**Transition:** &quot;Let's step back and see how all these sections connect...&quot;</p></div><div class="bespoke-marp-note" data-index="19" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This is the &quot;coherence&quot; message — the same thing that's worth 20 points in the grading rubric. Students often treat Brief sections as independent checkboxes. They're not. This slide makes the connections explicit.
+
+**Key point:** Brief coherence is where most points are lost on the assignment.
+
+**Say something like:**
+&quot;Let me make this explicit. The Brief isn't a checklist of 10 independent sections. They connect.
+
+Your methodology has to actually answer the problem you stated. If your problem is 'are we acquiring profitably by channel?' and your methodology doesn't segment by channel, you have a coherence problem.
+
+Your counter-metrics should anticipate your pre-mortem scenarios. MindfulApp's pre-mortem was about channels being interdependent. Their counter-metric 'brand awareness' connects to that — it's watching for the same failure mode.
+
+Your stakeholder map informs how you present. If the paid team is a blocker, that shapes your presentation strategy.
+
+On your assignment, this is where most points are lost. Sections that feel disconnected. A pre-mortem that describes a risk not mentioned in the risks section. A methodology that can't answer the problem. Look for these when you self-review.&quot;
+
+**Transition:** &quot;Let's look at what makes this Brief strong overall...&quot;</p></div><div class="bespoke-marp-note" data-index="20" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This slide summarizes the quality markers from the grading rubric. Each point corresponds to something students often miss.
+
+**Key point:** These five elements distinguish a strong Brief from a weak one.
+
+**Say something like:**
+&quot;Let me summarize what makes this Brief strong. These are the things you should check in your own work.
+
+First: specific metric definition. Not 'LTV:CAC' but '12-month projected LTV / fully-loaded CAC by acquisition source.' Could you write the query? If yes, it's specific enough.
+
+Second: counter-metrics WITH TYPES. Growth rate is a tradeoff. Engagement quality is a guardrail. Not just 'here are some other things to watch.'
+
+Third: a named blocker with motivation. Not 'the marketing team might resist' but 'the paid acquisition team could lose half their headcount — that's their motivation to resist.'
+
+Fourth: decision criteria include the null result. What if you find nothing conclusive? Most analyses produce mixed results. Plan for it.
+
+Fifth: the pre-mortem is specific. It tells a story with a causal insight. Not 'data quality was bad' but 'we assumed channels were independent and they weren't.'
+
+Check your work against these five things.&quot;
+
+**Transition:** &quot;Now, what would you change about this Brief?&quot;</p></div><div class="bespoke-marp-note" data-index="21" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This is an important &quot;critique&quot; exercise. Students need practice identifying weaknesses, not just strengths. No Brief is perfect — developing critical eye helps students improve their own work.
+
+**Key point:** Even good Briefs have room for improvement. The skill is seeing what's missing.
+
+**Facilitation:**
+Give students 30 seconds to think before opening discussion. If no one speaks, cold-call: &quot;You — one thing you'd change.&quot;
+
+**Possible answers:**
+- No sensitivity analysis specified for LTV projections → How much does the answer change if retention is 20% worse?
+- Doesn't address channel interaction explicitly in methodology → The pre-mortem assumes independent channels, but methodology doesn't test for it
+- Timeline might be aggressive for board-quality work → 4 weeks is tight for cohort analysis, LTV modeling, AND board-ready presentation
+- Could specify action thresholds more precisely → &quot;Scale aggressively&quot; is vague. How much? Which channels first?
+- No contingency for data gaps → What if we can't get team allocation data for fully-loaded CAC?
+- Ethics section is thin → &quot;No bias risk&quot; — really? What about different privacy expectations across user demographics?
+
+**Say something like:**
+&quot;No Brief is perfect. What would you improve?
+
+[Discussion]
+
+Some things I'd push on: The pre-mortem worries about channel interaction, but the methodology doesn't explicitly test for it. That's a gap. The timeline — 4 weeks — is aggressive for cohort analysis AND LTV modeling AND board-ready presentation. And 'scale aggressively' — what does that mean? 2x? 5x? The more specific your decision criteria, the less room for post-hoc debate.&quot;
+
+**Transition:** &quot;Alright, now it's your turn. Let's do some group work...&quot;</p></div><div class="bespoke-marp-note" data-index="23" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This is the most interactive part of Block 4. Students work in groups, argue about analysis selection, and then defend their choices publicly. This simulates real work — you'll always have to justify your methodology to stakeholders.
+
+**Key point:** There are multiple reasonable answers. The skill is justifying your choice, not finding &quot;the right&quot; one.
+
+**Group formation (1 min):**
+- Count off: &quot;1, 2, 3, 4, 1, 2, 3, 4...&quot; to form groups
+- Or let them self-select into groups of 3-4
+- Mixed backgrounds are ideal (diverse perspectives)
+
+**Timing:**
+- 2 min to read Scenario A
+- 5 min group work on A
+- 5 min share-out and debate on A
+- Repeat for B and C
+- Total: ~25-30 min
+
+**Facilitation approach:**
+- Walk around during group work, listen but don't answer questions
+- During share-out, push back on EVERY answer: &quot;Why not [X] instead?&quot;
+- Highlight disagreements between groups: &quot;Group 1 said Funnel, Group 2 said Attribution — let's hear why&quot;
+- Don't reveal a &quot;correct&quot; answer — there isn't one
+
+**Say something like:**
+&quot;Here's how this works. You'll see a business scenario. In your groups, you have 5 minutes to decide: which 2-3 analyses would you do, why, and what's the primary metric?
+
+Then you'll share out and defend your choices. I'll push back. Other groups will disagree. That's the point — you need to be able to justify your methodology.
+
+Form groups of 3-4 now. [Pause for group formation] First scenario coming up...&quot;
+
+**Transition:** &quot;Here's Scenario A...&quot;</p></div><div class="bespoke-marp-note" data-index="24" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** StreamBox is inspired by Spotify's freemium model. The scenario describes a classic growth-stage problem: lots of free users, marketing spend increasing, but paid conversion stalling. This is a multi-part problem — no single analysis will solve it.
+
+**Key point:** The vague ask (&quot;what's working and what's not&quot;) is intentional. Students must narrow it down.
+
+**Give groups 5 minutes to work, then move to discussion slide.**
+
+**Reasonable analysis choices:**
+- Funnel Analysis: Where are free users dropping off before premium? What's the conversion rate at each stage?
+- CAC/LTV: Is the marketing spend producing profitable customers? Which channels are efficient?
+- Expansion/Monetization: What triggers free→paid conversion? Which behaviors predict upgrade?
+- Attribution: Which channels are driving (or not driving) premium signups?
+
+**Less appropriate (but discuss if raised):**
+- Retention: Not directly answering &quot;what's working&quot; — unless they reframe as &quot;are we losing converts?&quot;
+- Failure Analysis: Could apply if they want to understand why free users don't convert
+
+**Transition:** After 5 min: &quot;Time. Let's hear from groups...&quot;</p></div><div class="bespoke-marp-note" data-index="25" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This is the debate portion. The goal isn't consensus — it's exposing different reasoning. Students learn as much from defending their choices as from hearing alternatives.
+
+**Key point:** Push back on every answer. Make students justify.
+
+**Facilitation approach:**
+1. Call on one group: &quot;What did you pick and why?&quot;
+2. Push back: &quot;Why Funnel and not Attribution?&quot;
+3. Ask another group: &quot;Did anyone pick something different?&quot;
+4. Highlight the tension: &quot;So Group 1 would start with the funnel, Group 2 would start with channels. Both are defensible. What would make you choose one over the other?&quot;
+
+**Good pushback questions:**
+- &quot;If you had to pick ONLY ONE, which would it be?&quot;
+- &quot;What data would you need for that analysis? Do they have it?&quot;
+- &quot;If the CMO pushed back and said 'I don't care about funnel, I want to know if marketing is working,' what would you say?&quot;
+
+**Wrap-up synthesis:**
+&quot;Multiple approaches work here. The key is justifying your choice based on the business question. Funnel answers 'where do we lose people?' Attribution answers 'which channels work?' CAC/LTV answers 'is our spend efficient?' All are valid interpretations of 'what's working.'
+
+In real life, you'd have a conversation with the CMO to narrow it down.&quot;
+
+**Transition:** &quot;Let's try another one. Scenario B is different — it's about diagnosis, not growth...&quot;</p></div><div class="bespoke-marp-note" data-index="26" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** QuickShip is a diagnostic scenario — something is broken, we don't know what. This is different from StreamBox (growth optimization). The &quot;finger-pointing&quot; dynamic (Operations blaming carriers) is common and politically charged.
+
+**Key point:** This is exploratory. You don't know the root cause yet. Start with diagnosis.
+
+**Give groups 5 minutes to work, then move to discussion slide.**
+
+**Reasonable analysis choices:**
+- Failure Analysis: Categorize why deliveries fail — carrier? address quality? inventory? This is the core analysis.
+- Funnel Analysis: Where in the delivery process do failures occur? (Order → Pick → Pack → Ship → Deliver)
+- Retention Analysis: Are affected customers churning? What's the downstream revenue impact?
+
+**Less appropriate (but discuss if raised):**
+- CAC/LTV: Not relevant — this is about operations, not acquisition
+- Attribution: Wrong domain — this isn't about marketing channels
+
+**Key insight to surface:**
+This is exploratory — they don't know the root cause. You can't optimize something until you understand it. Failure Analysis is the natural starting point.
+
+**Transition:** After 5 min: &quot;Time. What's the right approach here?&quot;</p></div><div class="bespoke-marp-note" data-index="27" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This discussion should surface the difference between diagnostic (exploratory) and optimization analyses. QuickShip doesn't know what's broken — they need to find out first.
+
+**Key point:** Failure Analysis is the natural starting point. You diagnose before you optimize.
+
+**Facilitation approach:**
+1. Ask: &quot;What did you pick?&quot; Expect Failure Analysis as the top answer.
+2. If someone says Funnel: &quot;Good — how is that different from Failure Analysis here?&quot;
+3. If someone says Retention: &quot;Why track retention? What does that tell you about root cause?&quot;
+
+**Good pushback questions:**
+- &quot;Operations says it's the carriers. How would you test that claim?&quot;
+- &quot;What if you do Failure Analysis and find 47% is 'carrier fault'? Is that actionable?&quot;
+- &quot;Who's the blocker here? How would you present findings that blame Operations?&quot;
+
+**Stakeholder angle:**
+This is politically charged. Operations is blaming carriers. If you find Operations is at fault (bad address validation, inventory issues), you need to handle that carefully. This connects to Block 5 (Influence).
+
+**Wrap-up synthesis:**
+&quot;This is diagnostic work. You don't know what's broken, so you start with Failure Analysis to categorize problems. Then you can decide what to fix.
+
+Notice the political layer: someone's going to look bad. Your Brief should identify Operations as a potential blocker and plan for how to present findings diplomatically.&quot;
+
+**Transition:** &quot;Last scenario. This one is about product synergies...&quot;</p></div><div class="bespoke-marp-note" data-index="28" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** FinTrack is inspired by apps like Mint/NerdWallet that have multiple product lines. The scenario surfaces a classic product strategy question: are our products complements or substitutes? Do multi-product users have higher LTV, or is it just selection bias?
+
+**Key point:** Correlation vs. causation is the trap here. Multi-product users may look better without causation.
+
+**Give groups 5 minutes to work, then move to discussion slide.**
+
+**Reasonable analysis choices:**
+- Ecosystem Analysis: Are products complements or substitutes? Do users who try Budgeting also try Investing?
+- Power User Analysis: Who are the multi-product users? Are they more valuable? What behaviors define them?
+- Retention Analysis: Do multi-product users retain better? Is that causal or selection?
+
+**The selection bias trap:**
+Students will likely observe: &quot;Multi-product users have higher LTV!&quot; The pushback is: Is that because using multiple products CAUSES higher value, or do inherently more engaged users just use more products?
+
+This is the tutorial completion trap from Block 1 — correlation doesn't imply causation.
+
+**Transition:** After 5 min: &quot;Let's discuss — and watch out for a trap...&quot;</p></div><div class="bespoke-marp-note" data-index="29" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This discussion MUST surface the selection bias trap. It's the most important learning moment in the exercise.
+
+**Key point:** Multi-product correlation ≠ causation. Engaged users use more products; that doesn't mean more products CAUSE engagement.
+
+**Facilitation approach:**
+1. Let a group present: &quot;We'd look at LTV of multi-product users vs. single-product users.&quot;
+2. Trap sprung: &quot;Great — and if you find multi-product users have 2x LTV, what do you recommend?&quot;
+3. If they say &quot;invest in cross-product features&quot;: Push back hard.
+
+**The pushback script:**
+&quot;Wait. If multi-product users have higher LTV, does that mean cross-product features will increase LTV? Or is it that inherently engaged users happen to use multiple products?
+
+Remember the tutorial completion example from Day 1? Users who complete tutorials retain better. Does that mean forcing tutorials causes retention? No — engaged users complete tutorials AND retain. Same trap here.&quot;
+
+**How to avoid the trap:**
+- Look at users BEFORE they adopted second product. Were they already higher-value?
+- Run an A/B test: promote cross-product features to some users, not others
+- Use a quasi-experiment: cohorts before/after cross-product features launched
+
+**Wrap-up synthesis:**
+&quot;Ecosystem Analysis tells you if there's correlation. It doesn't tell you if there's causation. Your Brief should acknowledge this — if you find correlation, the recommendation isn't 'build cross-product features' but 'test whether cross-product features improve outcomes.'&quot;
+
+**Transition:** &quot;Let's debrief on what these three scenarios taught us...&quot;</p></div><div class="bespoke-marp-note" data-index="30" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This slide provides closure to the group exercise. The meta-lesson isn't &quot;here are the right answers&quot; — it's &quot;multiple approaches are valid, but you must justify your choice.&quot;
+
+**Key point:** The Brief forces justification. That's its power.
+
+**Say something like:**
+&quot;Let me step back from the scenarios. What did we learn?
+
+First: there's no single right answer. StreamBox could reasonably start with Funnel, Attribution, or CAC/LTV. QuickShip could start with Failure Analysis or Funnel. All are defensible.
+
+Second: context matters. What data do you have? What decision needs to be made? What's the timeline? Two analysts with the same scenario might choose different approaches based on different constraints.
+
+Third: the Brief forces you to justify your choice. That's the point. You can't just say 'we'll do Funnel Analysis.' You have to say WHY Funnel Analysis answers the business question better than Attribution or CAC/LTV for THIS situation.
+
+That justification is what separates good analysts from order-takers. Anyone can run a query. Knowing which query to run, and why, is the skill.&quot;
+
+**Energy check:** This is about 70 minutes into the block. If energy is flagging, consider a 1-minute &quot;stand up and stretch&quot; before moving to timed practice.
+
+**Transition:** &quot;Now let's practice under time pressure. This is what your assignment will feel like...&quot;</p></div><div class="bespoke-marp-note" data-index="32" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This timed exercise simulates exam conditions. Students often underestimate how long Brief sections take to write well. This exercise calibrates expectations and builds confidence.
+
+**Key point:** Exam conditions are faster than you expect. Practice now.
+
+**Say something like:**
+&quot;On Thursday, you'll get your assignment — a 2-page scenario, unique to you. You'll complete a full Brief.
+
+Right now, we're going to practice under time pressure. This is 10 minutes. It's tight. That's intentional.
+
+The goal isn't to produce perfect work. The goal is to experience how quickly 10 minutes goes when you're thinking carefully about metrics and blockers.
+
+Ready?&quot;
+
+**Transition:** [Pause dramatically] &quot;Here's the exercise...&quot;</p></div><div class="bespoke-marp-note" data-index="33" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This is individual work under time pressure. The goal is for students to experience how quickly time goes when writing precise metrics and thinking through blockers. 10 minutes is intentionally tight.
+
+**Key point:** Time pressure reveals gaps. If you struggle with metric precision, now you know what to practice.
+
+**Facilitation:**
+1. Set a visible 10-minute timer (phone timer, projected timer, whatever works)
+2. Say: &quot;Work alone. Timer starts... now.&quot;
+3. Walk around the room silently. Don't answer questions. If someone asks something, say: &quot;On the exam, I can't help. Figure it out.&quot;
+4. At 5 minutes, announce: &quot;Five minutes left.&quot;
+5. At 10 minutes: &quot;Pens down.&quot;
+
+**What to look for while walking:**
+- Are students writing immediately or staring at the page?
+- Are metrics specific or vague?
+- Are people getting stuck on counter-metrics?
+- Is anyone visibly stressed? (Normal — this is calibration)
+
+**After timer:**
+&quot;Pens down. How did that feel?&quot;
+
+Expect answers like:
+- &quot;Not enough time for the metric&quot;
+- &quot;I couldn't think of a blocker&quot;
+- &quot;I forgot what Guardrail vs Tradeoff means&quot;
+
+All of these are useful data for what students need to review.
+
+**Transition:** &quot;Let's debrief quickly...&quot;</p></div><div class="bespoke-marp-note" data-index="34" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This debrief validates the struggle and motivates practice before Thursday. The key message: the discomfort is useful information.
+
+**Key point:** Now you know what to practice before the assignment.
+
+**Facilitation:**
+Ask: &quot;How did that feel? What was hardest?&quot;
+Let 2-3 students share. Don't fix their answers — just acknowledge.
+
+**Common struggles and responses:**
+- &quot;Metric precision takes forever&quot; → Yes. That's why we practice. On Thursday, budget more time for metrics.
+- &quot;I couldn't think of a counter-metric&quot; → Review the &quot;What Breaks&quot; framework. 5 questions to generate counter-metrics.
+- &quot;Blocker motivation was hard&quot; → You need to put yourself in their shoes. What do they care about? What threatens them?
+- &quot;I kept re-reading the scenario&quot; → That's normal. On the assignment, you'll have more time. But efficient reading matters.
+
+**Say something like:**
+&quot;I asked how that felt. Most of you probably felt rushed. That's intentional.
+
+The point isn't to produce great work in 10 minutes. The point is to surface where you struggle. If you couldn't write a precise metric quickly, that's information — practice that before Thursday. If you blanked on counter-metrics, review the 'What Breaks' framework tonight.
+
+Your assignment is Thursday. You now know what to work on.&quot;
+
+**Transition:** &quot;Before we wrap up, let me show you the most common mistakes I see in Briefs...&quot;</p></div><div class="bespoke-marp-note" data-index="36" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** Vague metrics are the #1 mistake in student Briefs. &quot;Engagement,&quot; &quot;satisfaction,&quot; &quot;growth&quot; — all meaningless without operational definitions. This slide establishes the standard: SQL-level precision.
+
+**Key point:** The SQL test is definitive. If you can't write the query, the metric isn't defined.
+
+**Say something like:**
+&quot;This is the most common mistake I see. 'Improve user engagement.' What does that mean? App opens? Time spent? Features used? Sessions per week?
+
+'Engagement' is not a metric. It's a category that contains dozens of possible metrics. Your Brief needs to pick one and define it precisely.
+
+Here's the test: can you write the SQL query? If the answer is 'I'd need to figure out what tables to use and what to count,' the metric isn't defined yet.
+
+Look at the good example: D7 retention, defined as users with at least one app_open event on calendar day 7 after signup_complete on day 0. That's queryable. You know exactly what to count.&quot;
+
+**Transition:** &quot;Second mistake: no counter-metrics...&quot;</p></div><div class="bespoke-marp-note" data-index="37" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** Missing counter-metrics is the second most common mistake. Students optimize for the primary metric without asking what could break. This is Goodhart's Law in action.
+
+**Key point:** Optimization without counter-metrics is dangerous. You WILL break something.
+
+**Say something like:**
+&quot;Second mistake: no counter-metrics. You track conversion rate, you optimize conversion rate, conversion goes up. Victory, right?
+
+Meanwhile, average order value dropped 15% because you added aggressive discount pop-ups. Fraud tripled because you removed friction from checkout. Customer satisfaction tanked because you're pushing too hard.
+
+You 'won' on conversion but lost overall. That's what happens without counter-metrics.
+
+Here's the test: what could go wrong if you succeed on your primary metric? If you can't answer, you haven't done the adversarial thinking.&quot;
+
+**If asked:** &quot;How do I know which counter-metrics to track?&quot;
+A: Use the 'What Breaks' framework: What directly worsens? What quality degrades? Which users are harmed? Which long-term metrics suffer? Which other teams' goals are threatened?
+
+**Transition:** &quot;Third mistake: ignoring stakeholders...&quot;</p></div><div class="bespoke-marp-note" data-index="38" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** Stakeholder blind spots kill more projects than technical failure. The most dangerous blocker is the one you didn't identify — the person who torpedoes your recommendation in a meeting you weren't in.
+
+**Key point:** &quot;The leadership team&quot; is not a stakeholder. Specific people are stakeholders.
+
+**Say something like:**
+&quot;Third mistake: stakeholder blind spots. 'We'll present to the leadership team.' That tells me nothing.
+
+Who specifically? The CEO? The CFO? The Head of Marketing? Each has different interests, different concerns, different power. 'Leadership' is not a stakeholder. Sarah the CFO is a stakeholder. Marcus the VP of Ops is a stakeholder.
+
+Here's what happens when you don't map stakeholders: someone you didn't anticipate — someone whose budget, headcount, or reputation is threatened by your findings — raises objections in a meeting you weren't invited to. Your beautiful analysis dies in a room you've never entered.
+
+The test: Who has veto power over acting on your findings? Who might resist? Why would they resist?&quot;
+
+**Transition:** &quot;Fourth mistake: scope creep...&quot;</p></div><div class="bespoke-marp-note" data-index="39" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** Scope creep is death by a thousand additions. Each small addition seems harmless, but they compound. A 2-week analysis becomes 6 weeks, and the original decision window has passed.
+
+**Key point:** &quot;Out of Scope&quot; is as important as &quot;In Scope.&quot; Saying no is a skill.
+
+**Say something like:**
+&quot;Fourth mistake: scope creep. 'While we're at it, we should also look at X.' 'It would be easy to add Y.' 'Leadership mentioned they'd love to see Z.'
+
+Each addition seems small. But they compound. Suddenly your 2-week analysis is 6 weeks, the decision window has closed, and you've delivered a comprehensive report that nobody acts on because the moment passed.
+
+The warning phrases: 'while we're at it,' 'it would be easy to also,' 'leadership mentioned.' These are scope creep triggers.
+
+Here's the test: does this addition help the decision we're trying to inform? Not 'is it interesting' — is it decision-relevant? If not, it's out of scope.
+
+An explicit 'Out of Scope' section in your Brief is your shield. When someone asks to add something, you point to the Brief: 'We agreed this is out of scope for this analysis. We can do a separate project if needed.'&quot;
+
+**Transition:** &quot;Fifth mistake: no decision criteria...&quot;</p></div><div class="bespoke-marp-note" data-index="40" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** &quot;We'll analyze and see what we find&quot; is analysis for its own sake. Without decision criteria, you'll produce insights that don't drive action. This is how analytics work becomes shelf-ware.
+
+**Key point:** Define decisions BEFORE analysis. If you don't know what you'd do with different results, why are you analyzing?
+
+**Say something like:**
+&quot;Fifth mistake: no decision criteria. 'We'll analyze and see what we find.' That's not a project — that's exploration.
+
+Exploration has its place. But if someone is paying for your time, they usually want decisions, not insights. Before you start, you should know: if I find X, we do this. If I find Y, we do that. If I find nothing conclusive, here's what happens.
+
+The null result is crucial. Most analyses produce mixed or inconclusive results. If you haven't planned for that, you'll waste weeks after delivery debating what the results 'really mean.'
+
+Here's the test: before you start, do you know what actions different findings would trigger? If not, have that conversation with your sponsor. Force them to commit: 'If we find LTV:CAC below 2x, what will you do?' Get that answer before you start the work.&quot;
+
+**Transition:** &quot;Last mistake: the most dangerous one...&quot;</p></div><div class="bespoke-marp-note" data-index="41" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This is the selection bias trap we've discussed throughout the course. It's mistake #6 but arguably the most dangerous. Recommendations based on correlation-causation confusion waste resources and damage analyst credibility.
+
+**Key point:** Correlation identifies hypotheses. Experiments test causation.
+
+**Say something like:**
+&quot;Last mistake, and the most dangerous: confusing correlation with causation.
+
+'Users who complete the tutorial retain 2x better. Let's make the tutorial mandatory.'
+
+What actually happens: signup drops 40%, and users who do complete the tutorial now retain at the same rate as everyone used to. The tutorial didn't cause retention — engaged users completed tutorials AND retained. You just filtered out the disengaged users at signup.
+
+This is the tutorial completion example from Day 1. It shows up everywhere. Power users do X, so make everyone do X. Multi-product users are more valuable, so push everyone to multiple products. Tutorial completers retain better, so mandate tutorials.
+
+The correlation is real. The causation is a hypothesis. An analyst who confuses them will make expensive recommendations that don't work.
+
+Here's the test: is this correlation or causation? If I forced this behavior on users who wouldn't naturally do it, would the outcome change? If you're not sure, the honest recommendation is 'A/B test this hypothesis.'&quot;
+
+**Transition:** &quot;These six mistakes share a common root cause...&quot;</p></div><div class="bespoke-marp-note" data-index="42" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This is the core message of the entire course. Every mistake we've discussed — vague metrics, missing counter-metrics, blocker blind spots, scope creep, no decision criteria, confusing correlation with causation — stems from skipping the scoping work. The Brief is uncomfortable because it forces hard conversations. Students will be tempted to skip to &quot;the real work&quot; (analysis). This slide is the intervention.
+
+**Key point:** 30 minutes of scoping saves 30 hours of wrong analysis. The Brief is the work.
+
+**Say something like:**
+&quot;I want you to notice something about all the mistakes we just covered. They have a common root cause.
+
+Vague metrics? That happens when you start analyzing before you've defined what you're measuring. Missing counter-metrics? That happens when you're excited to optimize something and don't pause to ask what could break. Blocker blind spots? That's from not mapping stakeholders before you present. Scope creep? That's from not drawing boundaries upfront.
+
+All of these get caught if you fill out the Brief BEFORE you start analyzing.
+
+I know the temptation. You get an exciting analysis request. You want to dive into the data. SQL is fun. Building models is fun. Scoping conversations are uncomfortable.
+
+But here's the math: 30 minutes of scoping saves 30 hours of wrong analysis. The time you spend on the Brief is not overhead — it's the actual work of ensuring your analysis matters.
+
+When you get your scenario Thursday, resist the urge to start analyzing. Fill out the Brief first. It will feel slow. It will save you.&quot;
+
+**If asked:** &quot;What if the Brief takes longer than 30 minutes?&quot;
+A: That's fine, especially at first. The time estimate is for someone practiced. Your first few Briefs will take longer. That's expected.
+
+**Transition:** &quot;Let me summarize what we covered...&quot;</p></div><div class="bespoke-marp-note" data-index="43" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This summary reinforces the four main lessons from Block 4. Students should leave with these takeaways firmly in mind before lunch.
+
+**Key point:** Four things to remember: questions reveal gaps, sections connect, justify choices, Brief prevents mistakes.
+
+**Say something like:**
+&quot;Let me summarize what we covered this morning.
+
+Q&amp;A: Questions aren't a sign of weakness. They're a sign of engagement. The gaps in understanding you surfaced this morning are gaps you can now fill before Thursday.
+
+Deep Dive: The Brief isn't 10 independent sections. They reference each other. Your methodology must answer your problem. Your counter-metrics should anticipate your pre-mortem. Your stakeholder map shapes how you present.
+
+Analysis Selection: Reasonable people disagree about which analyses to use. The skill isn't finding 'the right answer' — it's justifying your choice based on the business question and constraints.
+
+Common Mistakes: Vague metrics, missing counter-metrics, stakeholder blind spots, scope creep, no decision criteria, correlation-causation confusion. The Brief prevents all of these — but only if you fill it out BEFORE you start analyzing.&quot;
+
+**Transition:** &quot;Any final questions before lunch?&quot;</p></div><div class="bespoke-marp-note" data-index="44" tabindex="0"><p>INSTRUCTOR NOTE:
+
+**Background:** This is the final Q&amp;A before lunch. Keep it short — afternoon energy depends on a proper break.
+
+**Key point:** End on time. Protect the lunch break.
+
+**Facilitation:**
+- Take 2-3 questions maximum
+- If questions run long, say: &quot;Great question — let's continue at 13:30&quot;
+- Don't let one student monopolize the remaining time
+
+**Say something like:**
+&quot;Quick questions before lunch? [Take 2-3] Great — enjoy your break. Be back by 13:30 for Block 5: Influence for Data Scientists. That's where we learn how to get people to act on your analysis.&quot;
+
+**Logistics reminder:**
+- Lunch is approximately 1 hour
+- Block 5 starts at 13:30
+- Consider announcing where lunch is / recommending places if unfamiliar campus
+
+**Transition:** Move to closing slide.</p></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@4.2.3/lib/bespoke.js.LICENSE.txt */
 !function(){"use strict";function e(e){return e&&e.__esModule&&Object.prototype.hasOwnProperty.call(e,"default")?e.default:e}var t,n,r=(n||(n=1,t={from:function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),o=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,function(e){return"SCRIPT"!==e.nodeName}),a={},i=function(e,t){return(t=t||{}).index=o.indexOf(e),t.slide=e,t},s=function(e,t){a[e]=(a[e]||[]).filter(function(e){return e!==t})},c=function(e,t){return(a[e]||[]).reduce(function(e,n){return e&&!1!==n(t)},!0)},l=function(e,t){o[e]&&(n&&c("deactivate",i(n,t)),n=o[e],c("activate",i(n,t)))},d=function(e,t){var r=o.indexOf(n)+e;c(e>0?"next":"prev",i(n,t))&&l(r,t)},u={off:s,on:function(e,t){return(a[e]||(a[e]=[])).push(t),s.bind(null,e,t)},fire:c,slide:function(e,t){if(!arguments.length)return o.indexOf(n);c("slide",i(o[e],t))&&l(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:o,destroy:function(e){c("destroy",i(n,e)),a={}}};return(t||[]).forEach(function(e){e(u)}),n||l(0),u}}),t),o=e(r);const a=document.body,i=(...e)=>history.replaceState(...e),s="",c="presenter",l="next",d=["",c,l],u="bespoke-marp-",f=`data-${u}`,m=(e,{protocol:t,host:n,pathname:r,hash:o}=location)=>{const a=e.toString();return`${t}//${n}${r}${a?"?":""}${a}${o}`},g=()=>a.dataset.bespokeView,p=e=>new URLSearchParams(location.search).get(e),v=(e,t={})=>{const n={location,setter:i,...t},r=new URLSearchParams(n.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?r.set(t,n):r.delete(t)}try{n.setter({...window.history.state??{}},"",m(r,n.location))}catch(e){console.error(e)}},h=(()=>{const e="bespoke-marp";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch{return!1}})(),y=e=>{try{return localStorage.getItem(e)}catch{return null}},b=(e,t)=>{try{return localStorage.setItem(e,t),!0}catch{return!1}},w=e=>{try{return localStorage.removeItem(e),!0}catch{return!1}},x=(e,t)=>{const n="aria-hidden";t?e.setAttribute(n,"true"):e.removeAttribute(n)},k=e=>{e.parent.classList.add(`${u}parent`),e.slides.forEach(e=>e.classList.add(`${u}slide`)),e.on("activate",t=>{const n=`${u}active`,r=t.slide,o=r.classList,a=!o.contains(n);if(e.slides.forEach(e=>{e.classList.remove(n),x(e,!0)}),o.add(n),x(r,!1),a){const e=`${n}-ready`;o.add(e),document.body.clientHeight,o.remove(e)}})},$=e=>{let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],o=(r,o)=>{t=r,n=o,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const a=t<r||t===r&&n<=o;e.setAttribute(`${f}fragment`,(a?"":"in")+"active");const i=`${f}current-fragment`;t===r&&n===o?e.setAttribute(i,"current"):e.removeAttribute(i)})}),e.fragmentIndex=o;const a={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:o};e.fire("fragment",a)};e.on("next",({fragment:a=!0})=>{if(a){if(r(1))return o(t,n+1),!1;const a=t+1;e.fragments[a]&&o(a,0)}else{const r=e.fragments[t].length;if(n+1<r)return o(t,r-1),!1;const a=e.fragments[t+1];a&&o(t+1,a.length-1)}}),e.on("prev",({fragment:a=!0})=>{if(r(-1)&&a)return o(t,n-1),!1;const i=t-1;e.fragments[i]&&o(i,e.fragments[i].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const o=e.fragments[t];if(o){const{length:e}=o;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}o(t,r)}),o(0,0)},E=document,L=()=>!(!E.fullscreenEnabled&&!E.webkitFullscreenEnabled),S=()=>!(!E.fullscreenElement&&!E.webkitFullscreenElement),P=e=>{e.fullscreen=()=>{L()&&(async()=>{S()?(E.exitFullscreen||E.webkitExitFullscreen)?.call(E):((e=E.body)=>{(e.requestFullscreen||e.webkitRequestFullscreen)?.call(e)})()})()},document.addEventListener("keydown",t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!L()||(e.fullscreen(),t.preventDefault())})},_=`${u}inactive`,T=(e=2e3)=>({parent:t,fire:n})=>{const r=t.classList,o=e=>n(`marp-${e?"":"in"}active`);let a;const i=()=>{a&&clearTimeout(a),a=setTimeout(()=>{r.add(_),o()},e),r.contains(_)&&(r.remove(_),o(!0))};for(const e of["mousedown","mousemove","touchend"])document.addEventListener(e,i);setTimeout(i,0)},I=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"],M=e=>{e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(I.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})},O=e=>{window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("marp-auto-scaling, [data-auto-scaling], [data-marp-fitting]");t.setAttribute(`${f}load`,e?"":"hideable")}})},A=({interval:e=250}={})=>t=>{document.addEventListener("keydown",e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()});let n,r,o=0;t.parent.addEventListener("wheel",a=>{let i=!1;const s=(e,t)=>{e&&(i=i||((e,t)=>((e,t)=>{const n="X"===t?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]})(e,t)&&((e,t)=>{const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r})(getComputedStyle(e),t))(e,t)),e?.parentElement&&s(e.parentElement,t)};if(0!==a.deltaX&&s(a.target,"X"),0!==a.deltaY&&s(a.target,"Y"),i)return;a.preventDefault();const c=Math.sqrt(a.deltaX**2+a.deltaY**2);if(void 0!==a.wheelDelta){if(void 0===a.webkitForce&&Math.abs(a.wheelDelta)<40)return;if(a.deltaMode===a.DOM_DELTA_PIXEL&&c<4)return}else if(a.deltaMode===a.DOM_DELTA_PIXEL&&c<12)return;r&&clearTimeout(r),r=setTimeout(()=>{n=0},e);const l=Date.now()-o<e,d=c<=n;if(n=c,l||d)return;let u;(a.deltaX>0||a.deltaY>0)&&(u="next"),(a.deltaX<0||a.deltaY<0)&&(u="prev"),u&&(t[u](),o=Date.now())})},C=(e=`.${u}osc`)=>{const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[${f}osc=${JSON.stringify(e)}]`).forEach(n)};return L()||n("fullscreen",e=>e.style.display="none"),h||n("presenter",e=>{e.disabled=!0,e.title="Presenter view is disabled due to restricted localStorage."}),e=>{t.addEventListener("click",t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;n&&t.target.blur();const r={fragment:!t.shiftKey};"next"===n?e.next(r):"prev"===n?e.prev(r):"fullscreen"===n?e?.fullscreen():"presenter"===n&&e.openPresenterView()}}),e.parent.appendChild(t),e.on("activate",({index:t})=>{n("page",n=>n.textContent=`Page ${t+1} of ${e.slides.length}`)}),e.on("fragment",({index:t,fragments:r,fragmentIndex:o})=>{n("prev",e=>e.disabled=0===t&&0===o),n("next",n=>n.disabled=t===e.slides.length-1&&o===r.length-1)}),e.on("marp-active",()=>x(t,!1)),e.on("marp-inactive",()=>x(t,!0)),L()&&(e=>{for(const t of["","webkit"])E.addEventListener(t+"fullscreenchange",e)})(()=>n("fullscreen",e=>e.classList.toggle("exit",L()&&S())))}},D=e=>{window.addEventListener("message",t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let o=Number.parseInt(t,10),a=Number.parseInt(n,10)+1;a>=e.fragments[o].length&&(o+=1,a=0),e.slide(o,{fragment:a})}})};var N,B,q,K,F,j,V,U={exports:{}},X=(N||(N=1,U.exports=(B=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"],q=function(e){return String(e).replace(/[&<>"']/g,function(e){return"&"+K[e]+";"})},K={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},F="dangerouslySetInnerHTML",j={className:"class",htmlFor:"for"},V={},function(e,t){var n=[],r="";t=t||{};for(var o=arguments.length;o-- >2;)n.push(arguments[o]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(var a in t)!1!==t[a]&&null!=t[a]&&a!==F&&(r+=" "+(j[a]?j[a]:q(a))+'="'+q(t[a])+'"');r+=">"}if(-1===B.indexOf(e)){if(t[F])r+=t[F].__html;else for(;n.length;){var i=n.pop();if(i)if(i.pop)for(var s=i.length;s--;)n.push(i[s]);else r+=!0===V[i]?i:q(i)}r+=e?"</"+e+">":""}return V[r]=!0,r})),U.exports),H=e(X);const R=({children:e})=>H(null,null,...e),W=`${u}presenter-`,J={container:`${W}container`,dragbar:`${W}dragbar-container`,next:`${W}next`,nextContainer:`${W}next-container`,noteContainer:`${W}note-container`,noteWrapper:`${W}note-wrapper`,noteButtons:`${W}note-buttons`,infoContainer:`${W}info-container`,infoPage:`${W}info-page`,infoPageText:`${W}info-page-text`,infoPagePrev:`${W}info-page-prev`,infoPageNext:`${W}info-page-next`,noteButtonsBigger:`${W}note-bigger`,noteButtonsSmaller:`${W}note-smaller`,infoTime:`${W}info-time`,infoTimer:`${W}info-timer`},Y=e=>{const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=J.container,t.appendChild(e),t.insertAdjacentHTML("beforeend",H(R,null,H("div",{class:J.nextContainer},H("iframe",{class:J.next,src:"?view=next"})),H("div",{class:J.dragbar}),H("div",{class:J.noteContainer},H("div",{class:J.noteWrapper}),H("div",{class:J.noteButtons},H("button",{class:J.noteButtonsSmaller,tabindex:"-1",title:"Smaller notes font size"},"Smaller notes font size"),H("button",{class:J.noteButtonsBigger,tabindex:"-1",title:"Bigger notes font size"},"Bigger notes font size"))),H("div",{class:J.infoContainer},H("div",{class:J.infoPage},H("button",{class:J.infoPagePrev,tabindex:"-1",title:"Previous"},"Previous"),H("span",{class:J.infoPageText}),H("button",{class:J.infoPageNext,tabindex:"-1",title:"Next"},"Next")),H("time",{class:J.infoTime,title:"Current time"}),H("time",{class:J.infoTimer,title:"Timer"})))),t})(e.parent)),(e=>{let t=!1;r(J.dragbar).addEventListener("mousedown",()=>{t=!0,r(J.dragbar).classList.add("active")}),window.addEventListener("mouseup",()=>{t=!1,r(J.dragbar).classList.remove("active")}),window.addEventListener("mousemove",e=>{if(!t)return;const n=e.clientX/document.documentElement.clientWidth*100;r(J.container).style.setProperty("--bespoke-marp-presenter-split-ratio",`${Math.max(0,Math.min(100,n))}%`)}),r(J.nextContainer).addEventListener("click",()=>e.next());const n=r(J.next),o=(a=n,(e,t)=>a.contentWindow?.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin));var a;n.addEventListener("load",()=>{r(J.nextContainer).classList.add("active"),o(e.slide(),e.fragmentIndex),e.on("fragment",({index:e,fragmentIndex:t})=>o(e,t))});const i=document.querySelectorAll(".bespoke-marp-note");i.forEach(e=>{e.addEventListener("keydown",e=>e.stopPropagation()),r(J.noteWrapper).appendChild(e)}),e.on("activate",()=>i.forEach(t=>t.classList.toggle("active",t.dataset.index==e.slide())));let s=0;const c=e=>{s=Math.max(-5,s+e),r(J.noteContainer).style.setProperty("--bespoke-marp-note-font-scale",(1.2**s).toFixed(4))},l=()=>c(1),d=()=>c(-1),u=r(J.noteButtonsBigger),f=r(J.noteButtonsSmaller);u.addEventListener("click",()=>{u.blur(),l()}),f.addEventListener("click",()=>{f.blur(),d()}),document.addEventListener("keydown",e=>{"+"===e.key&&l(),"-"===e.key&&d()},!0),e.on("activate",({index:t})=>{r(J.infoPageText).textContent=`${t+1} / ${e.slides.length}`});const m=r(J.infoPagePrev),g=r(J.infoPageNext);m.addEventListener("click",t=>{m.blur(),e.prev({fragment:!t.shiftKey})}),g.addEventListener("click",t=>{g.blur(),e.next({fragment:!t.shiftKey})}),e.on("fragment",({index:t,fragments:n,fragmentIndex:r})=>{m.disabled=0===t&&0===r,g.disabled=t===e.slides.length-1&&r===n.length-1});let p=new Date;const v=()=>{const e=new Date,t=e=>`${Math.floor(e)}`.padStart(2,"0"),n=e.getTime()-p.getTime(),o=t(n/1e3%60),a=t(n/1e3/60%60),i=t(n/36e5%24);r(J.infoTime).textContent=e.toLocaleTimeString(),r(J.infoTimer).textContent=`${i}:${a}:${o}`};v(),setInterval(v,250),r(J.infoTimer).addEventListener("click",()=>{p=new Date})})(e)},z=e=>{if(!(e=>e.syncKey&&"string"==typeof e.syncKey)(e))throw new Error("The current instance of Bespoke.js is invalid for Marp bespoke presenter plugin.");Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:G},presenterUrl:{enumerable:!0,get:Q}}),h&&document.addEventListener("keydown",t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())})};function G(){const{max:e,floor:t}=Math,n=e(t(.85*window.innerWidth),640),r=e(t(.85*window.innerHeight),360);return window.open(this.presenterUrl,W+this.syncKey,`width=${n},height=${r},menubar=no,toolbar=no`)}function Q(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),m(e)}const Z=e=>{const t=g();return t===l&&e.appendChild(document.createElement("span")),{[s]:z,[c]:Y,[l]:D}[t]},ee=e=>{e.on("activate",t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach(n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"})})},te=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t},ne=(e={})=>{const t={history:!0,...e};return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},o=(t={fragment:!0})=>{let n=t.fragment?te(p("f")||""):null;((t,n)=>{const{min:r,max:o}=Math,{fragments:a,slides:i}=e,s=o(0,r(t,i.length-1)),c=o(0,r(n||0,a[s].length-1));s===e.slide()&&c===e.fragmentIndex||e.slide(s,{fragment:c})})((()=>{if(location.hash){const[t]=location.hash.slice(1).split(":~:");if(/^\d+$/.test(t))return(te(t)??1)-1;const r=document.getElementById(t)||document.querySelector(`a[name="${CSS.escape(t)}"]`);if(r){const{length:t}=e.slides;for(let o=0;o<t;o+=1)if(e.slides[o].contains(r)){const t=e.fragments?.[o],a=r.closest("[data-marpit-fragment]");if(t&&a){const e=t.indexOf(a);e>=0&&(n=e)}return o}}}return 0})(),n)};e.on("fragment",({index:e,fragmentIndex:r})=>{n||v({f:0===r||r.toString()},{location:{...location,hash:`#${e+1}`},setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})}),setTimeout(()=>{o(),window.addEventListener("hashchange",()=>r(()=>{o({fragment:!1}),v({f:void 0})})),window.addEventListener("popstate",()=>{n||r(()=>o())}),n=!1},0)}},re=(e={})=>{const t=e.key||window.history.state?.marpBespokeSyncKey||Math.random().toString(36).slice(2),n=`bespoke-marp-sync-${t}`;var r;r={marpBespokeSyncKey:t},v({},{setter:(e,...t)=>i({...e,...r},...t)});const o=()=>{const e=y(n);return e?JSON.parse(e):Object.create(null)},a=e=>{const t=o(),r={...t,...e(t)};return b(n,JSON.stringify(r)),r},s=()=>{window.removeEventListener("pageshow",s),a(e=>({reference:(e.reference||0)+1}))};return e=>{s(),Object.defineProperty(e,"syncKey",{value:t,enumerable:!0});let r=!0;setTimeout(()=>{e.on("fragment",e=>{r&&a(()=>({index:e.index,fragmentIndex:e.fragmentIndex}))})},0),window.addEventListener("storage",t=>{if(t.key===n&&t.oldValue&&t.newValue){const n=JSON.parse(t.oldValue),o=JSON.parse(t.newValue);if(n.index!==o.index||n.fragmentIndex!==o.fragmentIndex)try{r=!1,e.slide(o.index,{fragment:o.fragmentIndex,forSync:!0})}finally{r=!0}}});const i=()=>{const{reference:e}=o();void 0===e||e<=1?w(n):a(()=>({reference:e-1}))};window.addEventListener("pagehide",e=>{e.persisted&&window.addEventListener("pageshow",s),i()}),e.on("destroy",i)}},{PI:oe,abs:ae,sqrt:ie,atan2:se}=Math,ce={passive:!0},le=({slope:e=-.7,swipeThreshold:t=30}={})=>n=>{let r;const o=n.parent,a=e=>{const t=o.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};o.addEventListener("touchstart",({touches:e})=>{r=1===e.length?a(e[0]):void 0},ce),o.addEventListener("touchmove",e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=a(e.touches[0]),n=t.x-r.x,o=t.y-r.y;r.delta=ie(ae(n)**2+ae(o)**2),r.radian=se(n,o)}else r=void 0}),o.addEventListener("touchend",o=>{if(r){if(r.delta&&r.delta>=t&&r.radian){const t=(r.radian-e+oe)%(2*oe)-oe;n[t<0?"next":"prev"](),o.stopPropagation()}r=void 0}},ce)},de=new Map;de.clear(),de.set("none",{backward:{both:void 0,incoming:void 0,outgoing:void 0},forward:{both:void 0,incoming:void 0,outgoing:void 0}});const ue={both:"",outgoing:"outgoing-",incoming:"incoming-"},fe={forward:"",backward:"-backward"},me=e=>`--marp-bespoke-transition-animation-${e}`,ge=e=>`--marp-transition-${e}`,pe=me("name"),ve=me("duration"),he=e=>new Promise(t=>{const n={},r=document.createElement("div"),o=e=>{r.remove(),t(e)};r.addEventListener("animationstart",()=>o(n)),Object.assign(r.style,{animationName:e,animationDuration:"1s",animationFillMode:"both",animationPlayState:"paused",position:"absolute",pointerEvents:"none"}),document.body.appendChild(r);const a=getComputedStyle(r).getPropertyValue(ge("duration"));a&&Number.parseFloat(a)>=0&&(n.defaultDuration=a),((e,t)=>{requestAnimationFrame(()=>{e.style.animationPlayState="running",requestAnimationFrame(()=>t(void 0))})})(r,o)}),ye=async e=>de.has(e)?de.get(e):(e=>{const t={},n=[];for(const[r,o]of Object.entries(ue))for(const[a,i]of Object.entries(fe)){const s=`marp-${o}transition${i}-${e}`;n.push(he(s).then(e=>{t[a]=t[a]||{},t[a][r]=e?{...e,name:s}:void 0}))}return Promise.all(n).then(()=>t)})(e).then(t=>(de.set(e,t),t)),be=e=>Object.values(e).flatMap(Object.values).every(e=>!e),we=(e,{type:t,backward:n})=>{const r=e[n?"backward":"forward"],o=(()=>{const e=r[t],n=e=>({[pe]:e.name});if(e)return n(e);if(r.both){const e=n(r.both);return"incoming"===t&&(e[me("direction")]="reverse"),e}})();return!o&&n?we(e,{type:t,backward:!1}):o||{[pe]:"__bespoke_marp_transition_no_animation__"}},xe=e=>{if(e)try{const t=JSON.parse(e);if((e=>{if("object"!=typeof e)return!1;const t=e;return"string"==typeof t.name&&(void 0===t.duration||"string"==typeof t.duration)})(t))return t}catch{}},ke="_tSId",$e="_tA",Ee="bespoke-marp-transition-warming-up",Le=window.matchMedia("(prefers-reduced-motion: reduce)"),Se="__bespoke_marp_transition_reduced_outgoing__",Pe="__bespoke_marp_transition_reduced_incoming__",_e={forward:{both:void 0,incoming:{name:Pe},outgoing:{name:Se}},backward:{both:void 0,incoming:{name:Pe},outgoing:{name:Se}}},Te=e=>{if(!document.startViewTransition)return;const t=t=>(void 0!==t&&(e._tD=t),e._tD);let n;t(!1),((...e)=>{CSS.registerProperty({name:ge("duration"),syntax:"<time>",inherits:!0,initialValue:"-1s"});const t=[...new Set(e).values()];return Promise.all(t.map(e=>ye(e))).then()})(...Array.from(document.querySelectorAll("section[data-transition], section[data-transition-back]")).flatMap(e=>[e.dataset.transition,e.dataset.transitionBack].flatMap(e=>{const t=xe(e);return[t?.name,t?.builtinFallback?`__builtin__${t.name}`:void 0]}).filter(e=>!!e))).then(()=>{document.querySelectorAll("style").forEach(e=>{e.innerHTML=e.innerHTML.replace(/--marp-transition-duration:[^;}]*[;}]/g,e=>e.slice(0,-1)+"!important"+e.slice(-1))})});const r=(n,{back:r,cond:o})=>a=>{const i=t();if(i)return!!a[$e]||!("object"!=typeof i||(i.skipTransition(),!a.forSync));if(!o(a))return!0;const s=e.slides[e.slide()],c=()=>a.back??r,l="data-transition"+(c()?"-back":""),d=s.querySelector(`section[${l}]`);if(!d)return!0;const u=xe(d.getAttribute(l)??void 0);return!u||((async(e,{builtinFallback:t=!0}={})=>{let n=await ye(e);if(be(n)){if(!t)return;return n=await ye(`__builtin__${e}`),be(n)?void 0:n}return n})(u.name,{builtinFallback:u.builtinFallback}).then(e=>{if(!e){t(!0);try{n(a)}finally{t(!1)}return}let r=e;Le.matches&&(console.warn("Use a constant animation to transition because preferring reduced motion by viewer has detected."),r=_e);const o=document.getElementById(ke);o&&o.remove();const i=document.createElement("style");i.id=ke,document.head.appendChild(i),((e,t)=>{const n=[`:root{${ge("direction")}:${t.backward?-1:1};}`,":root:has(.bespoke-marp-inactive){cursor:none;}"],r=t=>{const n=e[t].both?.defaultDuration||e[t].outgoing?.defaultDuration||e[t].incoming?.defaultDuration;return"forward"===t?n:n||r("forward")},o=t.duration||r(t.backward?"backward":"forward");void 0!==o&&n.push(`::view-transition-group(*){${ve}:${o};}`);const a=e=>Object.entries(e).map(([e,t])=>`${e}:${t};`).join("");return n.push(`::view-transition-old(root){${a(we(e,{...t,type:"outgoing"}))}}`,`::view-transition-new(root){${a(we(e,{...t,type:"incoming"}))}}`),n})(r,{backward:c(),duration:u.duration}).forEach(e=>i.sheet?.insertRule(e));const s=document.documentElement.classList;s.add(Ee);let l=!1;const d=()=>{l||(n(a),l=!0,s.remove(Ee))},f=()=>{t(!1),i.remove(),s.remove(Ee)};try{t(!0);const e=document.startViewTransition(d);t(e),e.finished.finally(f)}catch(e){console.error(e),d(),f()}}),!1)};e.on("prev",r(t=>e.prev({...t,[$e]:!0}),{back:!0,cond:e=>e.index>0&&!((e.fragment??1)&&n.fragmentIndex>0)})),e.on("next",r(t=>e.next({...t,[$e]:!0}),{cond:t=>t.index+1<e.slides.length&&!(n.fragmentIndex+1<n.fragments.length)})),setTimeout(()=>{e.on("slide",r(t=>e.slide(t.index,{...t,[$e]:!0}),{cond:t=>{const n=e.slide();return t.index!==n&&(t.back=t.index<n,!0)}}))},0),e.on("fragment",e=>{n=e})};let Ie;const Me=()=>(void 0===Ie&&(Ie="wakeLock"in navigator&&navigator.wakeLock),Ie),Oe=async()=>{const e=Me();if(e)try{return await e.request("screen")}catch(e){console.warn(e)}return null},Ae=async()=>{if(!Me())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&Oe()};for(const e of["visibilitychange","fullscreenchange"])document.addEventListener(e,t);return e=await Oe(),e};((e=document.getElementById(":$p"))=>{(()=>{const e=p("view");a.dataset.bespokeView=e===l||e===c?e:""})();const t=(e=>{const t=p(e);return v({[e]:void 0}),t})("sync")||void 0;o.from(e,((...e)=>{const t=d.findIndex(e=>g()===e);return e.map(([e,n])=>e[t]&&n).filter(e=>e)})([[1,1,0],re({key:t})],[[1,1,1],Z(e)],[[1,1,0],M],[[1,1,1],k],[[1,0,0],T()],[[1,1,1],O],[[1,1,1],ne({history:!1})],[[1,1,0],A()],[[1,1,0],P],[[1,0,0],ee],[[1,1,0],le()],[[1,0,0],C()],[[1,0,0],Te],[[1,1,1],$],[[1,1,0],Ae]))})()}();</script></body></html>

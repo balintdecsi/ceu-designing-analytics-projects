@@ -45,6 +45,23 @@ Based in southern Spain.
 
 **One artifact, applied repeatedly.**
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Students are used to courses that cover many tools or techniques. This course is intentionally focused: one framework (the Brief), applied to different contexts. The 2-day intensive format means we move fast — there's no room for tangents. The capstone connection is the "why this matters."
+
+**Key point:** One artifact, applied repeatedly. Simplicity is intentional.
+
+**Say something like:**
+"I want to set expectations. This is a different kind of course.
+
+We're not going to cover 20 techniques superficially. We're going to learn one framework — the Analytics Project Brief — and apply it over and over. You'll see it in different contexts: funnel analysis, attribution, retention, and so on. But it's the same framework each time.
+
+By the end of these two days, filling out a Brief should feel natural. That's the goal. And this directly prepares you for your capstone project, where you'll use this framework for real."
+
+**Transition:** "Here's how the two days are structured..."
+-->
+
 ---
 
 ## Schedule: Day 1 (January 8)

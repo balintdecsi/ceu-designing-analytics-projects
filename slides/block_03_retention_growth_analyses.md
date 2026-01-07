@@ -66,6 +66,28 @@ The fundamental question:
 
 This tells you if your product has lasting value — or if people try it and leave.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Retention is often called "the silent killer" — companies can grow quickly with poor retention by pouring money into acquisition, but it's not sustainable. The D7 and D30 retention benchmarks vary dramatically by industry: gaming apps often have 20% D30, productivity apps 40%+, social apps in between.
+
+**Key point:** Retention tells you if your product has lasting value.
+
+**Say something like:**
+"Retention analysis answers a simple but crucial question: do people come back?
+
+Of the users who signed up on a given day — call it Day 0 — what percentage are still active on Day 7? Day 30? Day 90?
+
+This is the single best indicator of whether your product has lasting value. If people try it and never return, it doesn't matter how many you acquire — you're filling a leaky bucket.
+
+I like to think of retention as the truth-teller. Marketing can get people in the door. A clever onboarding flow can get them to complete signup. But if they don't come back the next week? The product didn't deliver value. Retention is the metric you can't fake."
+
+**If asked:** "What's a good retention rate?"
+A: It depends on the product category. Gaming apps: 20-30% D30 is solid. Productivity SaaS: 40%+ D30. Social apps: 30-40% D30. The trend matters as much as the absolute number — is it improving or declining?
+
+**Transition:** "Let me show you why retention matters more than most people realize..."
+-->
+
 ---
 
 <!-- _header: '' -->
@@ -83,6 +105,32 @@ This tells you if your product has lasting value — or if people try it and lea
 - Improving retention 20% → 20% more users **every cohort, forever**
 
 Small retention improvements have massive long-term impact.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This is one of the most important slides for students to internalize. Companies often over-invest in acquisition and under-invest in retention. The math is simple but powerful: acquisition improvements are additive (one-time gain), retention improvements are multiplicative (compound over every future cohort).
+
+**Key point:** Retention improvements compound. Acquisition improvements don't.
+
+**Say something like:**
+"I want you to understand the math of retention vs. acquisition.
+
+If you improve acquisition 20%, you get 20% more users this period. Great. But that's a one-time gain.
+
+If you improve retention 20%, you get 20% more users retained from this cohort. And 20% more from next month's cohort. And 20% more from every cohort forever.
+
+Retention compounds. Acquisition doesn't.
+
+A 5 percentage point improvement in D30 retention might sound small. But apply it to every cohort over 3 years and you've potentially doubled your active user base compared to where you'd be otherwise.
+
+This is why smart companies obsess about retention. It's not as glamorous as growth — nobody writes headlines about 'retention improved 3 percentage points' — but the long-term math is overwhelmingly in favor of retention investment."
+
+**If asked:** "Then why do companies focus so much on acquisition?"
+A: Several reasons. Acquisition is more visible. Executives can see ads running. Growth numbers look good in board decks. Retention is quiet — you're preventing something bad, not creating something visible. Also, many companies have short time horizons.
+
+**Transition:** "Let me show you what data you need for retention analysis..."
+-->
 
 ---
 
@@ -132,6 +180,30 @@ Small retention improvements have massive long-term impact.
 
 Where the curve flattens = your "true" retention rate.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** The shape of the retention curve tells a story. Most products have steep early drops (Day 1-7) as users who signed up but never engaged disappear. The curve then either continues declining (product doesn't form habits) or flattens (users who made it past the early drop have found value). The "true" retention rate is where the curve stabilizes.
+
+**Key point:** A steep early drop is normal. What matters is whether the curve eventually flattens.
+
+**Say something like:**
+"When you look at a retention curve, the shape tells you a story.
+
+A steep early drop — say, 50% by Day 7 — sounds bad, but it's actually normal. Many people sign up and never really try the product. They downloaded the app and forgot. They created an account and got distracted. That's expected.
+
+What you care about is what happens after. If the curve keeps declining — 50% at D7, 30% at D30, 15% at D60, trending toward zero — you don't have habit formation. Users try it, use it a bit, and gradually drift away. Your product doesn't become part of their routine.
+
+If the curve flattens — 50% at D7, 35% at D30, 30% at D60, stable around 28% — you have something. Those 28% found enough value to keep coming back. That's your 'true' retention rate.
+
+The place where the curve flattens tells you what percentage of users you're really retaining long-term. Everything before that is the 'sorting' period."
+
+**If asked:** "When does the curve typically flatten?"
+A: Varies by product. Consumer apps often see stabilization by D30-D60. Enterprise software might take months. Gaming can stabilize in days.
+
+**Transition:** "You shouldn't just look at one cohort though..."
+-->
+
 ---
 
 ## Cohort Analysis: Comparing Over Time
@@ -179,6 +251,32 @@ Users who add 3+ friends retain better. But:
 If you force friend-adding on disengaged users, they might still churn.
 
 **Always recommend A/B tests** before mandating changes based on driver analysis.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This is one of the most important cautions in the entire course. Every company does retention driver analysis and finds correlations like "users who do X retain better." The temptation is to force everyone to do X. This rarely works because it confuses correlation with causation. The Facebook "7 friends in 10 days" story is the canonical example — it's often misunderstood as "make everyone add 7 friends" when the insight was about identifying engaged users early.
+
+**Key point:** Correlation is not causation. Recommend A/B tests before mandating changes.
+
+**Say something like:**
+"This slide is so important I want you to write it down. The driver analysis trap.
+
+You do the analysis. You find that users who add 3+ friends in the first week retain at 2x the rate. The product team says: 'Great! Let's make everyone add 3 friends before they can use the app.'
+
+Stop. Think about what you're assuming.
+
+You're assuming that adding friends CAUSES retention. But what if engaged users — people who were always going to retain — naturally add friends because they're engaged? The adding didn't cause the engagement; they were both caused by underlying engagement.
+
+If that's true, forcing friend-adding on disengaged users won't help. They'll add friends to get past the gate and then churn anyway. Or worse, they'll abandon during onboarding because you made it harder.
+
+This is why your recommendation should always be: 'We found a correlation. We recommend an A/B test to establish causation before mandating the change.' That's what separates good analysts from dangerous ones."
+
+**If asked:** "How do you run the A/B test?"
+A: Test group gets prompted/encouraged to add friends but not forced. Control group gets normal experience. Measure D30 retention for both. If test retains better, there's likely a causal effect. If they're the same, the correlation was selection bias.
+
+**Transition:** "Let me show you some common data quality issues to watch for..."
+-->
 
 ---
 
@@ -258,6 +356,36 @@ Power user analysis asks:
 - Who are these users?
 - What do they do differently?
 - Should we optimize for them or broaden engagement?
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Most products have highly skewed engagement — a small percentage of users drive a disproportionate share of value. This is the Pareto principle applied to user engagement. Power user analysis helps companies understand who these users are and decide whether to double down on them or try to create more of them.
+
+**Key point:** Engagement is usually skewed. Understanding power users informs strategy.
+
+**Say something like:**
+"Most products have a dirty secret: a small percentage of users drive most of the value.
+
+Think about any app you use. Some people check it 20 times a day. Most people open it once a week — if that. The daily users might be 10% of your base but 60% of your engagement.
+
+Power user analysis asks four questions.
+
+First: how concentrated is engagement? Is it 80/20? 90/10? 95/5?
+
+Second: who are these power users? What do they have in common?
+
+Third: what do they do differently? Features, behaviors, patterns?
+
+Fourth — and this is the strategic question: should we optimize for power users, or try to create more of them?
+
+This last question doesn't have a right answer. It's a strategy decision. Your job as an analyst is to provide the data that informs the decision."
+
+**If asked:** "Shouldn't we always try to create more power users?"
+A: Not necessarily. If your power users have fundamentally different needs or circumstances than casual users, trying to convert casual users may dilute the product for everyone. Sometimes serving power users better is the right call.
+
+**Transition:** "Let me show you what data you need..."
+-->
 
 ---
 
@@ -463,6 +591,28 @@ Different from other analyses:
 - **Failure analysis** tells you *why*
 
 Often **exploratory** — you don't have a hypothesis yet. You're categorizing problems.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Failure analysis is different from other analyses because it's explicitly exploratory. You don't start with a hypothesis — you start with a symptom ("searches are failing") and build a taxonomy of causes. This is qualitative work disguised as quantitative analysis. The manual sampling step is crucial and often skipped by analysts who want to stay in SQL.
+
+**Key point:** Failure analysis is exploratory. You're categorizing problems, not testing hypotheses.
+
+**Say something like:**
+"Failure analysis is different from everything else we've covered. It's explicitly exploratory.
+
+Here's the difference. Funnel analysis tells you WHERE users drop off — 40% abandon at the payment step. But it doesn't tell you WHY. Is the page slow? Confusing form? Missing payment method? You don't know.
+
+Failure analysis answers the 'why' question. And here's the key: you usually don't have a hypothesis when you start. You have a symptom — searches are returning zero results, support tickets are spiking, error rates are up. Your job is to categorize the failures and size each category.
+
+This is qualitative work. You can't stay in SQL for this. You have to look at actual examples — actual search queries that failed, actual error messages, actual support tickets. And then you build a taxonomy: 'These failures are spelling errors. These are inventory gaps. These are junk queries.' That taxonomy is the analytical output."
+
+**If asked:** "Can't we automate this with machine learning?"
+A: Eventually, maybe. But you need the taxonomy first. And ML classification is only as good as its training labels — which means a human had to categorize examples first. Start manual, automate later.
+
+**Transition:** "Here's when you'd use failure analysis..."
+-->
 
 ---
 
@@ -683,6 +833,34 @@ Lowering limits increases conversion, but:
 
 **Finding the sweet spot requires experimentation.**
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** The limit dilemma is central to freemium strategy. Limits are the most powerful conversion lever — when users hit a limit, conversion rates spike. But limits that are too aggressive damage user trust and drive free users away. This is a classic tradeoff with no universal right answer.
+
+**Key point:** Limits convert, but aggressive limits damage trust. Finding the right balance requires experimentation.
+
+**Say something like:**
+"This is the central tension in freemium: the limit dilemma.
+
+Limits are incredibly powerful for conversion. When someone hits a storage limit or project limit, their conversion rate might be 10x higher than someone who hasn't hit a limit. They have an immediate need.
+
+So there's a temptation: lower the limits. Make people hit them earlier. Convert more users.
+
+But here's the problem. If limits feel too aggressive, users feel nickeled-and-dimed. They came for a 'free product' and immediately hit a paywall. They churn — often angrily, with bad reviews.
+
+If limits are too generous, almost nobody hits them. You have millions of free users happily using your product forever, never converting.
+
+The sweet spot is somewhere in the middle: limits that let users get genuine value from the free tier, encounter the limit naturally as they grow, and feel that paying is worth it.
+
+Finding that sweet spot requires experimentation. There's no formula. You have to test different limits and measure both conversion AND free user retention."
+
+**If asked:** "How do you test limit changes safely?"
+A: Gradually and with holdbacks. Lower the limit for 10% of new users first. Measure conversion and churn for that cohort. If both metrics improve (or conversion goes up without killing churn), expand.
+
+**Transition:** "Let's look at a real scenario..."
+-->
+
 ---
 
 ## The NoteSpace Scenario
@@ -745,6 +923,34 @@ Questions:
 
 Relevant for: Multi-product companies, platform businesses, feature suites.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** As companies grow, they often launch multiple products or features. The strategic question is whether these complement each other (using one increases value of another) or cannibalize each other (using one reduces need for another). This analysis is particularly relevant for platform businesses, multi-product companies, and feature-rich applications.
+
+**Key point:** Products/features can complement (1+1=3) or cannibalize (1+1=1.5). Understanding which is crucial for strategy.
+
+**Say something like:**
+"Ecosystem analysis becomes important as companies grow and launch multiple products.
+
+The core question: when users adopt multiple products, is the total value greater than the sum of parts — or less?
+
+Complements: Think Slack and Google Drive. Using one makes the other more valuable. Integrations deepen engagement. 1+1=3.
+
+Substitutes: Think iMessage and WhatsApp. Using one reduces need for the other. They compete for the same use case. 1+1=1.5.
+
+If your products are complements, you want to encourage multi-product adoption — build bridges, promote cross-selling, reward multi-product users.
+
+If your products are substitutes, you might be cannibalizing yourself. New product success comes at the expense of the old product. That might be okay strategically, but you need to know it's happening.
+
+The analysis tells you which scenario you're in — and the strategy depends on the answer."
+
+**If asked:** "How do I know if products are complements or substitutes?"
+A: Look at user behavior. If users of Product A have higher engagement with Product B than non-users of A, they might be complements. If users of A rarely use B, they might be substitutes. But beware of selection bias — test causally.
+
+**Transition:** "Let me define complements and substitutes more precisely..."
+-->
+
 ---
 
 ## Complements vs. Substitutes
@@ -768,6 +974,30 @@ You observe: Users of both Product A and B retain 40% better than single-product
 2. Highly engaged users **naturally** use more products? (Selection bias)
 
 If it's selection bias, pushing cross-product adoption won't help — and may annoy users.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This is the same selection bias problem we discussed in retention driver analysis, applied to ecosystem analysis. Multi-product users often look better on every metric — but that's often because engaged users naturally adopt more products, not because multi-product adoption causes engagement. This mistake leads to expensive "cross-product" investments that don't work.
+
+**Key point:** Multi-product correlation almost always has selection bias. Engaged users do everything.
+
+**Say something like:**
+"This is the same trap we saw in retention driver analysis, applied to ecosystem analysis.
+
+You look at the data. Users who use both Product A and Product B retain 40% better than single-product users. The product team says: 'Great! Let's invest in cross-product features to get more people using both!'
+
+Stop. Same question as before. Is it that using both products CAUSES higher retention? Or is it that highly engaged users — the people who would have retained anyway — naturally explore and adopt more products?
+
+If it's the second — and it usually is — pushing cross-product adoption on single-product users won't help. You're not creating engagement. You're just annoying people who were perfectly happy with one product.
+
+This is why you can't just observe correlations. You need to test causally. Did the INTERVENTION of promoting cross-product adoption increase retention? Or did you just select for already-engaged users?"
+
+**If asked:** "How can you tell the difference?"
+A: A/B test. Show cross-product prompts to a treatment group, suppress them for a control group. Measure retention for both. If treatment retains better, there's a causal effect. If not, it was selection bias.
+
+**Transition:** "Let me show you some methods to untangle this..."
+-->
 
 ---
 
@@ -842,6 +1072,34 @@ If it's selection bias, pushing cross-product adoption won't help — and may an
 - Expansion: High-propensity users would convert anyway
 
 **Solution:** A/B test before major investments. Correlation ≠ causation.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This is the meta-lesson for Block 3, just as "interaction effects" was for Block 2. Selection bias is the single most common mistake in retention and growth analytics. It's related to the causal inference problem we introduced in Block 2, but here we're seeing it specifically in user-level analysis.
+
+**Key point:** Selection bias causes most analytics failures in retention and growth work. Always ask: "Are we finding causation, or just selecting for engaged users?"
+
+**Say something like:**
+"I want you to notice a pattern that ran through every analysis we covered today.
+
+Retention drivers: Users who add friends retain better. But maybe engaged users both add friends AND retain — selection bias.
+
+Power users: Multi-product users have higher LTV. But maybe engaged users naturally adopt more products — selection bias.
+
+Expansion: Users who hit limits convert. But maybe power users hit limits AND would have converted anyway — selection bias.
+
+Do you see the pattern? In every case, we're observing a correlation and tempted to assume causation. But there's a hidden variable: underlying user engagement.
+
+Here's the rule: whenever you find a behavioral correlation in user data, ask yourself: 'Would an A/B test validate this?' If you're not sure, recommend the test before the investment. The difference between correlation and causation can be millions of dollars of wasted effort.
+
+Block 2's lesson was 'things interact.' Block 3's lesson is 'correlation isn't causation.' Both are the same underlying problem — observational data lies to you in predictable ways."
+
+**If asked:** "Is there ever a case where we don't need to A/B test?"
+A: If the intervention is cheap and reversible, sometimes you just try it. But for major investments — redesigns, forced onboarding changes, budget reallocation — always test.
+
+**Transition:** "That wraps up Day 1..."
+-->
 
 ---
 
