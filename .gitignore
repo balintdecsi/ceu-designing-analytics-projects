@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Claude Code session data
+.claude/
+
+# Deprecated/archived content
+old/
+
+# Sensitive course materials (not for public repo)
+exam/
+grading/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Extracted PDF text files (regeneratable)
+*_text.txt

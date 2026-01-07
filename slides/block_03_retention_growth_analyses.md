@@ -1,0 +1,869 @@
+---
+marp: true
+theme: default
+paginate: true
+header: 'ECBS5228A: Designing Analytics Projects'
+footer: 'Block 3: Retention & Growth Analyses'
+---
+
+<!-- _class: lead -->
+<!-- _paginate: false -->
+<!-- _header: '' -->
+<!-- _footer: '' -->
+
+# Designing Analytics Projects
+
+## Block 3: Retention & Growth Analyses
+
+**Eduardo Arino de la Rubia**
+January 8, 2026
+
+---
+
+## Block 3 Overview
+
+| Section | Time |
+|---------|------|
+| Retention Analysis | 20 min |
+| Power User Analysis | 13 min |
+| Mini-Case Exercise | 10 min |
+| Failure Analysis | 13 min |
+| Expansion & Monetization | 10 min |
+| Ecosystem Analysis | 12 min |
+| Day 1 Wrap-up | 8 min |
+
+---
+
+## The Retention & Growth Questions
+
+Block 2 was about **getting** customers.
+Block 3 is about **keeping** and **growing** them.
+
+> Acquisition without retention is a leaky bucket.
+
+The analyses in this block answer:
+- Why do they leave? (Retention)
+- Who matters most? (Power User)
+- What's broken? (Failure)
+- How do they grow? (Expansion)
+
+---
+
+<!-- _class: lead -->
+
+# Part 1: Retention Analysis
+### *(22 minutes)*
+
+---
+
+## What is Retention Analysis?
+
+**Measuring whether users come back after their first interaction.**
+
+The fundamental question:
+
+> Of the users who signed up on Day 0, what percentage are still active on Day N?
+
+This tells you if your product has lasting value — or if people try it and leave.
+
+---
+
+<!-- _header: '' -->
+<!-- _footer: '' -->
+
+![bg contain](../figures/images/block_03_retention_vs_acquisition.png)
+
+---
+
+## Why Retention Matters More Than Acquisition
+
+**Acquisition is expensive. Retention compounds.**
+
+- Improving acquisition 20% → 20% more users
+- Improving retention 20% → 20% more users **every cohort, forever**
+
+Small retention improvements have massive long-term impact.
+
+---
+
+## The Data You Need
+
+| Field | Example | Why |
+|-------|---------|-----|
+| `user_id` | `u_12345` | Track individual users |
+| `signup_date` | `2026-01-01` | Define cohort (Day 0) |
+| `activity_date` | `2026-01-08` | When they came back |
+| `activity_type` | `app_open` | What counts as "active" |
+
+**Critical decision:** What counts as "active"?
+- App open? (low bar)
+- Core action? (higher bar, more meaningful)
+- Purchase? (highest bar)
+
+---
+
+## Defining Retention: DN vs. Rolling
+
+**DN retention** — Active on Day N specifically?
+`Active Day N / Signups Day 0`
+
+**Rolling D7** — Active at any point in days 1-7?
+`Active any day 1-7 / Signups Day 0`
+
+**Example:** 1,000 signups Jan 1 → 420 active Jan 8 → D7 = 42%
+
+**DN is stricter.** Rolling is more forgiving. Be explicit.
+
+---
+
+<!-- _header: '' -->
+<!-- _footer: '' -->
+
+![bg contain](../figures/images/block_03_retention_curve.png)
+
+---
+
+## Reading the Retention Curve
+
+**Shape matters:**
+- **Steep early drop** = First-time experience problem
+- **Continued decline** = No habit formation
+- **Flattens** = Found product-market fit for those users
+
+Where the curve flattens = your "true" retention rate.
+
+---
+
+## Cohort Analysis: Comparing Over Time
+
+Don't just look at one cohort. Compare them:
+
+| Cohort | D1 | D7 | D30 |
+|--------|----|----|-----|
+| Jan 2025 | 65% | 42% | 28% |
+| Apr 2025 | 62% | 38% | 24% |
+| Jul 2025 | 58% | 35% | 22% |
+| Oct 2025 | 55% | 35% | ??? |
+
+**Trend is down.** Something changed — product? Acquisition source? Competition?
+
+Cohort analysis reveals trends that aggregate metrics hide.
+
+---
+
+## Retention Driver Analysis
+
+Beyond "what is retention?" → **"what drives retention?"**
+
+**Method:** Compare users who retained vs. churned. What's different?
+
+| Behavior in First Week | Retained D30 | Churned D30 |
+|-----------------------|--------------|-------------|
+| Added ≥3 friends | 52% | 18% |
+| Completed profile | 45% | 22% |
+| Posted content | 48% | 15% |
+| Only browsed | 12% | 68% |
+
+**Insight:** Friend-adding is the strongest predictor.
+
+---
+
+## The Driver Analysis Trap
+
+**Correlation ≠ causation.**
+
+Users who add 3+ friends retain better. But:
+- Did friend-adding **cause** retention?
+- Or do **naturally engaged users** both add friends AND retain?
+
+If you force friend-adding on disengaged users, they might still churn.
+
+**Always recommend A/B tests** before mandating changes based on driver analysis.
+
+---
+
+## Common Retention Data Issues
+
+**Inconsistent "active" definition** — Different teams use different events → metrics don't match
+
+**Bot/fraud signups** — Unusual signup patterns → inflates D0, deflates retention
+
+**Reactivation confusion** — Churned user returns after 90 days → is this D1 or new user?
+
+**Platform differences** — iOS vs. Android tracking gaps → retention looks different
+
+**Standardize your "active" event** across the company.
+
+---
+
+## The SnapGram Scenario
+
+**Company:** SnapGram (photo sharing app)
+**Problem:** D7 retention dropped from 42% to 35% over 6 months
+**Stakes:** "Sugar diet growth" — high acquisition masking retention crisis
+
+**Hypothesis:** Users who add ≥3 friends in first 48 hours retain at 2x the rate. Onboarding doesn't push friend-adding hard enough.
+
+---
+
+## SnapGram: Counter-Metrics
+
+**Signup completion** (Guardrail) — Aggressive onboarding increases abandonment
+
+**Engagement depth** (Guardrail) — "Zombie retention" = they return but don't engage
+
+**Notification opt-out** (Tradeoff) — Pushy re-engagement causes fatigue
+
+---
+
+## SnapGram: Pre-Mortem
+
+> We found friend-adding was the #1 predictor. Product added a mandatory "add 5 friends" step.
+>
+> Signup completion dropped 30%.
+>
+> The correlation was selection bias — engaged users organically add friends, but forcing it didn't make disengaged users engaged.
+>
+> **Lesson:** Recommend A/B tests, not mandates. Correlation ≠ causation.
+
+---
+
+## Retention Analysis: Key Takeaways
+
+1. **Define "active" precisely** — same event across all analysis
+2. **DN vs. rolling retention** — be explicit about which you're using
+3. **Cohort comparisons reveal trends** — aggregates hide insights
+4. **Driver analysis is correlational** — A/B test before mandating
+5. **Counter-metrics matter** — don't break signup to fix D7
+
+---
+
+<!-- _class: lead -->
+
+# Part 2: Power User Analysis
+### *(13 minutes)*
+
+---
+
+## What is Power User Analysis?
+
+**Understanding who your best users are and what they do differently.**
+
+Most products have highly skewed engagement:
+
+> A small percentage of users drive most of the value.
+
+Power user analysis asks:
+- How concentrated is engagement?
+- Who are these users?
+- What do they do differently?
+- Should we optimize for them or broaden engagement?
+
+---
+
+## The Data You Need
+
+| Field | Example | Why |
+|-------|---------|-----|
+| `user_id` | `u_12345` | Identify individuals |
+| `engagement_metric` | `viewing_hours` | What defines "power" |
+| `time_period` | `Jan 2026` | Consistent measurement window |
+| `user_attributes` | Tenure, source, demographics | Describe power users |
+| `behaviors` | Features used, content consumed | What they do differently |
+
+**Critical decision:** What metric defines "power"?
+- Time spent? Actions taken? Revenue generated?
+
+---
+
+<!-- _header: '' -->
+<!-- _footer: '' -->
+
+![bg contain](../figures/images/block_03_pareto_curve.png)
+
+---
+
+## The 80/20 Rule (Pareto)
+
+Often, engagement follows a power law:
+- Top 10% of users → 50%+ of engagement
+- Top 20% of users → 80%+ of engagement
+
+The exact numbers vary, but skew is almost universal.
+
+---
+
+## Calculating Concentration
+
+**Gini coefficient** or simple percentile analysis:
+
+| User Percentile | % of Total Viewing Hours |
+|-----------------|-------------------------|
+| Top 1% | 15% |
+| Top 5% | 35% |
+| Top 10% | 52% |
+| Top 20% | 72% |
+| Bottom 50% | 8% |
+
+**High concentration** = Small group matters a lot
+**Low concentration** = Engagement is distributed
+
+---
+
+## Power User Behavioral Profile
+
+Once you identify power users, describe them:
+
+| Dimension | Power Users | Casual |
+|-----------|------------|--------|
+| Tenure | 18 mo avg | 4 mo |
+| Sessions/week | 12 | 2 |
+| Features used | 8 of 10 | 2 of 10 |
+| Content type | Series | Movies |
+| Time of day | Evening | Weekend |
+
+**Insight:** Power users have formed a habit. Casual users haven't.
+
+---
+
+## Path to Power: How Users Become Power Users
+
+Track user journeys over time:
+
+| Months Active | % Became Power User |
+|--------------|---------------------|
+| 1 | 2% |
+| 3 | 8% |
+| 6 | 15% |
+| 12 | 22% |
+
+**Questions:** What triggers the transition? Can we accelerate it?
+
+---
+
+## The Strategic Question
+
+**Two options:**
+
+1. **Optimize for power users**
+   - They drive most engagement
+   - High retention, high value
+   - Risk: Alienate casual users
+
+2. **Broaden engagement**
+   - More users become power users
+   - Larger addressable base
+   - Risk: Dilute product for core users
+
+**This is a strategy decision, not an analytics one.** Your job is to inform it.
+
+---
+
+## The Streamflix Scenario
+
+**Company:** Streamflix (streaming service, 45M subscribers)
+**Problem:** Engagement is highly skewed. Small % drives most viewing.
+**Question:** Optimize for power users or broaden engagement?
+
+**Hypothesis:** Top 10% of users account for >50% of viewing hours and have distinct content preferences we're not explicitly designing for.
+
+---
+
+## Streamflix: Counter-Metrics
+
+**Casual user satisfaction** (Guardrail) — Power user features may confuse casual users
+
+**Content diversity** (Tradeoff) — Optimizing for power users may narrow content
+
+**New user activation** (Guardrail) — Power user UX may overwhelm newcomers
+
+---
+
+## Streamflix: Pre-Mortem
+
+> We redesigned homepage for power users (binge-watchers). Casual users saw engagement drop 20%, churn increased. We optimized for power users at the expense of everyone else.
+
+**Lesson:** Serve both segments. Present a balanced strategy.
+
+---
+
+## Power User Analysis: Key Takeaways
+
+1. **Engagement is usually skewed** — measure how much
+2. **Define "power" with a clear metric** — time, actions, or revenue
+3. **Profile power users behaviorally** — what do they do differently?
+4. **Counter-metric: casual user health** — don't alienate the majority
+5. **This informs strategy** — analysts provide data, leadership decides
+
+---
+
+<!-- _class: lead -->
+
+# Mini-Case Exercise: Retention
+### *(10 minutes)*
+
+---
+
+## Mini-Case: SocialApp Retention Drop
+
+> **Situation:** SocialApp's D7 retention dropped from 42% to 34% after a major UI redesign.
+>
+> **Additional data:**
+> - Power users (top 10%) seem unaffected — their D7 is still 68%
+> - Casual users (bottom 50%) dropped from 28% to 18%
+> - The new UI emphasizes "stories" over the feed
+
+**Think (2 min):** What does this pattern tell you? Which foundational analysis would you use first?
+
+---
+
+## Mini-Case: Discussion
+
+**Questions to consider:**
+
+1. Why might power users be unaffected while casual users suffer?
+2. Is this a Retention Analysis problem or a Power User Analysis problem?
+3. What counter-metric should have been tracked during the redesign?
+4. What's your hypothesis for the root cause?
+
+<!--
+INSTRUCTOR NOTE:
+Cold call 2-3 students.
+Looking for:
+- Power users have habit formation, casual users don't
+- The redesign catered to power user preferences
+- Counter-metric: casual user engagement, feature adoption by segment
+- Hypothesis: Stories are a power user feature; casual users wanted simple scrolling
+-->
+
+---
+
+<!-- _class: lead -->
+
+## ☕ Stretch Break
+### 5 minutes
+
+Stand up. Walk around. The last 30 minutes cover Failure and Expansion analyses.
+
+---
+
+<!-- _class: lead -->
+
+# Part 3: Failure Analysis
+### *(13 minutes)*
+
+---
+
+## What is Failure Analysis?
+
+**Systematically investigating why something isn't working.**
+
+Different from other analyses:
+- **Funnel analysis** tells you *where* users drop off
+- **Failure analysis** tells you *why*
+
+Often **exploratory** — you don't have a hypothesis yet. You're categorizing problems.
+
+---
+
+## When to Use Failure Analysis
+
+| Symptom | Failure Analysis Approach |
+|---------|--------------------------|
+| Zero search results | Sample queries, categorize why they failed |
+| High error rates | Sample errors, identify root causes |
+| Support tickets | Categorize complaints, size each category |
+| Abandonment | Review session recordings, identify patterns |
+
+**Common thread:** Something is broken, but you don't know the mix of causes.
+
+---
+
+## The Method: Manual Sampling
+
+**Step 1:** Pull a random sample (100-500 instances of failure)
+
+**Step 2:** Manually review and categorize each one
+
+**Step 3:** Develop a taxonomy (3-7 categories)
+
+**Step 4:** Validate taxonomy at scale (can you apply it programmatically?)
+
+**Step 5:** Size each category (volume and impact)
+
+This is qualitative-first, quantitative-second.
+
+---
+
+## Example: Zero-Results Search
+
+Sample 200 zero-result queries. Manually categorize:
+
+| Category | Example | Count | % |
+|----------|---------|-------|---|
+| **Spelling error** | "ipone case" | 86 | 43% |
+| **Synonym gap** | "sneakers" (we index "trainers") | 42 | 21% |
+| **Inventory gap** | "vintage camera" (we don't sell) | 34 | 17% |
+| **Junk/nonsense** | "asdfgh" | 24 | 12% |
+| **Ambiguous** | "gift" (too broad) | 14 | 7% |
+
+**Insight:** 43% is spelling. That's a clear priority.
+
+---
+
+## Opportunity Sizing
+
+Not all failures are equal. Size by impact:
+
+| Category | % | Value | Opportunity |
+|----------|---|-------|-------------|
+| Spelling | 43% | $50 | $5.4M/yr |
+| Synonym | 21% | $75 | $3.9M/yr |
+| Inventory | 17% | $120 | $5.1M/yr |
+| Junk | 12% | $0 | $0 |
+
+**Insight:** Spelling is highest volume, but inventory has high-value queries.
+
+---
+
+## Validation: Inter-Rater Reliability
+
+Manual classification is subjective. Validate it:
+
+**Method:** Have 2 people independently classify the same 50 samples.
+
+| Agreement Level | Interpretation |
+|-----------------|----------------|
+| >80% | Taxonomy is clear, can proceed |
+| 60-80% | Refine category definitions |
+| <60% | Taxonomy is too subjective, rethink |
+
+If classifiers disagree, the categories aren't crisp enough.
+
+---
+
+## The FindIt Scenario
+
+**Company:** FindIt (e-commerce search engine)
+**Problem:** 12% of searches return zero results (up from 9%)
+**Stakes:** Each percentage point = ~$2M lost GMV
+
+**Framing:** This is **exploratory**. We don't know why searches fail. Goal is to categorize and size before picking a solution.
+
+---
+
+## FindIt: Counter-Metrics
+
+| Counter-metric | Type | Why it could break |
+|----------------|------|-------------------|
+| **Search relevance** | Guardrail | Returning bad results is worse than no results |
+| **Query latency** | Guardrail | Complex spelling logic may slow search |
+| **Inventory trust** | Tradeoff | Showing "similar" items may frustrate users |
+
+**Key insight:** Aggressive spell-correction can break things. "Febreeze" → "Freeze" is wrong.
+
+---
+
+## FindIt: Pre-Mortem
+
+> We found spelling errors were 45% of failures and recommended a spelling correction system.
+>
+> Engineering built it, but the speller was too aggressive — it "corrected" valid brand names and niche terms. Search relevance dropped 15%.
+>
+> **Lesson:** Exploratory work was valuable, but we skipped validation. Test edge cases before launch.
+
+---
+
+## Failure Analysis: Key Takeaways
+
+1. **Start with manual sampling** — you need to see the failures
+2. **Build a taxonomy** — 3-7 categories, mutually exclusive
+3. **Validate with inter-rater reliability** — if classifiers disagree, refine
+4. **Size by impact, not just volume** — small category can have big $$$
+5. **This is exploratory** — you're building hypotheses, not testing them
+6. **Counter-metrics prevent over-correction** — fixing one thing can break another
+
+---
+
+<!-- _class: lead -->
+
+# Part 4: Expansion & Monetization Analysis
+### *(13 minutes)*
+
+---
+
+## What is Expansion Analysis?
+
+**Understanding how customers grow their relationship with you.**
+
+Questions:
+- Why do free users upgrade to paid?
+- Why do basic subscribers upgrade to premium?
+- What triggers expansion (more seats, higher tier)?
+
+This is about **extracting more value from existing customers** — often cheaper than acquisition.
+
+---
+
+<!-- _header: '' -->
+<!-- _footer: '' -->
+
+![bg contain](../figures/images/block_03_freemium_funnel.png)
+
+---
+
+## The Freemium Model
+
+**Freemium math:**
+- Free users: Large base, low/no revenue
+- Paid users: Smaller base, meaningful revenue
+- Premium: Smallest base, highest revenue
+
+**The question:** What makes someone convert?
+
+---
+
+## The Data You Need
+
+| Field | Example | Why |
+|-------|---------|-----|
+| `user_id` | `u_12345` | Track individual journeys |
+| `subscription_status` | `free`, `basic`, `premium` | Current state |
+| `status_change_date` | `2026-01-15` | When they upgraded |
+| `usage_metrics` | Storage used, features used | What might trigger upgrade |
+| `limit_hit_events` | `storage_limit_reached` | Friction points |
+
+---
+
+## Conversion Driver Analysis
+
+Compare users who upgraded vs. stayed free:
+
+| Behavior (Week Before Upgrade) | Upgraded | Stayed Free |
+|-------------------------------|----------|-------------|
+| Hit storage limit | 78% | 12% |
+| Used premium feature (trial) | 65% | 8% |
+| Invited team member | 45% | 5% |
+| Heavy daily usage | 52% | 15% |
+
+**Insight:** Hitting limits and trying premium features are strong triggers.
+
+---
+
+## Limit Analysis: The Conversion Trigger
+
+Many freemium products use **limits** to drive conversion:
+
+| Limit Type | % Who Hit It | Conversion Rate If Hit |
+|-----------|--------------|------------------------|
+| Storage (5GB) | 15% | 35% |
+| Team members (3) | 8% | 52% |
+| Projects (10) | 12% | 28% |
+| API calls | 3% | 65% |
+
+**Insight:** Few users hit limits, but those who do convert at high rates.
+
+**Question:** Should we lower limits to force more conversions?
+
+---
+
+<!-- _header: '' -->
+<!-- _footer: '' -->
+
+![bg contain](../figures/images/block_03_limit_tradeoff.png)
+
+---
+
+## The Limit Dilemma
+
+Lowering limits increases conversion, but:
+
+- **Too high:** Few hit the limit, low conversion
+- **Too low:** Users feel nickeled-and-dimed, churn
+
+**Finding the sweet spot requires experimentation.**
+
+---
+
+## The NoteSpace Scenario
+
+**Company:** NoteSpace (productivity SaaS)
+**Problem:** 2M free users, 180K paid (9% conversion)
+**Question:** Where should Product invest to drive upgrades — limits, feature discovery, or targeting?
+
+**Hypothesis:** Users who hit the 5GB storage limit convert at 3x, but only 15% ever hit it.
+
+---
+
+## NoteSpace: Counter-Metrics
+
+| Counter-metric | Type | Why it could break |
+|----------------|------|-------------------|
+| **Free user retention** | Guardrail | Aggressive prompts drive free users away |
+| **Upgrade satisfaction** | Guardrail | Premature upgrades → regret → churn |
+| **Brand perception** | Tradeoff | "Pushy" monetization damages trust |
+
+---
+
+## NoteSpace: Pre-Mortem
+
+> We identified "high-value" free users (heavy usage, hit limits, tried premium features) and aggressively targeted them with upgrade prompts.
+>
+> Conversion increased 40%, but free user DAU dropped 25% as annoyed users left.
+>
+> Many "high-value" users were power free users who loved the free tier — they felt betrayed, not persuaded.
+>
+> **Lesson:** Looking valuable ≠ ready to convert. Use holdout tests. Monitor free retention as a hard guardrail.
+
+---
+
+## Expansion Analysis: Key Takeaways
+
+1. **Conversion drivers are behavioral** — what triggers the upgrade moment?
+2. **Limits are powerful but dangerous** — too aggressive alienates users
+3. **Targeting requires validation** — holdout tests before aggressive prompts
+4. **Counter-metric: free user health** — don't kill the funnel to boost conversion
+5. **Selection bias is real** — engaged users ≠ incremental conversions
+
+---
+
+<!-- _class: lead -->
+
+# Part 5: Ecosystem Analysis
+### *(12 minutes)*
+
+---
+
+## What is Ecosystem Analysis?
+
+**Understanding how multiple products or features interact.**
+
+Questions:
+- Do our products complement each other (1+1=3)?
+- Or cannibalize each other (1+1=1.5)?
+- Should we invest in cross-product features?
+
+Relevant for: Multi-product companies, platform businesses, feature suites.
+
+---
+
+## Complements vs. Substitutes
+
+| Relationship | Definition | Example |
+|-------------|------------|---------|
+| **Complement** | Using A increases value of B | Slack + Google Drive |
+| **Substitute** | Using A reduces need for B | iMessage vs. WhatsApp |
+| **Independent** | No relationship | Spotify + banking app |
+
+**Multi-product companies want complements.** Substitutes mean internal competition.
+
+---
+
+## The Selection Bias Problem
+
+You observe: Users of both Product A and B retain 40% better than single-product users.
+
+**But:** Is that because:
+1. Using both products **causes** higher retention? (Complement)
+2. Highly engaged users **naturally** use more products? (Selection bias)
+
+If it's selection bias, pushing cross-product adoption won't help — and may annoy users.
+
+---
+
+## Methods to Untangle Causation
+
+| Method | How It Works | Strength |
+|--------|-------------|----------|
+| **Propensity matching** | Compare multi-product users to similar single-product users | Controls for observables |
+| **Natural experiments** | When one product has outage, does the other suffer? | Reveals dependence |
+| **Holdout tests** | Suppress cross-product prompts in some markets | Gold standard |
+
+**Key insight:** Observational analysis alone cannot establish causation.
+
+---
+
+## The SocialSuite Scenario
+
+**Company:** SocialSuite (FriendFeed, QuickChat, PicShare)
+**Problem:** Products are siloed. Each PM optimizes their own metrics.
+**Question:** Are products complements? Should we invest in "bridges"?
+
+**Hypothesis:** Multi-product users retain 30% better, and cross-product features will increase stickiness.
+
+---
+
+## SocialSuite: Counter-Metrics & Pre-Mortem
+
+**Counter-metrics:**
+- Individual product focus (dilution risk)
+- User overwhelm (too many cross-promos)
+- Cannibalization (one product grows at another's expense)
+
+**Pre-mortem:** We found 40% better retention for multi-product users and invested heavily in cross-product features. But it was selection bias — engaged users adopt everything naturally. Cross-product prompts annoyed single-product users, and FriendFeed DAU dropped 10%.
+
+---
+
+## Ecosystem Analysis: Key Takeaways
+
+1. **Multi-product correlation ≠ causation** — selection bias is likely
+2. **Use natural experiments** — outages reveal true dependence
+3. **Holdout test before investing** — don't assume cross-product features help
+4. **Watch for cannibalization** — products may compete internally
+5. **This informs platform strategy** — big investment decisions
+
+---
+
+<!-- _class: lead -->
+
+# Day 1 Summary & Wrap-up
+### *(8 minutes)*
+
+---
+
+## The Retention & Growth Analyses
+
+| Analysis | Question | Pitfall |
+|----------|----------|---------|
+| **Retention** | Do they come back? | Zombie retention |
+| **Power User** | Who matters most? | Alienating casual users |
+| **Failure** | What's broken? | Over-aggressive fixes |
+| **Expansion** | How do they grow? | Annoying free users |
+| **Ecosystem** | Products complement? | Selection bias |
+
+---
+
+## Common Thread: Selection Bias
+
+**Multiple analyses today shared this trap:**
+
+- Retention drivers: Engaged users do everything
+- Power users: They were always going to be power users
+- Expansion: High-propensity users would convert anyway
+
+**Solution:** A/B test before major investments. Correlation ≠ causation.
+
+---
+
+## Day 1 Complete
+
+You now know:
+- **The Analytics Project Brief framework** (10 sections)
+- **Counter-metrics and adversarial thinking**
+- **9 foundational analyses** (4 acquisition + 5 retention/growth)
+
+**Day 2:** Stakeholders & Influence, then Application & Capstone Preparation.
+
+---
+
+<!-- _class: lead -->
+<!-- _paginate: false -->
+
+# See you Monday!
+
+**Day 2 starts at 10:50**
+
+- Block 4: Application & Practice
+- Block 5: Stakeholders & Influence
+
+**Before then:** Review the Brief template. Questions: rubiae@ceu.edu
