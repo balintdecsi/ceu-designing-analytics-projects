@@ -311,7 +311,7 @@ Each student receives a unique 2-page business scenario describing a company, pr
 
 ### Weekly Write-ups (30%)
 
-You'll submit 6 weekly write-ups from February 10 through March 17. These are practice exercises that prepare you for your capstone. Your actual capstone Brief is built through the PID process (due March 30).
+You'll submit 6 weekly write-ups from February 10 through March 17. These are practice exercises that prepare you for your capstone.
 
 | Week | Due Date | Topic |
 |------|----------|-------|

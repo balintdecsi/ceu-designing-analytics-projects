@@ -130,7 +130,7 @@ Your job: Scope it professionally using the Brief framework.
 
 **Grading:** Pass/fail. Genuine engagement matters, not perfection.
 
-Your actual capstone Brief is built via PID (due Mar 30).
+These prepare you for your actual capstone project.
 
 ---
 

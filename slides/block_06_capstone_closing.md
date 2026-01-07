@@ -440,7 +440,7 @@ Common Qs:
 
 You'll submit 6 weekly write-ups from Feb 10 – Mar 17.
 
-These are **practice exercises** that prepare you for your capstone. Your actual Brief is built through the PID process (due Mar 30).
+These are **practice exercises** that prepare you for your capstone.
 
 ---
 
@@ -467,7 +467,7 @@ These are **practice exercises** that prepare you for your capstone. Your actual
 > Week 2 (Feb 17): "Find an article about metric optimization gone wrong. Apply the 'What Breaks' framework."
 > Week 4 (Mar 3): "Evaluate 1-2 potential capstone projects against the red flags checklist."
 
-**By Week 6 (Mar 17):** You're ready to build your real Brief via PID.
+**By Week 6 (Mar 17):** You're ready for your capstone.
 
 ---
 

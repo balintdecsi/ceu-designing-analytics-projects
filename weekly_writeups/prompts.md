@@ -6,7 +6,7 @@ These 6 weekly prompts span February 10 through March 17. They prepare you for y
 
 **Structure:**
 - **Weeks 1-6 (Feb 10 – Mar 17):** Concept practice, capstone search journey, skill building
-- **Your actual capstone Brief** is built through the PID process (due Mar 30), not these write-ups
+- These write-ups prepare you for your capstone
 
 **Grading:** Pass/Fail
 **Length:** ~1 page per write-up
@@ -254,7 +254,7 @@ Choose one of the following:
 
 ### Prompt
 
-Projects are assigned on March 16. This is your final write-up before you begin building your actual capstone Brief through the PID process (due Mar 30).
+Projects are assigned on March 16. This is your final write-up before you begin working on your actual capstone.
 
 **Your submission should include:**
 
@@ -338,4 +338,4 @@ These 6 write-ups prepare you for capstone success:
 - Practice skills you'll need when you have a project
 - Build confidence before your Brief is "for real"
 
-**After Mar 17:** Your actual capstone Brief is built through the PID process (due Mar 30). The PID template includes all Brief sections. These write-ups have prepared you to fill it out effectively.
+**After Mar 17:** You'll apply what you've practiced to your actual capstone project.
