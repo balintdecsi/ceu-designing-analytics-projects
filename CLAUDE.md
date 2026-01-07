@@ -6,114 +6,161 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is the course repository for **ECBS5228A "Designing Analytics Projects"**, a 1-credit intensive course for MS in Business Analytics students at Central European University. The course runs over 2 days (January 8 & 12, 2026) and prepares students for their mandatory capstone project.
 
-## Core Architecture
+## Course Structure
 
-### Three-Pillar Course Structure
+### Three Pillars
 
-1. **Strategic Thinking**: Teaching that data science value extends beyond models in production (the "Webmaster Evolution" narrative)
-2. **Foundational Analyses**: 8 analyses structured along the customer journey:
-   - Acquisition: Funnel → Channel Attribution → Campaign Effectiveness → Customer Acquisition (CAC/LTV)
-   - Retention: Retention Analysis → Power User Analysis → Failure Analysis
-   - Growth: Expansion & Monetization Analysis
+1. **Strategic Thinking**: Data science value extends beyond models in production (the "job titles are fragile, responsibilities are durable" narrative)
+2. **Foundational Analyses**: 9 analyses structured along the customer journey
 3. **Capstone Preparation**: Using the Analytics Project Brief framework for professional project design
 
-### Key Course Framework: Analytics Project Brief
+### The 9 Foundational Analyses
 
-The centerpiece teaching tool is the **Analytics Project Brief** (one-page template). Students use this framework across all three assignments:
+| Phase | Analyses |
+|-------|----------|
+| **Acquisition** | Funnel, Channel Attribution, Campaign Effectiveness, CAC/LTV |
+| **Retention** | Retention Analysis, Power User Analysis, Failure Analysis |
+| **Growth** | Expansion & Monetization, Ecosystem Analysis |
 
-**Template structure** (see `templates/analytics_project_brief_template.md`):
-- Problem & Decision
-- Metrics (Primary + 2-3 Counter-Metrics using "What Breaks" framework)
-- Stakeholder Map (Power-Interest Grid, Champions & Blockers)
-- Foundational Analyses (2-3 selected from the 8 core analyses)
-- Scope & Timeline
-- Success Criteria
-- Assumptions & Risks
-- Pre-Mortem Exercise
+Each analysis has a complete worked example in `templates/examples/`.
 
-**Example** (see `templates/analytics_project_brief_example.md`): Netflix Skip Intro feature analysis
+### The Analytics Project Brief
 
-### File Organization
+The centerpiece teaching tool is a 10-section project scoping framework:
+
+1. Problem & Decision
+2. Metrics (Primary + Counter-Metrics)
+3. Stakeholder Map (Power-Interest Grid)
+4. Methodology
+5. Scope & Deliverables
+6. Success & Decision Criteria
+7. Timeline
+8. Risks & Assumptions
+9. Ethics & Privacy
+10. Pre-Mortem
+
+**Template:** `templates/analytics_project_brief.md`
+**Examples:** `templates/examples/brief_01_*.md` through `brief_09_*.md`
+
+## File Organization
 
 ```
 /Users/earino/CEU/ECBS5228/
-├── syllabus.md                    # Official course syllabus (authoritative source)
-├── notes.md                        # Teaching implementation notes (detailed lesson plans)
+├── syllabus.md                    # Official course syllabus (authoritative)
+├── CLAUDE.md                      # This file
+├── README.md                      # GitHub-facing readme
+├── LICENSE                        # MIT license
+├── requirements.txt               # Python dependencies
+│
 ├── templates/
-│   ├── analytics_project_brief_template.md   # Blank framework
-│   └── analytics_project_brief_example.md    # Netflix case study
-├── readings/
-│   └── counter_metrics_and_stakeholder_management.md  # Tiered reading list
-├── resources/                      # PDFs (capstone regulations, samples, presentation)
-├── slides/                         # Marp markdown slides + generated HTML
+│   ├── analytics_project_brief.md           # Blank Brief template
+│   └── examples/                            # 9 worked examples
+│       ├── brief_01_funnel_analysis.md      # Quickcart
+│       ├── brief_02_channel_attribution.md  # DataDash
+│       ├── brief_03_campaign_effectiveness.md # BrightMart
+│       ├── brief_04_cac_ltv.md              # MindfulApp
+│       ├── brief_05_retention_analysis.md   # SnapGram
+│       ├── brief_06_power_user_analysis.md  # Streamflix
+│       ├── brief_07_failure_analysis.md     # FindIt
+│       ├── brief_08_expansion_monetization.md # NoteSpace
+│       └── brief_09_ecosystem_analysis.md   # SocialSuite
+│
+├── slides/                        # Marp markdown slides
+│   ├── block_00_syllabus_logistics.md
+│   ├── block_01_analytics_project_brief.md
+│   ├── block_02_acquisition_analyses.md
+│   ├── block_03_retention_growth_analyses.md
+│   ├── block_04_application_practice.md
+│   ├── block_05_influence.md
+│   └── block_06_capstone_closing.md
+│
+├── scenarios/                     # 18 unique student assignment scenarios
+│   └── scenario_01_peakfit.md ... scenario_18_legaltech.md
+│
+├── weekly_writeups/
+│   └── prompts.md                 # 6 weekly write-up prompts (Feb-Mar)
+│
 ├── figures/
-│   ├── figures.md                  # Image catalog with designer briefs
-│   └── images/                     # Designer-created slide images
+│   ├── figures.md                 # Designer briefs for all images
+│   └── images/                    # Generated slide images (PNGs)
+│
 ├── scripts/
-│   └── check_overflow.py           # Slide overflow detection tool
-├── instructor_resources/           # GITIGNORED - not in repo (see below)
-├── extract_pdf_text.py             # OCR utility for extracting text from PDFs
-├── extract_pdf_with_images.py      # Alternative PDF extraction with image processing
-└── *_text.txt                      # Extracted text from PDFs
+│   └── check_overflow.py          # Slide overflow detection tool
+│
+└── old/                           # Deprecated content (gitignored)
 ```
 
-### Instructor Resources (Local Only)
+### Gitignored Directories (Not in Public Repo)
 
-The `instructor_resources/` directory exists locally but is **gitignored** (not committed to the repo). This contains sensitive materials students should not see:
+These directories exist locally but are excluded from the GitHub repository:
 
-```
-instructor_resources/
-├── presenter_mode_guide.md    # How to use Marp presenter mode for instructor notes
-├── grading_rubric.md          # Detailed rubric with point values and red flags
-└── scenario_key.md            # "Golden key" for all 18 scenarios (traps, ideal answers)
-```
+| Directory | Contents |
+|-----------|----------|
+| `exam/` | Exam questions with answer key |
+| `grading/` | Rubrics and scenario answer keys |
+| `instructor_resources/` | Presenter guide, grading rubric, scenario "golden key" |
+| `old/` | Deprecated files from earlier course iterations |
 
-**IMPORTANT:** Never commit this directory. It contains:
-- Scenario answers (the "traps" and ideal solutions)
-- Grading criteria students could use to game the assignment
-
-If recreating this directory on a new machine, the files must be manually copied from a secure backup.
+**Never commit these directories.** They contain answers students should not see.
 
 ## Common Development Tasks
 
-### PDF Text Extraction
+### Building Slides
 
-When you need to extract text from PDFs in the `resources/` folder:
+Slides use **Marp** (markdown slide generator).
 
 ```bash
-# Extract latest PDF using OCR
-python extract_pdf_text.py
+# Build a single slide deck
+cd slides/
+marp --no-stdin block_02_acquisition_analyses.md --html -o block_02_acquisition_analyses.html
 
-# Alternative: extract with full image processing
-python extract_pdf_with_images.py
+# Build all slides
+for f in block_*.md; do
+  marp --no-stdin "$f" --html -o "${f%.md}.html"
+done
 ```
+
+### Checking for Slide Overflow
+
+After building, run the overflow checker:
+
+```bash
+python scripts/check_overflow.py
+```
+
+This uses headless Chromium to detect slides where content exceeds the 720px container height. Fix flagged slides before presenting.
 
 **Requirements:**
-- PyMuPDF (`pip install PyMuPDF`)
-- pytesseract (`pip install pytesseract`)
-- Pillow (`pip install pillow`)
-- Tesseract OCR binary (`brew install tesseract` on macOS)
-
-The scripts:
-- Find the most recently modified PDF in `resources/`
-- Convert pages to 300 DPI images
-- OCR each page with fallback to direct text extraction
-- Output timestamped `course_text_YYYYMMDD_HHMMSS.txt` file
-
-### Viewing Course Materials
-
-Use the `open` command to view files in the default application:
-
 ```bash
-open /Users/earino/CEU/ECBS5228/syllabus.md
-open /Users/earino/CEU/ECBS5228/templates/analytics_project_brief_example.md
+pip install playwright
+playwright install chromium
 ```
 
-## Important Course-Specific Concepts
+### Slide Generation Workflow
+
+**Every time you modify slides:**
+
+1. Build the HTML
+2. Run `check_overflow.py`
+3. Fix any overflowing slides
+4. Verify visually by opening the HTML
+
+## Assessment Structure
+
+| Component | Weight | Due Date | Description |
+|-----------|--------|----------|-------------|
+| Scenario → Brief | 30% | Jan 16, 2026 | Complete Brief for assigned scenario |
+| Pen & Paper Exam | 30% | Jan 27, 2026 | Closed book, one A4 cheat sheet |
+| Weekly Write-ups | 30% | Feb 10 – Mar 17 | 6 practice exercises |
+| Participation | 10% | During class | Engagement |
+
+Each student receives one of 18 unique scenarios (`scenarios/scenario_*.md`).
+
+## Key Course Concepts
 
 ### Counter-Metrics Framework
 
-Counter-metrics prevent Goodhart's Law ("when a measure becomes a target, it ceases to be a good measure"). The "What Breaks" 5-question framework:
+Counter-metrics prevent Goodhart's Law. The "What Breaks" 5-question framework:
 
 1. What directly worsens?
 2. What quality degrades?
@@ -121,182 +168,75 @@ Counter-metrics prevent Goodhart's Law ("when a measure becomes a target, it cea
 4. What long-term metrics suffer?
 5. Which other teams' goals are threatened?
 
-Students must identify 2-3 counter-metrics for every analytics project using this framework.
+Students must identify 2-3 counter-metrics for every project, labeled as **Guardrail** (must not worsen) or **Tradeoff** (may worsen within bounds).
 
 ### Stakeholder Management
 
-Uses the **Power-Interest Grid (Mendelow Matrix)** with 4 quadrants:
-- High Power + High Interest = Manage Closely
-- High Power + Low Interest = Keep Satisfied
-- Low Power + High Interest = Keep Informed
-- Low Power + Low Interest = Monitor
+Uses the **Power-Interest Grid (Mendelow Matrix)**:
 
-Students also identify Champions (advocates) and Blockers (potential opponents) with mitigation strategies.
+| | High Interest | Low Interest |
+|---|---|---|
+| **High Power** | Manage Closely | Keep Satisfied |
+| **Low Power** | Keep Informed | Monitor |
 
-### Assessment Structure
+Students also identify **Champions** (advocates) and **Blockers** (potential opponents) with mitigation strategies.
 
-**Assignment 1 (30%)**: Weekend foundational analyses + Analytics Project Brief draft (due Day 2 morning)
-**In-Class Assessment (30%)**: 90-minute open-note exam (week of Jan 13-17, exact date TBD)
-- Part 1 (60 min): Applied case study - Complete Analytics Project Brief sections
-- Part 2 (30 min): Short answer questions on course concepts
-**Final Assignment (30%)**: Capstone project preparation (due May 8, 2026)
-**Intellectual Presence (10%)**: Attendance and engagement
+### Pre-Mortem Exercise
+
+"It's 3 months from now and this project failed. What happened?"
+
+Forces identification of non-obvious risks before they occur. Strong pre-mortems include:
+- Correlation/causation confusion
+- Stakeholder dynamics gone wrong
+- Data quality issues discovered too late
+- Scope creep
 
 ## Editing Guidelines
 
 ### Syllabus Changes
 
-**syllabus.md is the authoritative document**. When making changes:
+`syllabus.md` is the **authoritative student-facing document**. When editing:
 
-1. Maintain consistency with course code: `ECBS5228A (T2, AY 2025/26)`
-2. All dates reference January 2026 (Day 1: Jan 8, Day 2: Jan 12)
-3. Keep 6 blocks × 100 minutes structure (3 blocks per day)
-4. This is a **Python-only** program - never reference R or other languages
-5. Total suggested pre-Day 1 reading should remain ~27 minutes (2 articles)
+- Maintain course code: `ECBS5228A (T2, AY 2025/26)`
+- All dates reference January 2026 (Day 1: Jan 8, Day 2: Jan 12)
+- Keep 6 blocks × 100 minutes structure
+- Python-only program — never reference R
 
-### notes.md Structure
+### Slide Standards
 
-Implementation notes organized by:
-- Core philosophy & teaching approach
-- Detailed breakdown of each foundational analysis (with datasets, deliverables, timing)
-- Module-by-module lesson plans (counter-metrics, stakeholder management)
-- Assignment grading rubrics
+Each foundational analysis section should include:
 
-**notes.md informs teaching, syllabus.md is student-facing.**
+1. **What is it?** — Definition and core question
+2. **The Data You Need** — Required fields and structure
+3. **How to Do It** — Step-by-step mechanics
+4. **What the Output Looks Like** — Example deliverable
+5. **Common Pitfalls** — Data quality issues
+6. **Scenario Application** — Brief example with counter-metrics
+7. **Key Takeaways** — 4-6 bullet summary
 
-### Analytics Project Brief Updates
+### Image Placeholders
 
-If updating the framework:
-1. Update `templates/analytics_project_brief_template.md` (blank version)
-2. Update `templates/analytics_project_brief_example.md` (Netflix example)
-3. Update references in syllabus.md sections: Learning Outcome #4, Block 3 schedule, all 3 assignments
-4. Update `notes.md` teaching modules if pedagogical approach changes
+Use HTML comments for images not yet created:
 
-## Course Philosophy Reminders
+```markdown
+<!--
+IMAGE PLACEHOLDER: [Description]
+[Specific details: axes, labels, data]
+-->
+```
+
+Designer briefs for all images are in `figures/figures.md`.
+
+## Course Philosophy
 
 Key messages to preserve in all materials:
 
 1. **"Your job is never to optimize a metric; it's to improve the experience that the metric measures."**
-2. **"Job titles are fragile, responsibilities are durable"** (from the Webmaster Evolution narrative)
-3. **"The future of data science value is NOT in models in production"**
-4. Foundational analyses follow the **customer journey** (Acquisition → Retention → Expansion)
-5. Analytics projects require **adversarial thinking** (counter-metrics, pre-mortem, stakeholder blockers)
-
-## Reading List Tiers
-
-From `readings/counter_metrics_and_stakeholder_management.md`:
-
-- **Suggested** (pre-Day 1): 2 articles, ~27 minutes total
-- **Strongly Recommended**: 5 articles with clear "read when relevant" guidance
-- **Optional/Reference**: 10+ articles for deep dives
-
-**Do not add to Suggested readings without removing something else** - reading equity is a design constraint.
+2. **"Job titles are fragile, responsibilities are durable."**
+3. Analytics projects require **adversarial thinking** — counter-metrics, pre-mortems, blocker identification
+4. Foundational analyses follow the **customer journey** (Acquisition → Retention → Growth)
+5. **Correlation is not causation** — every pre-mortem should consider this trap
 
 ---
 
-## Slide Generation Standards
-
-Slides are generated using **Marp** (markdown slide generator).
-
-### Slide Build Workflow
-
-**Every time you regenerate slides, follow this workflow:**
-
-1. **Build the HTML:**
-   ```bash
-   cd slides/
-   marp --no-stdin block_XX_name.md --html -o block_XX_name.html
-   ```
-
-2. **Check for text overflow:**
-   ```bash
-   cd /Users/earino/CEU/ECBS5228
-   python scripts/check_overflow.py
-   ```
-   This script loads each HTML file in a headless browser and reports slides where content exceeds the 720px height. Fix any overflowing slides before considering the build complete.
-
-3. **Verify visually** by opening the HTML file and spot-checking flagged slides.
-
-### Overflow Detection Tool
-
-**File:** `scripts/check_overflow.py`
-
-**Requirements:**
-- `pip install playwright`
-- `playwright install chromium`
-
-**What it does:**
-- Loads each HTML file in `slides/` using headless Chromium
-- Checks every slide's `scrollHeight` vs the 720px container
-- Reports which slides overflow and by how many pixels
-
-**Example output:**
-```
-block_02_acquisition_analyses.html:
-  Slide 10: OVERFLOW (950px, +230px)
-  Slide 13: OVERFLOW (750px, +30px)
-```
-
-**Fixing overflows:** Split content across slides, reduce text, or use smaller tables/code blocks.
-
-### Analysis Section Checklist
-
-Every foundational analysis section MUST include these elements in order:
-
-1. **What is it?** (1-2 slides)
-   - Clear definition in plain language
-   - The core question it answers
-   - When/why you'd use this analysis
-
-2. **The Data You Need** (1-2 slides)
-   - Specific fields required (e.g., `user_id`, `timestamp`, `event_type`)
-   - Data structure (show example tables)
-   - What's optional vs. required
-
-3. **How to Do It** (3-5 slides)
-   - Step-by-step mechanics
-   - Formulas or SQL snippets where appropriate
-   - Different methods/approaches if applicable
-
-4. **What the Output Looks Like** (1-2 slides)
-   - Example output table or visualization description
-   - How to read/interpret the results
-   - What "good" vs. "bad" looks like
-
-5. **Common Pitfalls / Data Quality Issues** (1 slide)
-   - What goes wrong in practice
-   - How to detect problems
-   - Impact of each issue
-
-6. **Scenario + Brief Application** (2-3 slides, compressed)
-   - Company scenario from example Briefs
-   - Primary metric + counter-metrics (condensed)
-   - Key blocker + pre-mortem lesson
-
-7. **Key Takeaways** (1 slide)
-   - 4-6 bullet points
-   - Actionable, memorable
-
-### What NOT to Do
-
-- ❌ Don't just show Brief sections without teaching the analysis itself
-- ❌ Don't define terms without explaining mechanics
-- ❌ Don't skip data structure — students need to know what tables they're querying
-- ❌ Don't skip output examples — students need to know what deliverable looks like
-- ❌ Don't spend more time on Brief framework than on the actual analysis
-
-### Image Placeholders
-
-Mark with clear HTML comments:
-```markdown
-<!--
-IMAGE PLACEHOLDER: [Description of what image should show]
-[Specific details: axes, labels, example data]
--->
-```
-
-### Timing Guidelines
-
-- Each foundational analysis: ~12-17 slides for 20-25 minutes
-- Include stretch breaks every 45-50 minutes
-- Instructor notes in HTML comments for cold-call questions and discussion prompts
+*Last updated: January 2026*
