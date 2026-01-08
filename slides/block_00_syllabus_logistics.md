@@ -153,7 +153,7 @@ These prepare you for your actual capstone project.
 
 ## Suggested Reading
 
-Complete **before Day 1** (today):
+These readings provide helpful context but are **not required**:
 
 | Reading | Time |
 |---------|------|
@@ -162,7 +162,7 @@ Complete **before Day 1** (today):
 
 **Total: ~27 minutes**
 
-If you haven't read them yet, prioritize them tonight.
+We'll cover the key concepts in class.
 
 ---
 
