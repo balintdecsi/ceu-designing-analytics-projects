@@ -95,6 +95,23 @@ The Brief is your tool to scope the capstone professionally. Good scoping leads 
 | **Dec – Feb** | Matchmaking ← **you are here** |
 | **March 16** | Assigned to project |
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This timeline orients students to where they are in the capstone process. The crossed-out dates show what should have happened already. Many students haven't started looking — this is a wake-up call.
+
+**Key point:** You are here. If you haven't started looking for projects, you're behind.
+
+**Say something like:**
+"Let me show you the capstone timeline. Notice the crossed-out dates — mid-October, mid-November. Those are past. If you started looking for clients in October, you're in good shape. If you haven't started yet... you need to start today.
+
+Right now we're in the matchmaking phase. December through February. This is when projects get assigned. March 16 is your deadline for being matched to a project.
+
+The point of this slide: don't wait. The best projects get claimed early. If you wait until March, you'll get whatever's left."
+
+**Transition:** "Here's what happens after you're matched..."
+-->
+
 ---
 
 ## The Capstone Timeline: Execution Phase
@@ -108,6 +125,31 @@ The Brief is your tool to scope the capstone professionally. Good scoping leads 
 | **June 10-12** | Final Exam |
 
 **Key insight:** The hardest part isn't execution. It's finding and scoping.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This timeline shows the execution phase after project assignment. The key insight at the bottom is the real message: students worry about the wrong thing.
+
+**Key point:** Finding and scoping is harder than execution. That's why this course exists.
+
+**Say something like:**
+"Once you're matched, here's what happens.
+
+March 30: You submit your PID — Project Initiation Document. This is basically your Brief, formalized for the program.
+
+April 10: Project officially begins. You have access, you have a sponsor, you start working.
+
+May 11: Interim progress report. This is a checkpoint — are you on track?
+
+June 8: Final deliverables due. Presentation, technical discussion, public summary.
+
+June 10-12: Final exam period.
+
+But here's the key insight — read the bottom of the slide. The hardest part isn't execution. It's finding and scoping. Most capstones that fail, fail before April. They fail because the student picked a bad project, or didn't scope it well, or didn't have an engaged sponsor. That's why we're spending this course on scoping, not on execution."
+
+**Transition:** "Let me show you what you'll actually deliver..."
+-->
 
 ---
 
@@ -124,6 +166,27 @@ General audience essay for the ETD database.
 
 All three require a **well-scoped project**. The Brief is your scoping tool.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Students need to understand what they're actually producing. Three different documents for three different audiences.
+
+**Key point:** All three deliverables depend on good scoping. A poorly scoped project makes all three documents harder to write.
+
+**Say something like:**
+"You'll produce three deliverables. Let me explain what each one is.
+
+First, the Project Presentation. 10-20 slides. This is for your sponsor. It answers: what was the problem, what did you find, what do you recommend? This is what your sponsor will use to make decisions or share with their team.
+
+Second, the Technical Discussion. 20-25 pages. This is a full consulting-style report. Methodology details, data descriptions, limitations, detailed findings. This is for someone who wants to understand exactly how you did the work.
+
+Third, the Public Summary. 3 pages. This goes in the ETD database — the Electronic Theses and Dissertations archive. It's for a general audience. No jargon, no technical details. Just: what was the question, what did you find, why does it matter?
+
+Here's the connection to this course: all three require a well-scoped project. If your project is vague, your presentation will be vague. If your methodology is unclear, your technical discussion will ramble. The Brief is your scoping tool — it makes all three documents easier to write."
+
+**Transition:** "Let me show you how the Brief maps to these deliverables..."
+-->
+
 ---
 
 ## How the Brief Scaffolds Your Capstone
@@ -136,6 +199,31 @@ Each Brief section maps to a capstone question:
 - **Methodology** → What analyses will you run?
 - **Scope** → What's in and out?
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This slide makes the connection between the Brief framework and capstone execution explicit. Each Brief section directly answers a question students will face.
+
+**Key point:** The Brief isn't academic busywork — it directly maps to capstone questions.
+
+**Say something like:**
+"Let me connect what we've taught you to what you'll actually do.
+
+Problem & Decision — this becomes 'what question are you answering?' in your capstone. If you can't answer this clearly, your project has no focus.
+
+Metrics — this becomes 'how will you measure success?' If you don't define success precisely, how will you know when you're done?
+
+Stakeholders — this is 'who is your sponsor?' And more importantly, who else cares? Who might block you?
+
+Methodology — this answers 'what analyses will you run?' The 9 foundational analyses give you options. You pick 2-3 that fit your problem.
+
+Scope — this is 'what's in and out?' Every sponsor wants more than you can deliver. Scope defines the boundaries.
+
+The Brief isn't separate from your capstone. It IS the foundation of your capstone."
+
+**Transition:** "You won't write the Brief all at once..."
+-->
+
 ---
 
 ## Building Your Brief Over Time
@@ -143,6 +231,27 @@ Each Brief section maps to a capstone question:
 **You'll practice Brief concepts through weekly write-ups (Feb 10 – Mar 17).**
 
 First you'll practice concepts while searching for projects, then build Brief sections once assigned.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Students often feel overwhelmed by the Brief framework. This slide reassures them: you don't do it all at once. The weekly write-ups build the skill incrementally.
+
+**Key point:** The weekly write-ups are practice. By the time you write the real Brief, you'll have done each section before.
+
+**Say something like:**
+"You won't write the Brief all at once. That would be overwhelming.
+
+Instead, you'll practice Brief concepts through the weekly write-ups. February 10 through March 17 — six weeks.
+
+The first few write-ups happen while you're still searching for projects. You'll practice concepts like counter-metrics and stakeholder mapping on hypothetical scenarios. That way, when you find your real project, you already know how to think.
+
+Once you're assigned to a project in March, the later write-ups help you build actual Brief sections. By the time you submit your PID in March, you've already practiced every section.
+
+This is intentional. We scaffold the skill so you're not learning everything at once."
+
+**Transition:** "Now let me tell you what makes a good project in the first place..."
+-->
 
 ---
 
@@ -197,6 +306,31 @@ Warning signs: vague questions, unavailable data, absent sponsors. These are pre
 
 **The Brief forces you to address these before starting.**
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** These are the five most common reasons capstones fail. Each one is preventable with good upfront scoping.
+
+**Key point:** Every failed capstone traces back to one of these five mistakes.
+
+**Say something like:**
+"Let me show you the five ways capstones fail.
+
+Too broad: 'Optimize all marketing.' That's not a capstone — that's a career. You'll never finish because there's no finish line.
+
+Too narrow: 'Fix this one bug.' That's not substantial enough for a capstone. You need something that demonstrates analytical thinking, not just execution.
+
+No data access: 'We'll get you the data soon.' Famous last words. If you don't have data access before you commit, you might never get it.
+
+No decision-maker: You complete amazing analysis, and... nothing happens. Nobody was going to act on it anyway. Make sure someone will actually use your work.
+
+Dependent on others: 'We just need engineering to build this first.' If your project is blocked until someone else finishes their work, you've lost control of your timeline.
+
+The Brief forces you to address all of these before you start. That's why we fill it out first."
+
+**Transition:** "The most important factor in avoiding these mistakes is your sponsor..."
+-->
+
 ---
 
 ## The Sponsor Relationship
@@ -210,6 +344,34 @@ Your sponsor is your primary stakeholder. They:
 **Ideal sponsor:** Someone with a real question AND time to engage.
 
 **Warning:** A sponsor who's "too busy" = no feedback = bad capstone.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** The sponsor relationship is often the difference between a successful and failed capstone. Students underestimate how important sponsor engagement is.
+
+**Key point:** An engaged sponsor is more important than an interesting problem.
+
+**Say something like:**
+"Your sponsor is your primary stakeholder. Let me tell you what they do for you.
+
+They define the business problem. Without them, you're guessing what matters.
+
+They provide access to data. Without them, you can't get the data you need.
+
+They give feedback on approach. Without them, you might spend weeks going in the wrong direction.
+
+They validate that findings make sense. Without them, you don't know if your analysis reflects reality.
+
+Here's what makes an ideal sponsor: someone with a real question AND time to engage. Both parts matter. A sponsor with a great question but no time? You'll get no feedback. A sponsor with lots of time but no real question? Your work won't matter.
+
+The warning at the bottom: a sponsor who's 'too busy' means no feedback means bad capstone. If someone tells you they're excited about the project but can only meet once a month... that's a red flag. You need someone who will respond to emails, review your work, and tell you when you're off track."
+
+**If asked:** "What if my sponsor becomes too busy during the project?"
+A: Escalate early. Talk to your faculty advisor. Don't wait until June to mention you haven't gotten feedback since April.
+
+**Transition:** "Now let's talk about finding these projects..."
+-->
 
 ---
 
@@ -234,6 +396,35 @@ Why early matters:
 
 March 16 is your assignment deadline. That's 9 weeks away.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Many students haven't started looking for projects yet. This slide is intentionally blunt. The urgency is real.
+
+**Key point:** If you haven't started, start today. Not tomorrow. Today.
+
+**Say something like:**
+"The October Principle. You should have started looking for capstone projects in October.
+
+[Pause. Let that land.]
+
+If you started in October, great. You're ahead. If you haven't started yet... start today. Not next week. Today.
+
+Here's why early matters:
+
+Good projects get claimed. The best sponsors — engaged, interesting problems, good data — they get snapped up by students who started early. If you wait, you get leftovers.
+
+Building relationships takes time. You can't email someone on March 15 and expect a project by March 16. Relationships need time to develop.
+
+Data access takes time. Even when a sponsor says yes, getting actual data access often takes weeks. Legal reviews, IT permissions, anonymization — all of that takes time.
+
+Scope negotiation takes time. Your sponsor will want more than you can deliver. Negotiating a reasonable scope takes multiple conversations.
+
+March 16 is your deadline. That's 9 weeks away. 9 weeks is not a lot of time for all of these steps."
+
+**Transition:** "So where do you actually find projects?..."
+-->
+
 ---
 
 ## Where to Find Projects
@@ -245,6 +436,31 @@ March 16 is your assignment deadline. That's 9 weeks away.
 - **Nonprofits/NGOs** — Meaningful work (less data sophistication)
 
 **Best approach:** Multiple channels simultaneously.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Students often don't know where to start looking. This slide gives them five concrete channels, each with tradeoffs.
+
+**Key point:** Don't rely on one channel. Pursue multiple simultaneously.
+
+**Say something like:**
+"Five places to find projects.
+
+Your employer. Advantage: you already know the data, you have relationships, you understand the business. Disadvantage: might be narrow, might have confidentiality issues, might be too close to your day job.
+
+CEU network. The program has connections with sponsors. Advantage: curated projects, committed sponsors. Disadvantage: competitive — everyone's looking at the same list.
+
+Personal network. Friends, family, former colleagues. Advantage: relationship already exists, they want to help you. Disadvantage: quality varies — Uncle Bob's business idea might not be a good capstone.
+
+Cold outreach. LinkedIn messages, emails to companies you admire. Advantage: unlimited options, you can target exactly what interests you. Disadvantage: low response rate. Most cold emails get ignored.
+
+Nonprofits and NGOs. Advantage: meaningful work, often grateful for help. Disadvantage: data may be less sophisticated, less technical infrastructure.
+
+Best approach: pursue multiple channels simultaneously. Don't wait to hear back from one before starting another."
+
+**Transition:** "Let me give you specific tactics for activating your network..."
+-->
 
 ---
 
@@ -258,6 +474,29 @@ Most projects come through relationships. Activate your network:
 4. **Professional groups** — Meetups, Slack communities
 
 **The ask:** "Do you know anyone with a data question they'd like help with?"
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Most students underutilize their network. This slide gives specific, actionable tactics.
+
+**Key point:** The magic question is "Do you know anyone..." — it expands your reach beyond direct contacts.
+
+**Say something like:**
+"Most projects come through relationships. Here's how to activate your network.
+
+LinkedIn post. Simple: 'Looking for an analytics capstone project for my Master's program. Specifically interested in [your areas]. Know anyone with a data question they'd like help with?' Post it publicly. You'll be surprised who responds.
+
+Email to contacts. Go through your contacts — former colleagues, former managers, people you've worked with. Personal ask: 'I'm looking for a capstone project. Do you know anyone who might have a data question?'
+
+Alumni network. CEU alumni who've done capstones understand what you need. Reach out. Ask who they worked with. Ask for introductions.
+
+Professional groups. Meetups, Slack communities, industry groups. Post in relevant channels.
+
+Notice the phrasing of the ask: 'Do you know anyone with a data question they'd like help with?' Not 'Do you have a project for me?' The 'do you know anyone' framing expands your reach. Even if they don't have a project, they might know someone who does."
+
+**Transition:** "Once you find a potential project, how do you evaluate it?..."
+-->
 
 ---
 
@@ -274,6 +513,31 @@ Before committing, ask:
 | What's the timeline for access? | More than 2 weeks |
 
 **It's okay to say no.** A bad project is worse than waiting.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Students often feel pressure to accept the first project that comes along. This slide teaches them to evaluate critically.
+
+**Key point:** It's okay to say no. A bad project is worse than waiting.
+
+**Say something like:**
+"Before you commit to a project, ask these five questions.
+
+What's the business question? If they can't articulate it — if it's 'just explore the data' or 'tell us something interesting' — that's a red flag. No clear question means no clear success.
+
+What data is available? If the answer is 'we'll figure it out' — red flag. You need to know what data exists before you commit.
+
+Who will I work with? If there's no named sponsor — red flag. 'The team' isn't a sponsor. You need a person with a name who will give you feedback.
+
+What decisions will this inform? If the answer is 'we're just curious' — red flag. Analysis that doesn't lead to decisions is analysis that doesn't matter.
+
+What's the timeline for access? If getting data will take more than 2 weeks — that's a warning sign. Delays at the beginning cascade throughout the project.
+
+And here's the key message at the bottom: It's okay to say no. A bad project is worse than waiting. If you take a project with red flags, you'll spend 4 months struggling. Better to wait for a good one."
+
+**Transition:** "Let me show you specific red flag phrases to listen for..."
+-->
 
 ---
 
@@ -331,6 +595,37 @@ Sponsors often want **more** than is feasible.
 - "If we could only answer one thing, what would it be?"
 - "What would you do with the answer?"
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Scope negotiation is a skill students rarely have. Sponsors naturally want as much as possible. Students need to learn to push back constructively.
+
+**Key point:** Your job is to find the intersection: valuable to them, feasible for you, demonstrable as a capstone.
+
+**Say something like:**
+"Sponsors will always want more than you can deliver. That's not malicious — they have big problems and they want them solved. Your job is to negotiate.
+
+A good scope sits at the intersection of three things:
+
+Valuable to them. It has to matter. If you scope it so small that no one cares about the answer, what's the point?
+
+Feasible for you. You have limited time, limited access, limited expertise in their domain. The scope has to be something you can actually complete.
+
+Demonstrable as a capstone. It has to be substantial enough to show analytical thinking. 'Count the rows in a table' isn't a capstone.
+
+Three questions that help you find this intersection:
+
+'What's the most important question?' Forces them to prioritize.
+
+'If we could only answer one thing, what would it be?' Forces them to pick.
+
+'What would you do with the answer?' Reveals whether there's actually a decision at stake.
+
+Use these questions. They're magic."
+
+**Transition:** "Let me show you what this conversation sounds like..."
+-->
+
 ---
 
 ## The Scope Conversation
@@ -343,6 +638,34 @@ Sponsors often want **more** than is feasible.
 - Acknowledge their big goal
 - Propose a specific slice
 - Check if it's valuable
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This is a concrete example of scope negotiation. Students can use this exact pattern.
+
+**Key point:** Acknowledge, propose, check. Three moves that make scope negotiation work.
+
+**Say something like:**
+"Here's what the conversation actually sounds like.
+
+Sponsor says: 'We want to optimize our entire customer journey.' That's huge. That's not a capstone — that's a 5-year company initiative.
+
+You say: 'That's a great long-term goal.' First move: acknowledge. Don't say 'that's too big' — that feels like rejection. Say 'that's a great goal.' Validate their ambition.
+
+Then: 'For the capstone, what if we focused on the checkout flow?' Second move: propose a specific slice. You're not asking them to scope it — you're offering a proposal.
+
+Then: 'Would that be valuable?' Third move: check. Make sure your proposed slice actually matters to them. If they say 'no, checkout isn't the problem,' you've learned something important.
+
+Three moves: Acknowledge their big goal. Propose a specific slice. Check if it's valuable.
+
+This pattern works every time. Practice it."
+
+**If asked:** "What if they insist on the big scope?"
+A: Explain the constraints honestly. 'I have 8 weeks and limited access. If I try to do everything, I'll do nothing well. If I focus on checkout, I can give you something actionable.' Frame it as quality vs. scope.
+
+**Transition:** "Let's practice evaluating a project..."
+-->
 
 ---
 
@@ -488,6 +811,31 @@ A: You won't. Each scenario is generated uniquely. If you think you received the
 
 **Pre-mortem** — Specific failure scenario, not generic
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This slide previews what distinguishes excellent from mediocre submissions. It's a quick overview before showing examples.
+
+**Key point:** Precision is the theme. Vague answers lose points. Specific answers earn them.
+
+**Say something like:**
+"Let me show you what separates excellent submissions from mediocre ones. One word: precision.
+
+Metrics: Precise SQL-level definition. Not 'conversion rate' — that's meaningless. What events? What timeframe? What exclusions? Could someone write the SQL?
+
+Counter-metrics: Specific, labeled as guardrail or tradeoff. Not just 'revenue' — what about revenue? What threshold? Why might it break?
+
+Stakeholders: Named blockers with motivations. Not 'leadership' — that's not a stakeholder. Sarah, the Head of Growth, who recently got promoted based on the current approach — that's a stakeholder.
+
+Methodology: Justified analysis selection. Not 'we'll look at the data' — why funnel analysis? Why this approach and not that one?
+
+Pre-mortem: Specific failure scenario. Not 'the data was bad' — that's generic. 'We confused correlation with causation and recommended mandating a behavior that killed signups' — that's specific.
+
+Let me show you examples of each..."
+
+**Transition:** Move to Metric Definition Example.
+-->
+
 ---
 
 ## Metric Definition Example
@@ -499,6 +847,27 @@ A: You won't. Each scenario is generated uniquely. If you think you received the
 > Primary metric: D7 Active Users — Users with ≥1 `session_start` event on calendar day 7 after `signup_complete` event on day 0, excluding users flagged as `bot=true`, trailing 7-day rolling average
 
 **The test:** Could someone write the SQL from your definition?
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** The metric example is the most common failure mode. Students write vague metrics like "engagement" or "conversion" without defining them.
+
+**Key point:** The SQL test is the key. If someone can't write the query from your definition, it's not precise enough.
+
+**Say something like:**
+"Here's a metric example a strong submission.
+
+Weak: 'Primary metric: User engagement.' What does that mean? Clicks? Sessions? Time spent? This is meaningless.
+
+Excellent: 'D7 Active Users — Users with at least one session_start event on calendar day 7 after signup_complete on day 0, excluding users flagged as bot=true, trailing 7-day rolling average.'
+
+Notice what's in here: The specific event. The specific day. The exclusions. The calculation method. Someone could write the SQL query from this definition.
+
+That's the test: Could someone write the SQL from your definition? If yes, it's precise. If no, it's vague."
+
+**Transition:** "Counter-metrics need the same precision..."
+-->
 
 ---
 
@@ -514,6 +883,33 @@ A: You won't. Each scenario is generated uniquely. If you think you received the
 > - How we'll measure: Monitor RPU trend during and after intervention
 > - Threshold: Must not decline >5% from baseline
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Counter-metrics are where most students lose points. They either forget them entirely or write vague ones.
+
+**Key point:** A counter-metric needs four things: definition, why it might break, how you'll measure, and threshold.
+
+**Say something like:**
+"Counter-metrics. This is where a lot of points get lost.
+
+Weak: 'Counter-metric: Revenue.' That's not a counter-metric — it's just a word. What about revenue? How is it a counter-metric?
+
+Excellent: Look at the structure here.
+
+First, definition: Revenue per User, total revenue divided by active users, monthly. Precise.
+
+Second, why it could break: Aggressive conversion tactics may bring in low-value users. This is the 'what breaks' thinking.
+
+Third, how we'll measure: Monitor RPU trend during and after intervention. You have a plan.
+
+Fourth, threshold: Must not decline more than 5% from baseline. This is the guardrail — the line you won't cross.
+
+Four components: definition, why it breaks, measurement plan, threshold. If you're missing any of these, your counter-metric isn't complete."
+
+**Transition:** "Stakeholders need the same specificity..."
+-->
+
 ---
 
 ## Stakeholder Example
@@ -527,6 +923,33 @@ A: You won't. Each scenario is generated uniquely. If you think you received the
 > - Current status: Recently promoted based on "successful" launch metrics
 > - Mitigation: Private pre-brief, frame as "learning opportunity," acknowledge what worked before discussing what didn't
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Stakeholder sections often list job titles instead of people with motivations. The difference is critical.
+
+**Key point:** A stakeholder is a person with a name, a motivation, and a reason to care. 'Leadership' is not a stakeholder.
+
+**Say something like:**
+"Stakeholder example.
+
+Weak: 'Stakeholders: Product team, executives.' These are categories, not stakeholders. What do they want? Why do they care? Will they help or hinder?
+
+Excellent: Look at this blocker description.
+
+'Head of Growth' — a specific person, not a category.
+
+Motivation: 'Their team built the current onboarding flow; findings may imply their work failed.' This is why they might resist.
+
+Current status: 'Recently promoted based on successful launch metrics.' This is political context. Their promotion was tied to the thing you're about to critique.
+
+Mitigation: 'Private pre-brief, frame as learning opportunity, acknowledge what worked.' This is your strategy for handling them.
+
+This is a real stakeholder analysis. You understand who they are, why they might block you, and how to handle it. 'Executives' tells me nothing."
+
+**Transition:** "Finally, the pre-mortem..."
+-->
+
 ---
 
 ## Pre-Mortem Example
@@ -534,6 +957,27 @@ A: You won't. Each scenario is generated uniquely. If you think you received the
 ❌ **Weak:** "The project failed because we didn't have good data."
 
 ✅ **Excellent:** "Tutorial completers retain 2x better → mandated tutorial → signup dropped 40%. We confused correlation with causation. Should have A/B tested shorter tutorial."
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Pre-mortems are where students either excel or fail completely. Generic pre-mortems are worthless. Specific ones show real thinking.
+
+**Key point:** A good pre-mortem tells a specific story of how THIS project could fail.
+
+**Say something like:**
+"Pre-mortem example. This is where I see the biggest gap between weak and excellent.
+
+Weak: 'The project failed because we didn't have good data.' This is generic. It could apply to any project. It shows no thinking about YOUR specific situation.
+
+Excellent: Read this one. 'Tutorial completers retain 2x better. We mandated the tutorial. Signup dropped 40%. We confused correlation with causation. Should have A/B tested a shorter tutorial.'
+
+This is a story. It's specific to this project. The failure mode is correlation vs. causation — a trap we've discussed. The consequence is concrete — signup dropped 40%. The fix is specific — should have A/B tested.
+
+A good pre-mortem is a story you can tell about how THIS project might fail. Not 'data might be bad.' How might YOUR analysis lead to a bad decision? What trap might YOU fall into? What would YOU do differently if you could start over?"
+
+**Transition:** "Now let me show you how the assignment is graded..."
+-->
 
 ---
 
@@ -589,6 +1033,35 @@ This is where most points are lost. Two parts:
 - Clear, concise writing
 - Would you present this to a real sponsor?
 - No contradictions between sections
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Overall Coherence is the largest single category (20 points) and where most students lose points. Sections that don't connect indicate shallow thinking.
+
+**Key point:** Sections must connect to each other. A Brief isn't 10 independent answers — it's one integrated document.
+
+**Say something like:**
+"Overall Coherence. 20 points. This is the largest single category, and it's where most points are lost.
+
+Two parts:
+
+Internal Consistency — 10 points. Do your sections connect?
+
+Does your metric align with your methodology? If you're measuring D7 retention, your methodology better include retention analysis.
+
+Does your pre-mortem connect to your risks and stakeholders? If you identified the Head of Growth as a blocker, your pre-mortem might involve them resisting your findings.
+
+Do your decision criteria match your problem statement? If the problem is 'should we shift budget,' the decision criteria should say what would make you shift it.
+
+Does scope match your timeline and data? If you only have 6 weeks and limited data, your scope should reflect that.
+
+Professional Quality — 10 points. Would you present this to a real sponsor? Is the writing clear? Are there contradictions between sections?
+
+If your Brief reads like 10 separate documents pasted together, you'll lose points here. If it reads like one integrated analysis, you'll earn them."
+
+**Transition:** "Let me give you a recommended process..."
+-->
 
 ---
 
@@ -657,6 +1130,23 @@ You'll submit 6 weekly write-ups from Feb 10 – Mar 17.
 
 These are **practice exercises** that prepare you for your capstone.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Students may see weekly write-ups as busywork. Reframe them as practice that directly prepares for the capstone.
+
+**Key point:** These aren't homework — they're practice reps that make the capstone easier.
+
+**Say something like:**
+"From February 10 to March 17, you'll submit 6 weekly write-ups.
+
+These aren't busywork. They're practice exercises. Each one practices a skill you'll need for your capstone.
+
+Think of them as reps. By the time you write your real Brief, you'll have practiced each component separately. You won't be learning and executing at the same time."
+
+**Transition:** "Here's the schedule..."
+-->
+
 ---
 
 ## Weekly Write-Up Schedule
@@ -669,6 +1159,33 @@ These are **practice exercises** that prepare you for your capstone.
 | 4 | Mar 3 | Evaluating Project Opportunities |
 | 5 | Mar 10 | Pre-Mortem on a Hypothetical |
 | 6 | Mar 17 | Capstone Readiness Check |
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** The schedule shows how the write-ups build toward capstone readiness. Early ones practice concepts; later ones apply to real projects.
+
+**Key point:** The sequence is intentional — practice concepts first, then apply to real projects.
+
+**Say something like:**
+"Let me walk through the schedule.
+
+Week 1, February 10: Capstone Search Kickoff. You'll document what you're doing to find projects. This forces you to start looking.
+
+Week 2, February 17: Counter-Metrics in the Wild. Find a real example of metric optimization gone wrong. Apply the 'What Breaks' framework.
+
+Week 3, February 24: Analysis Methodology Selection. Practice picking the right analyses for a scenario.
+
+Week 4, March 3: Evaluating Project Opportunities. If you've found potential projects, evaluate them against the red flags checklist.
+
+Week 5, March 10: Pre-Mortem on a Hypothetical. Write a pre-mortem for a scenario — practicing the skill.
+
+Week 6, March 17: Capstone Readiness Check. By now you should be matched. This is a checkpoint: are you ready?
+
+Notice the progression: early weeks practice concepts, later weeks apply to your actual search."
+
+**Transition:** "Here's the format..."
+-->
 
 ---
 
@@ -683,6 +1200,27 @@ These are **practice exercises** that prepare you for your capstone.
 > Week 4 (Mar 3): "Evaluate 1-2 potential capstone projects against the red flags checklist."
 
 **By Week 6 (Mar 17):** You're ready for your capstone.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Students worry about workload. Emphasize that write-ups are short and pass/fail — genuine effort is all that's needed.
+
+**Key point:** Pass/fail means genuine engagement, not perfection. One page is enough.
+
+**Say something like:**
+"The format is designed to be low-stakes.
+
+Short — one page. Don't write essays. Answer the prompt concisely.
+
+Pass/fail — not graded on a curve. If you genuinely engage with the prompt, you pass. If you don't submit or submit something perfunctory, you don't.
+
+Look at the sample prompts. Week 2: find an article about metric optimization gone wrong, apply the What Breaks framework. That's maybe 30 minutes of reading and 30 minutes of writing. Week 4: evaluate potential capstone projects against the red flags checklist. That's work you should be doing anyway.
+
+By Week 6, you're ready for your capstone. That's the goal."
+
+**Transition:** "Now let me tell you about the exam..."
+-->
 
 ---
 
@@ -700,6 +1238,29 @@ These are **practice exercises** that prepare you for your capstone.
 
 **Preparation:** Review the Brief framework, 9 analyses, counter-metrics, stakeholder mapping.
 
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Students need to know what to expect on the exam. This overview reduces anxiety.
+
+**Key point:** The exam tests application, not memorization. The cheat sheet is allowed precisely because memorization isn't the point.
+
+**Say something like:**
+"The exam is January 27. 90 minutes, closed book, but you can bring one A4 cheat sheet — handwritten or typed, both sides.
+
+Three parts:
+
+Part A, 30 minutes: Concepts. Definitions, Goodhart's Law, influence strategies. This is 'do you understand the ideas.'
+
+Part B, 15 minutes: Matching. Connect problems to appropriate analyses. 'Given this scenario, which of the 9 analyses applies?' This tests whether you can select the right tool.
+
+Part C, 45 minutes: Applied. You'll get a new scenario and complete Brief sections. This is the core of the exam — can you apply the framework?
+
+The cheat sheet is allowed because this isn't about memorization. I want you to think, not to recall. Put the 9 analyses on your cheat sheet. Put the counter-metrics framework. Focus your study on application, not memorization."
+
+**Transition:** "If you need help between now and then..."
+-->
+
 ---
 
 ## Office Hours & Support
@@ -711,6 +1272,29 @@ These are **practice exercises** that prepare you for your capstone.
 **Urgent matters:** earino@gmail.com
 
 **Zoom interventions:** Available for strategic discussions about your capstone
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** Students should know how to reach you. This is straightforward logistics.
+
+**Key point:** Office hours are available. Use them.
+
+**Say something like:**
+"If you need help, here's how to reach me.
+
+Office hours by appointment. Email me to schedule — I'm flexible.
+
+Regular email: rubiae@ceu.edu. Use a clear subject line so I can prioritize.
+
+Urgent matters: earino@gmail.com. If something is time-sensitive and you need a faster response.
+
+Zoom is available for strategic discussions about your capstone. If you're stuck on project selection or scope negotiation, we can talk through it.
+
+The key message: don't struggle alone. If you're stuck, reach out."
+
+**Transition:** "Let me summarize what we've covered..."
+-->
 
 ---
 
@@ -724,6 +1308,27 @@ These are **practice exercises** that prepare you for your capstone.
 | Stakeholder mapping | Capstone preparation |
 
 **One framework, applied repeatedly.**
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This summary slide recaps the two days. It helps students see the coherence of the course.
+
+**Key point:** One framework, applied repeatedly. That's the course in four words.
+
+**Say something like:**
+"Let me summarize what we've covered.
+
+Day 1: The Analytics Project Brief — the framework. Counter-metrics and adversarial thinking — what breaks. The 9 foundational analyses — your toolkit. Stakeholder mapping — who matters.
+
+Day 2: Application and practice — using the framework on scenarios. Influence strategies — how to communicate your findings. Stakeholder communication — making it stick. Capstone preparation — applying it to your project.
+
+Notice the theme: one framework, applied repeatedly. The Brief is the through-line. Everything else builds on it or supports it.
+
+You now have a professional tool for scoping analytics projects. Use it."
+
+**Transition:** "Let me leave you with five core messages..."
+-->
 
 ---
 
@@ -776,6 +1381,29 @@ These five principles will guide your work for years. Write them down."
 | **Pre-mortem** | Failures you could have seen coming |
 
 Every tool exists to make sure your work **drives a decision**.
+
+<!--
+INSTRUCTOR NOTE:
+
+**Background:** This slide connects each tool to the problem it solves. It reinforces why we taught what we taught.
+
+**Key point:** Every tool exists to prevent a specific failure mode. They're not academic — they're practical.
+
+**Say something like:**
+"Let me connect each tool to the problem it prevents.
+
+The Brief prevents analysis nobody acts on. Without upfront alignment, you might build something brilliant that sits on a shelf because it wasn't what stakeholders needed.
+
+Counter-metrics prevent decisions that backfire. Without adversarial thinking, you might optimize a metric at the expense of something important — like Wells Fargo optimizing account openings.
+
+Stakeholder mapping prevents decisions that get blocked. Without understanding who has power and interest, you might run into political resistance you never saw coming.
+
+The pre-mortem prevents failures you could have seen coming. Without imagining what could go wrong, you might walk into traps that were obvious in hindsight.
+
+Every tool exists for a reason. They all serve the same goal: making sure your work drives a decision."
+
+**Transition:** "Let me close with some final thoughts..."
+-->
 
 ---
 
