@@ -351,6 +351,8 @@ You'll submit 6 weekly write-ups from February 10 through March 17. These are pr
 
 - **Getting to Yes** (Chapters 1-3) — Fisher, Ury, Patton
   - Read before Day 2, Block 5 (influence and negotiation)
+- **Click Here: The Art and Science of Digital Marketing and Advertising** — Alex Schultz
+  - Meta's CMO on digital marketing fundamentals, incrementality measurement, and attribution
 
 ### Course Materials
 
