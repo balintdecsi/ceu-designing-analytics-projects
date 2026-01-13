@@ -151,7 +151,7 @@ playwright install chromium
 |-----------|--------|----------|-------------|
 | Scenario → Brief | 30% | Jan 16, 2026 | Complete Brief for assigned scenario |
 | Pen & Paper Exam | 30% | Jan 27, 2026 | Closed book, one A4 cheat sheet |
-| Weekly Write-ups | 30% | Feb 10 – Mar 17 | 6 practice exercises |
+| Weekly Write-ups | 30% | Jan 23 – Feb 27 | 6 practice exercises |
 | Participation | 10% | During class | Engagement |
 
 Each student receives one of 18 unique scenarios (`scenarios/scenario_*.md`).

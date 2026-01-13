@@ -329,7 +329,7 @@ These aren't aspirational. They're what you'll be tested on. The exam, the assig
 |-----------|--------|------|
 | Scenario → Brief | 30% | Jan 16 |
 | Pen & Paper Exam | 30% | Jan 27 |
-| Weekly Write-ups | 30% | Feb 10 – Mar 17 |
+| Weekly Write-ups | 30% | Jan 23 – Feb 27 |
 | Participation | 10% | During class |
 
 Each of you gets a **unique scenario** for the Brief assignment.

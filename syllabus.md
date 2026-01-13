@@ -281,7 +281,7 @@ Each analysis introduced through its Analytics Project Brief example.
 |-----------|--------|-----|-------------|
 | **Scenario → Brief** | 30% | Jan 16, 2026 | Complete an Analytics Project Brief for your assigned scenario |
 | **Pen & Paper Exam** | 30% | Jan 27, 2026 | Closed book, one A4 cheat sheet allowed |
-| **Weekly Write-ups** | 30% | Feb 10 – Mar 17 | 6 practice exercises preparing you for your capstone |
+| **Weekly Write-ups** | 30% | Jan 23 – Feb 27 | 6 practice exercises preparing you for your capstone |
 | **Participation** | 10% | During class | Engagement in discussions and exercises |
 
 ### Scenario → Brief Assignment (30%)
@@ -311,22 +311,22 @@ Each student receives a unique 2-page business scenario describing a company, pr
 
 ### Weekly Write-ups (30%)
 
-You'll submit 6 weekly write-ups from February 10 through March 17. These are practice exercises that prepare you for your capstone.
+You'll submit 6 weekly write-ups from January 23 through February 27. These are practice exercises that prepare you for your capstone.
 
 | Week | Due Date | Topic |
 |------|----------|-------|
-| 1 | Feb 10 | Capstone Search Kickoff |
-| 2 | Feb 17 | Counter-Metrics in the Wild |
-| 3 | Feb 24 | Analysis Methodology Selection |
-| 4 | Mar 3 | Evaluating Project Opportunities |
-| 5 | Mar 10 | Pre-Mortem on a Hypothetical |
-| 6 | Mar 17 | Capstone Readiness Check |
+| 1 | Jan 23 | Capstone Search Kickoff |
+| 2 | Jan 30 | Counter-Metrics in the Wild |
+| 3 | Feb 6 | Analysis Methodology Selection |
+| 4 | Feb 13 | Evaluating Project Opportunities |
+| 5 | Feb 20 | Pre-Mortem on a Hypothetical |
+| 6 | Feb 27 | Capstone Readiness Check |
 
 **Grading:** Pass/fail per submission. Genuine engagement matters, not perfection.
 
 **Sample prompts:**
-- Week 2 (Feb 17): "Find an article about metric optimization gone wrong. Apply the 'What Breaks' framework."
-- Week 4 (Mar 3): "Evaluate 1-2 potential capstone projects against the red flags checklist."
+- Week 2 (Jan 30): "Find an article about metric optimization gone wrong. Apply the 'What Breaks' framework."
+- Week 4 (Feb 13): "Evaluate 1-2 potential capstone projects against the red flags checklist."
 
 ### Participation (10%)
 

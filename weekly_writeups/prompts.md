@@ -2,28 +2,28 @@
 
 ## Overview
 
-These 6 weekly prompts span February 10 through March 17. They prepare you for your capstone project through practice exercises and concept application.
+These 6 weekly prompts span January 23 through February 27. They prepare you for your capstone project through practice exercises and concept application.
 
 **Structure:**
-- **Weeks 1-6 (Feb 10 – Mar 17):** Concept practice, capstone search journey, skill building
+- **Weeks 1-6 (Jan 23 – Feb 27):** Concept practice, capstone search journey, skill building
 - These write-ups prepare you for your capstone
 
 **Grading:** Pass/Fail
 **Length:** ~1 page per write-up
-**Submission:** Via LMS by Monday 23:59 CET each week
+**Submission:** Via LMS by Friday 23:59 CET each week
 
 | Week | Due Date | Topic |
 |------|----------|-------|
-| 1 | Feb 10 | Capstone Search Kickoff |
-| 2 | Feb 17 | Counter-Metrics in the Wild |
-| 3 | Feb 24 | Analysis Methodology Selection |
-| 4 | Mar 3 | Evaluating Project Opportunities |
-| 5 | Mar 10 | Pre-Mortem on a Hypothetical |
-| 6 | Mar 17 | Capstone Readiness Check |
+| 1 | Jan 23 | Capstone Search Kickoff |
+| 2 | Jan 30 | Counter-Metrics in the Wild |
+| 3 | Feb 6 | Analysis Methodology Selection |
+| 4 | Feb 13 | Evaluating Project Opportunities |
+| 5 | Feb 20 | Pre-Mortem on a Hypothetical |
+| 6 | Feb 27 | Capstone Readiness Check |
 
 ---
 
-## Week 1: Capstone Search Kickoff (Due: Feb 10)
+## Week 1: Capstone Search Kickoff (Due: Jan 23)
 
 ### Prompt
 
@@ -61,7 +61,7 @@ Document the start of your capstone search journey.
 
 ---
 
-## Week 2: Counter-Metrics in the Wild (Due: Feb 17)
+## Week 2: Counter-Metrics in the Wild (Due: Jan 30)
 
 ### Prompt
 
@@ -98,7 +98,7 @@ Find and analyze a real-world example of metric optimization gone wrong.
 
 ---
 
-## Week 3: Analysis Methodology Selection (Due: Feb 24)
+## Week 3: Analysis Methodology Selection (Due: Feb 6)
 
 ### Prompt
 
@@ -155,7 +155,7 @@ Practice selecting and justifying foundational analyses for a real business prob
 
 ---
 
-## Week 4: Evaluating Project Opportunities (Due: Mar 3)
+## Week 4: Evaluating Project Opportunities (Due: Feb 13)
 
 ### Prompt
 
@@ -203,7 +203,7 @@ Update on your capstone search and evaluate potential projects.
 
 ---
 
-## Week 5: Pre-Mortem on a Hypothetical (Due: Mar 10)
+## Week 5: Pre-Mortem on a Hypothetical (Due: Feb 20)
 
 ### Prompt
 
@@ -250,7 +250,7 @@ Choose one of the following:
 
 ---
 
-## Week 6: Capstone Readiness Check (Due: Mar 17)
+## Week 6: Capstone Readiness Check (Due: Feb 27)
 
 ### Prompt
 
@@ -321,7 +321,7 @@ Each write-up is graded **Pass/Fail**.
 
 # Late Policy
 
-- **Due:** Monday 23:59 CET each week
+- **Due:** Friday 23:59 CET each week
 - **Grace period:** 24 hours with no penalty
 - **After grace period:** Must request extension via email before deadline
 - **Missing more than 2 write-ups:** Course grade penalty
@@ -332,10 +332,10 @@ Each write-up is graded **Pass/Fail**.
 
 These 6 write-ups prepare you for capstone success:
 
-**Weeks 1-6 (Feb 10 – Mar 17):** You're searching for and evaluating projects. These prompts help you:
+**Weeks 1-6 (Jan 23 – Feb 27):** You're searching for and evaluating projects. These prompts help you:
 - Document your search journey (useful for reflection and troubleshooting)
 - Apply course concepts to real-world examples
 - Practice skills you'll need when you have a project
 - Build confidence before your Brief is "for real"
 
-**After Mar 17:** You'll apply what you've practiced to your actual capstone project.
+**After Feb 27:** You'll apply what you've practiced to your actual capstone project.

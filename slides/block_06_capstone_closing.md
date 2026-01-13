@@ -228,7 +228,7 @@ The Brief isn't separate from your capstone. It IS the foundation of your capsto
 
 ## Building Your Brief Over Time
 
-**You'll practice Brief concepts through weekly write-ups (Feb 10 – Mar 17).**
+**You'll practice Brief concepts through weekly write-ups (Jan 23 – Feb 27).**
 
 First you'll practice concepts while searching for projects, then build Brief sections once assigned.
 
@@ -1126,7 +1126,7 @@ Common Qs:
 
 ## Weekly Write-Ups: What to Expect
 
-You'll submit 6 weekly write-ups from Feb 10 – Mar 17.
+You'll submit 6 weekly write-ups from Jan 23 – Feb 27.
 
 These are **practice exercises** that prepare you for your capstone.
 
@@ -1138,7 +1138,7 @@ INSTRUCTOR NOTE:
 **Key point:** These aren't homework — they're practice reps that make the capstone easier.
 
 **Say something like:**
-"From February 10 to March 17, you'll submit 6 weekly write-ups.
+"From January 23 to February 27, you'll submit 6 weekly write-ups.
 
 These aren't busywork. They're practice exercises. Each one practices a skill you'll need for your capstone.
 
@@ -1153,12 +1153,12 @@ Think of them as reps. By the time you write your real Brief, you'll have practi
 
 | Week | Due Date | Topic |
 |------|----------|-------|
-| 1 | Feb 10 | Capstone Search Kickoff |
-| 2 | Feb 17 | Counter-Metrics in the Wild |
-| 3 | Feb 24 | Analysis Methodology Selection |
-| 4 | Mar 3 | Evaluating Project Opportunities |
-| 5 | Mar 10 | Pre-Mortem on a Hypothetical |
-| 6 | Mar 17 | Capstone Readiness Check |
+| 1 | Jan 23 | Capstone Search Kickoff |
+| 2 | Jan 30 | Counter-Metrics in the Wild |
+| 3 | Feb 6 | Analysis Methodology Selection |
+| 4 | Feb 13 | Evaluating Project Opportunities |
+| 5 | Feb 20 | Pre-Mortem on a Hypothetical |
+| 6 | Feb 27 | Capstone Readiness Check |
 
 <!--
 INSTRUCTOR NOTE:
@@ -1196,10 +1196,10 @@ Notice the progression: early weeks practice concepts, later weeks apply to your
 **Pass/Fail.** Genuine engagement matters, not perfection.
 
 **Sample prompts:**
-> Week 2 (Feb 17): "Find an article about metric optimization gone wrong. Apply the 'What Breaks' framework."
-> Week 4 (Mar 3): "Evaluate 1-2 potential capstone projects against the red flags checklist."
+> Week 2 (Jan 30): "Find an article about metric optimization gone wrong. Apply the 'What Breaks' framework."
+> Week 4 (Feb 13): "Evaluate 1-2 potential capstone projects against the red flags checklist."
 
-**By Week 6 (Mar 17):** You're ready for your capstone.
+**By Week 6 (Feb 27):** You're ready for your capstone.
 
 <!--
 INSTRUCTOR NOTE:
@@ -1486,7 +1486,7 @@ This creates closure and reinforces learning through verbalization.
 - Scenario email: Today
 - Assignment due: January 16
 - Exam: January 27
-- Weekly write-ups: Feb 10 – Mar 17 (6 weeks)
+- Weekly write-ups: Jan 23 – Feb 27 (6 weeks)
 
 **Contact:**
 - rubiae@ceu.edu

@@ -99,7 +99,7 @@ By the end of these two days, filling out a Brief should feel natural. That's th
 |-----------|--------|-----|
 | **Scenario → Brief** | 30% | Jan 16, 2026 |
 | **Pen & Paper Exam** | 30% | Jan 27, 2026 |
-| **Weekly Write-ups** | 30% | Feb 10 – Mar 17 |
+| **Weekly Write-ups** | 30% | Jan 23 – Feb 27 |
 | **Participation** | 10% | During class |
 
 No surprises. Each component connects to what we learn.
@@ -137,13 +137,13 @@ Your job: Scope it professionally using the Brief framework.
 
 ## Weekly Write-ups
 
-**6 submissions** from Feb 10 – Mar 17
+**6 submissions** from Jan 23 – Feb 27
 
 | Week | Due | Topic |
 |------|-----|-------|
-| 1–2 | Feb 10, 17 | Search kickoff, Counter-metrics |
-| 3–4 | Feb 24, Mar 3 | Methodology, Project evaluation |
-| 5–6 | Mar 10, 17 | Pre-mortem, Readiness check |
+| 1–2 | Jan 23, 30 | Search kickoff, Counter-metrics |
+| 3–4 | Feb 6, 13 | Methodology, Project evaluation |
+| 5–6 | Feb 20, 27 | Pre-mortem, Readiness check |
 
 **Grading:** Pass/fail. Genuine engagement matters, not perfection.
 
