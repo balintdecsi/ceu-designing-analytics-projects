@@ -8,7 +8,8 @@ geometry: margin=0.75in
 ## 1. Search Update
 
 [Draft your update here: What's happened since Week 1? Any new leads? Closed doors? What's your current status?]
-
+Up to now, I've mostly been reaching out to people in my network. Honestly, a top experience for me regarding this is finding out how many managers and teams are open to collaboration, which has had a good effect on my confidence. Obviously, this is due to the fact that I offer to do the analysis for free, but either way I've talked with people I'd otherwise consider less approachable.\
+Nonetheless, I find it difficult to close a possible opportunity or ask the *important* and often uncomfortable questions that shed light on red flags.\
 
 ## 2. Project Evaluation
 
